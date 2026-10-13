@@ -114,16 +114,6 @@ export const leadershipMembers = [
     profileEn: "Retired Judge | Senior Advocate | Legal Advisor | Arbitration & Mediation Expert"
   },
   {
-    roleMr: "राष्ट्रीय कार्य अध्यक्ष",
-    roleEn: "National Working President",
-    nameMr: "नाव",
-    nameEn: "Name",
-    stateMr: "महाराष्ट्र / भारत",
-    stateEn: "Maharashtra / India",
-    profileMr: "राष्ट्रीय संघटनात्मक नियोजन व संचालन",
-    profileEn: "National Organisational Planning & Operations"
-  },
-  {
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-negeNoJtpUo0WW8AvC7sYKxvRKaid7.png",
     roleMr: "राष्ट्रीय कार्याध्यक्ष",
     roleEn: "National Working President",
@@ -135,14 +125,15 @@ export const leadershipMembers = [
     profileEn: "National Working President of Lokshahi Patrakar Mahasangh Bharat, editor of Super Maharashtra News, entrepreneur and social leader serving public interest through journalism."
   },
   {
-    roleMr: "कायदेशीर सल्लागार",
-    roleEn: "Legal Advisor",
-    nameMr: "नाव",
-    nameEn: "Name",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ReDV2wwYXIV5YH9EE7MEYVGXbmXcNS.png",
+    roleMr: "राष्ट्रीय कायदेशीर सल्लागार",
+    roleEn: "National Legal Advisor",
+    nameMr: "ॲड. रमकांत पाटील",
+    nameEn: "Adv. Ramkant Patil",
     stateMr: "महाराष्ट्र / भारत",
     stateEn: "Maharashtra / India",
-    profileMr: "पत्रकार हक्क, विधी मार्गदर्शन व संरक्षण",
-    profileEn: "Journalist Rights, Legal Defense & Advisory"
+    profileMr: "गेल्या १२ वर्षांपासून वकिली क्षेत्रात कार्यरत अनुभवी विधिज्ञ. मुंबई उच्च न्यायालय, सर्वोच्च न्यायालय, जिल्हा व कनिष्ठ न्यायालयांमध्ये कार्याचा अनुभव. फौजदारी कायदा, महसुली प्रशासन आणि विविध कायदेशीर बाबींमध्ये मार्गदर्शन करणारे, न्यायनिष्ठा व सामाजिक बांधिलकी जपणारे कायदेविषयक सल्लागार.",
+    profileEn: "An experienced legal professional with 12 years of practice and experience before the Bombay High Court, Supreme Court, district and subordinate courts. He advises on criminal law, revenue administration and legal matters while advancing access to justice and social welfare."
   },
   {
     roleMr: "राष्ट्रीय महामंत्री",
