@@ -5,7 +5,7 @@ import { leadershipMembers } from '../../data/pdfContent';
 
 const leadershipPhotos = [
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XL24YlyJkAlyDbDfUT0hhRnutDfwXP.png',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Y9j2edZ4WeP1FLEQR1XAIfGg0B9h88.png',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5U6by3iVGtc57t1Be7ZrFu7vKO17lQ.png',
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PQB4L96YI81oAEwVVu6dW32xmJNI7f.png',
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qfv31g8FLY8nPOzjvkM6cYTYQoMtYg.png',
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8PkZV3dTVQtEOc5FRkbN1VwOjHZRii.png',
