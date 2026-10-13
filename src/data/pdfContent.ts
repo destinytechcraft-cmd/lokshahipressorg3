@@ -158,14 +158,15 @@ export const leadershipMembers = [
     profileEn: "Editor-in-Chief of the daily Lokneta, known for fearless journalism, social commitment and strong advocacy of public-interest issues. He amplifies the concerns of farmers and marginalized communities and works nationally to strengthen the organization, protect journalists' rights and uphold democratic values."
   },
   {
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kDn4tDtgf8rxPMERIX62xYqp4gvihb.png",
     roleMr: "महाराष्ट्र प्रदेश अध्यक्ष",
     roleEn: "Maharashtra State President",
-    nameMr: "नाव",
-    nameEn: "Name",
+    nameMr: "मा. श्री. किशोर दादा पवार",
+    nameEn: "Hon. Shri. Kishor Dada Pawar",
     stateMr: "महाराष्ट्र",
     stateEn: "Maharashtra",
-    profileMr: "राज्यस्तरीय नेतृत्व, समन्वय व धोरण",
-    profileEn: "State Leadership, Coordination & Policy"
+    profileMr: "पत्रकार | संघटनात्मक नेतृत्व | संस्थापक-अध्यक्ष, Seva Social Welfare Global Foundation. गेल्या ६–७ वर्षांपासून जनहित, सामाजिक समस्या, प्रशासन आणि ग्रामीण भागातील प्रश्नांवर पत्रकारितेत सक्रिय. पत्रकारांना संघटित करून त्यांच्या हक्कांसाठी व्यासपीठ निर्माण करणारे, आरोग्य, शिक्षण, महिला सक्षमीकरण, रोजगारनिर्मिती व युवक विकासासाठी सामाजिक कार्य करणारे आणि महाराष्ट्रभर व्यापक जनसंपर्क व संघटनात्मक नेटवर्क उभारणारे नेतृत्व.",
+    profileEn: "Journalist, organizational leader and Founder-President of Seva Social Welfare Global Foundation. Active in journalism for 6–7 years, highlighting public-interest, social, administrative and rural issues. He organizes journalists, builds platforms for their rights, advances health, education, women's empowerment, employment and youth development initiatives, and leads a broad social network across Maharashtra."
   },
   {
     roleMr: "महाराष्ट्र प्रदेश उपाध्यक्ष",
@@ -264,13 +265,13 @@ export const futureRoadmapPhases = [
     phase: "PHASE 08",
     titleMr: "Research & Documentation",
     titleEn: "Research & Documentation",
-    descMr: "पत्रकारांचे प्रश्न, पत्रकारितेतील बदल आणि सामाजिक प्रश्नांवर अभ्यास व दस्तऐवजीकरण.",
+    descMr: "पत्रकारांचे प्रश्न, पत्रकारितेतील बदल आणि सामाजिक प्रश्नांवर अभ���यास व दस्तऐवजीकरण.",
     descEn: "Study and documentation of journalists' issues, media evolution, and social questions."
   }
 ];
 
 // Event Cards specifications matching PDF Page 13:
-// प्रत्येक Event Card मध्ये: कार्यक्रमाचे नाव, 📍 ठिकाण, 📅 दिनांक, 👥 आयोजक / समिती, 📝 कार्यक्रमाची माहिती, 📷 फोटो, 🎥 व्हिडिओ
+// प्रत्येक Event Card मध्ये: कार्यक्रमाचे नाव, 📍 ���िकाण, 📅 दिनांक, 👥 आयोजक / समिती, 📝 कार्यक्रमाची माहिती, 📷 फोटो, 🎥 व्हिडिओ
 export const sampleEvents = [
   {
     id: 1,
