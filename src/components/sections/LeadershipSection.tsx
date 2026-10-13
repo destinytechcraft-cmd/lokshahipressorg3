@@ -3,6 +3,18 @@ import { useLanguage } from '../../context/LanguageContext';
 import { SectionShell, WFImage } from '../ui/WireframePrimitives';
 import { leadershipMembers } from '../../data/pdfContent';
 
+const leadershipPhotos = [
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XL24YlyJkAlyDbDfUT0hhRnutDfwXP.png',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Y9j2edZ4WeP1FLEQR1XAIfGg0B9h88.png',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PQB4L96YI81oAEwVVu6dW32xmJNI7f.png',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qfv31g8FLY8nPOzjvkM6cYTYQoMtYg.png',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8PkZV3dTVQtEOc5FRkbN1VwOjHZRii.png',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ApxngpFHnMNEIIz9YjxeZID0qBqgyg.png',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LujB1VEfJROXnogtvGEYmmJyJIeZIm.png',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6b2evZ45iPQWZynIQjccWgmeOvsFUJ.png',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-vIMlSvZtcj4wZWRPPBUg7ZKla7CIij.png',
+] as const;
+
 export function LeadershipSection() {
   const { t, lang } = useLanguage();
 
@@ -29,11 +41,20 @@ export function LeadershipSection() {
               <div>
                 {/* Photo frame */}
                 <div className="mb-4">
-                  <WFImage
-                    label="Photo"
-                    ratio="aspect-[4/3]"
-                    className="w-full rounded-xl"
-                  />
+                  {leadershipPhotos[idx] ? (
+                    <img
+                      src={leadershipPhotos[idx]}
+                      alt={lang === 'mr' ? `${member.nameMr} यांचा फोटो` : `Portrait of ${member.nameEn}`}
+                      className="aspect-[4/3] w-full rounded-xl border-2 border-[#172A4A]/15 object-cover object-top shadow-xs"
+                      loading={idx < 3 ? 'eager' : 'lazy'}
+                    />
+                  ) : (
+                    <WFImage
+                      label={lang === 'mr' ? 'फोटो लवकरच' : 'Photo coming soon'}
+                      ratio="aspect-[4/3]"
+                      className="w-full rounded-xl"
+                    />
+                  )}
                 </div>
 
                 <div className="space-y-1.5">
