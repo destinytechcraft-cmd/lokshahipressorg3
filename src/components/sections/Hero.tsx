@@ -27,49 +27,49 @@ export function Hero({
   const { lang } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // 5 Background Slides for the event photos
+  // 6 Background Slides for the event photos
   const backgroundSlides: BackgroundSlide[] = [
     {
       id: 1,
       imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ZyFveTX0izQX1vVdtTV2j9Hr1LSkf3.png',
       titleMr: 'लोकशाही पत्रकार महासंघ बैठक व पत्रकार प्रशिक्षण मेळावा',
       titleEn: 'Press Federation Meeting and Journalist Training Seminar',
-      durationMs: 2000,
+      durationMs: 4000,
     },
     {
       id: 2,
       imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-NPaPIGpkmpzfHfjquZmJDNy2xVyoEA.png',
       titleMr: 'शिवस्मारक सोलापूर येथील पत्रकार व मान्यवरांचा कार्यक्रम',
       titleEn: 'Journalists and Dignitaries at ShivSmarak Solapur',
-      durationMs: 2000,
+      durationMs: 4000,
     },
     {
       id: 3,
       imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-57ZnFUnCzZXAljLU1jgwfdl8G0YfQK.png',
       titleMr: 'वृत्तपत्र व पत्रकारांचा विशेष कार्यक्रम',
       titleEn: 'Special Newspaper and Journalist Event',
-      durationMs: 2000,
+      durationMs: 4000,
     },
     {
       id: 4,
       imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uGiASrsN5C6sr7gQ8coskqIi7UBvAw.png',
       titleMr: 'ज्येष्ठ मान्यवरांची सदिच्छा भेट',
       titleEn: 'Courtesy Meeting with Senior Dignitaries',
-      durationMs: 2000,
+      durationMs: 4000,
     },
     {
       id: 5,
       imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-92H0pAshBqurUFJIkPT3pUk4oUMhKe.png',
       titleMr: 'दैनिक लोकनेता वर्धापन दिन सोहळा',
       titleEn: 'Dainik Lokneta Anniversary Celebration',
-      durationMs: 2000,
+      durationMs: 4000,
     },
     {
       id: 6,
       imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-deIesYcbJyAzcCmzvJem8F9RxpPs0E.png',
       titleMr: 'प्रशासकीय अधिकाऱ्यांची सदिच्छा भेट',
       titleEn: 'Courtesy Meeting with Administrative Officials',
-      durationMs: 2000,
+      durationMs: 4000,
     },
   ];
 
@@ -107,7 +107,7 @@ export function Hero({
                     e.currentTarget.src = fallback;
                   }
                 }}
-                className="w-full h-full object-cover object-center sm:object-[center_30%] scale-105 transition-transform duration-[3000ms] ease-out"
+                className="w-full h-full object-cover object-center sm:object-[center_30%] scale-105 transition-transform duration-[4000ms] ease-out"
               />
             </div>
           );

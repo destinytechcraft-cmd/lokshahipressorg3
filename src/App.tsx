@@ -25,7 +25,6 @@ import { OrgNetworkSection } from './components/sections/OrgNetworkSection';
 import { GallerySection } from './components/sections/GallerySection';
 import { JoinMembershipModal, QuickIssueModal } from './components/modals/InteractiveModals';
 import type { DictKey } from './types';
-import orgHeroBannerImage from './assets/images/regenerated_image_1791927145453.jpg';
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState<string>(() => {
@@ -85,12 +84,7 @@ export default function App() {
       case '/organisation':
         return (
           <>
-            <PageHero
-              titleKey="nav_org"
-              onNavigate={navigate}
-              heroImage={orgHeroBannerImage}
-              imageAlt="लोकशाही पत्रकार महासंघ भारत - संघटनात्मक रचना"
-            />
+            <PageHero titleKey="nav_org" onNavigate={navigate} />
             <OrganisationSection />
             <OrgNetworkSection />
             <CommitteesSection />
@@ -100,12 +94,7 @@ export default function App() {
       case '/leadership':
         return (
           <>
-            <PageHero
-              titleKey="nav_leadership"
-              onNavigate={navigate}
-              heroImage="/leadership-banner.jpg"
-              imageAlt="लोकशाही पत्रकार महासंघ भारत - केंद्रीय व राज्य कार्यकारिणी"
-            />
+            <PageHero titleKey="nav_leadership" onNavigate={navigate} />
             <LeadershipSection />
           </>
         );

@@ -2,12 +2,43 @@ import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { SectionShell, WFCard } from '../ui/WireframePrimitives';
 import { futureRoadmapPhases } from '../../data/pdfContent';
+import roadmapBannerImage from '../../assets/images/roadmap-banner.jpg';
 
 export function RoadmapSection() {
   const { t, lang } = useLanguage();
 
   return (
-    <SectionShell id="roadmap" title={t('sec_roadmap')}>
+    <SectionShell
+      id="roadmap"
+      title={t('sec_roadmap')}
+      topBanner={
+        <div className="overflow-hidden rounded-2xl border-2 border-[#172A4A]/20 bg-neutral-100 shadow-sm transition-all hover:shadow-md">
+          <img
+            src={roadmapBannerImage}
+            alt={
+              lang === 'mr'
+                ? 'आगामी वाटचाल — संघटनात्मक बैठक व विस्तार चर्चा, लोकशाही पत्रकार महासंघ भारत'
+                : 'Future Roadmap — Organisational Expansion Meeting, Lokshahi Patrakar Mahasangh Bharat'
+            }
+            className="h-auto w-full max-h-[520px] sm:max-h-[580px] object-cover object-center transition-transform duration-300 hover:scale-[1.01]"
+            referrerPolicy="no-referrer"
+            onError={(e) => {
+              const img = e.currentTarget;
+              if (!img.dataset.fallback) {
+                img.dataset.fallback = '1';
+                img.src = '/roadmap-banner.jpg';
+              } else if (img.dataset.fallback === '1') {
+                img.dataset.fallback = '2';
+                img.src = '/image.png';
+              } else if (img.dataset.fallback === '2') {
+                img.dataset.fallback = '3';
+                img.src = '/gallery-12.jpg';
+              }
+            }}
+          />
+        </div>
+      }
+    >
       <div className="space-y-6 text-left">
         {/* Intro from PDF Page 11 */}
         <div className="rounded-xl border-2 border-neutral-300 bg-neutral-50 p-6">

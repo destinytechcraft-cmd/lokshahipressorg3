@@ -1,14 +1,13 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { SectionShell, WFButton } from '../ui/WireframePrimitives';
-import { FacebookIcon, InstagramIcon, YouTubeIcon, XIcon, WhatsAppIcon } from '../SocialIcons';
+import { WhatsAppIcon } from '../SocialIcons';
 import { GOOGLE_FORM_LINKS } from '../../config/forms';
 import { MapPin, Phone, Mail, Globe, ExternalLink, Building2, Building, ShieldCheck } from 'lucide-react';
 
 export function ContactSection() {
   const { t, lang } = useLanguage();
 
-  const officialFacebookUrl = 'https://www.facebook.com/share/1Ekodo5ECG/?mibextid=wwXIfr';
   const officialPhone = '+91 878 873 4440';
   const officialPhoneRaw = '+918788734440';
   const officialEmail = 'help@lokshahipressorg.com';
@@ -142,7 +141,7 @@ export function ContactSection() {
                 </div>
 
                 {/* Website */}
-                <div className="border-b border-[#172A4A]/10 pb-3.5">
+                <div>
                   <span className="font-bold text-[#172A4A]/70 text-xs uppercase tracking-wider flex items-center gap-1.5 mb-1">
                     <Globe className="h-4 w-4 text-blue-600" />
                     {lang === 'mr' ? 'अधिकृत वेबसाइट :' : 'Official Website :'}
@@ -155,60 +154,6 @@ export function ContactSection() {
                   >
                     <span>{officialWebsite}</span>
                     <ExternalLink className="h-3.5 w-3.5" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Social Media */}
-              <div>
-                <span className="text-[11px] font-black text-[#172A4A]/70 uppercase tracking-wider block mb-2.5">
-                  {lang === 'mr' ? 'सोशल मीडिया लिंक्स' : 'Social Media'}
-                </span>
-                <div className="flex flex-wrap items-center gap-2">
-                  <a
-                    href={officialFacebookUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-lg border border-[#172A4A]/15 bg-white px-2.5 py-1.5 text-xs font-bold text-[#172A4A] hover:border-[#1877F2] hover:bg-[#1877F2]/5 transition-all"
-                  >
-                    <FacebookIcon size={15} />
-                    <span>Facebook</span>
-                  </a>
-                  <a
-                    href={officialWhatsApp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-lg border border-[#25D366]/40 bg-white px-2.5 py-1.5 text-xs font-bold text-[#172A4A] hover:border-[#25D366] hover:bg-[#25D366]/10 transition-all"
-                  >
-                    <WhatsAppIcon size={15} />
-                    <span>WhatsApp</span>
-                  </a>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-lg border border-[#172A4A]/15 bg-white px-2.5 py-1.5 text-xs font-bold text-[#172A4A] hover:border-[#E1306C] hover:bg-[#E1306C]/5 transition-all"
-                  >
-                    <InstagramIcon size={15} />
-                    <span>Instagram</span>
-                  </a>
-                  <a
-                    href="https://youtube.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-lg border border-[#172A4A]/15 bg-white px-2.5 py-1.5 text-xs font-bold text-[#172A4A] hover:border-[#FF0000] hover:bg-[#FF0000]/5 transition-all"
-                  >
-                    <YouTubeIcon size={15} />
-                    <span>YouTube</span>
-                  </a>
-                  <a
-                    href="https://x.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-lg border border-[#172A4A]/15 bg-white px-2.5 py-1.5 text-xs font-bold text-[#172A4A] hover:border-black hover:bg-black/5 transition-all"
-                  >
-                    <XIcon size={15} />
-                    <span>X</span>
                   </a>
                 </div>
               </div>
@@ -293,7 +238,7 @@ export function ContactSection() {
                 </div>
 
                 {/* Website */}
-                <div className="border-b border-[#172A4A]/10 pb-3.5">
+                <div>
                   <span className="font-bold text-[#172A4A]/70 text-xs uppercase tracking-wider flex items-center gap-1.5 mb-1">
                     <Globe className="h-4 w-4 text-blue-600" />
                     {lang === 'mr' ? 'अधिकृत वेबसाइट :' : 'Official Website :'}
@@ -306,60 +251,6 @@ export function ContactSection() {
                   >
                     <span>{officialWebsite}</span>
                     <ExternalLink className="h-3.5 w-3.5" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Social Media */}
-              <div>
-                <span className="text-[11px] font-black text-[#172A4A]/70 uppercase tracking-wider block mb-2.5">
-                  {lang === 'mr' ? 'सोशल मीडिया लिंक्स' : 'Social Media'}
-                </span>
-                <div className="flex flex-wrap items-center gap-2">
-                  <a
-                    href={officialFacebookUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-lg border border-[#172A4A]/15 bg-white px-2.5 py-1.5 text-xs font-bold text-[#172A4A] hover:border-[#1877F2] hover:bg-[#1877F2]/5 transition-all"
-                  >
-                    <FacebookIcon size={15} />
-                    <span>Facebook</span>
-                  </a>
-                  <a
-                    href={officialWhatsApp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-lg border border-[#25D366]/40 bg-white px-2.5 py-1.5 text-xs font-bold text-[#172A4A] hover:border-[#25D366] hover:bg-[#25D366]/10 transition-all"
-                  >
-                    <WhatsAppIcon size={15} />
-                    <span>WhatsApp</span>
-                  </a>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-lg border border-[#172A4A]/15 bg-white px-2.5 py-1.5 text-xs font-bold text-[#172A4A] hover:border-[#E1306C] hover:bg-[#E1306C]/5 transition-all"
-                  >
-                    <InstagramIcon size={15} />
-                    <span>Instagram</span>
-                  </a>
-                  <a
-                    href="https://youtube.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-lg border border-[#172A4A]/15 bg-white px-2.5 py-1.5 text-xs font-bold text-[#172A4A] hover:border-[#FF0000] hover:bg-[#FF0000]/5 transition-all"
-                  >
-                    <YouTubeIcon size={15} />
-                    <span>YouTube</span>
-                  </a>
-                  <a
-                    href="https://x.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-lg border border-[#172A4A]/15 bg-white px-2.5 py-1.5 text-xs font-bold text-[#172A4A] hover:border-black hover:bg-black/5 transition-all"
-                  >
-                    <XIcon size={15} />
-                    <span>X</span>
                   </a>
                 </div>
               </div>

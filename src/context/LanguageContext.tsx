@@ -139,8 +139,8 @@ export const dict: Record<DictKey, { mr: string; en: string }> = {
     en: 'Future Roadmap',
   },
   sec_media: {
-    mr: 'MEDIA SECTION',
-    en: 'MEDIA SECTION',
+    mr: 'News Articles',
+    en: 'News Articles',
   },
   sec_events: {
     mr: 'कार्यक्रम आणि उपक्रम',

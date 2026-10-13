@@ -3,6 +3,8 @@ import { useLanguage } from '../../context/LanguageContext';
 import { SectionShell, WFCard } from '../ui/WireframePrimitives';
 import { X, ZoomIn } from 'lucide-react';
 
+import social1Img from '../../assets/images/social-1.jpg';
+
 const socialWorkAreas = [
   { mr: 'जनजागृती', en: 'Public Awareness' },
   { mr: 'शिक्षण', en: 'Education' },
@@ -15,7 +17,7 @@ const socialWorkAreas = [
 ];
 
 const socialPhotos = [
-  { image: '/social-1.jpg', alt: 'विद्यार्थी आरोग्य तपासणी व सामाजिक उपक्रम' },
+  { image: social1Img, alt: 'विद्यार्थी आरोग्य तपासणी व सामाजिक उपक्रम' },
   { image: '/social-2.jpg', alt: 'शेतकरी चर्चासत्र व कृषी मार्गदर्शन' },
   { image: '/social-3.jpg', alt: 'छत्रपती शिवाजी महाराज जयंती उत्सव व सत्कार' },
   { image: '/social-4.jpg', alt: 'महिला सक्षमीकरण व जनसंवाद बैठक' },
