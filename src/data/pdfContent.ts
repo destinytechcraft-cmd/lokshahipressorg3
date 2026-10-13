@@ -154,7 +154,7 @@ export const leadershipMembers = [
     nameEn: "Dnyaneshwar Budhwat",
     stateMr: "महाराष्ट्र / भारत",
     stateEn: "Maharashtra / India",
-    profileMr: "दैनिक लोकनेता या वर्तमानपत्राचे मुख्य संपादक. निर्भीड पत्रकारिता, सामाजिक बांधिलकी आणि जनहिताच्या प्रश्नांवरील परखड लेखणीसाठी ओळखले जातात. शेतकरी, शोषित व वंचित घटकांच्या प्रश्नांना व्यासपीठ देत पत्रकार संघटनांमध्ये सक्रिय योगदान देणारे आणि राष्ट्रीय स्तरावर संघटनात्मक बळकटीकरण, पत्रकार हक्कांचे संरक्षण व लोकशाही मूल्यांच्या संवर्धनासाठी कार्यरत.",
+    profileMr: "दैनिक लोकनेता या वर्तमानपत्राचे मुख्य संपादक. निर्भीड पत्रकारिता, सामाजिक बांधिलकी आणि जनहिताच्या प्रश्नांवरील परखड लेखणीसाठी ओळखले जातात. शेतकरी, शोषित व वंचित घटकांच्या प्रश्नांना व्यासपीठ देत पत्रकार संघटनांमध्ये सक्रिय योगदान देणारे आणि राष्ट्रीय स्तरावर संघटनात्मक बळकटीकरण, पत्रकार हक्का���चे संरक्षण व लोकशाही मूल्यांच्या संवर्धनासाठी कार्यरत.",
     profileEn: "Editor-in-Chief of the daily Lokneta, known for fearless journalism, social commitment and strong advocacy of public-interest issues. He amplifies the concerns of farmers and marginalized communities and works nationally to strengthen the organization, protect journalists' rights and uphold democratic values."
   },
   {
@@ -200,14 +200,15 @@ export const leadershipMembers = [
     profileEn: "An active journalist who has worked with media groups including Navi Mumbai Crime News, Navi Mumbai Samachar News and With Maharashtra. Through print and digital media, he fearlessly highlights public issues, injustice and the concerns of marginalized communities while working to secure justice for citizens. As Maharashtra State Working President, he works to protect journalists' rights, strengthen the organization and provide a strong platform for public concerns."
   },
   {
-    roleMr: "मंत्रालय कामकाज समिती अध्यक्ष",
-    roleEn: "Mantralaya Affairs Committee Chairman",
-    nameMr: "नाव",
-    nameEn: "Name",
-    stateMr: "महाराष्ट्र",
-    stateEn: "Maharashtra",
-    profileMr: "मंत्रालय, शासन व प्रशासकीय कामकाज समन्वय",
-    profileEn: "Mantralaya, Government Affairs & Administrative Liaison"
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Do8hBZJGxInZHy2Rz90rXQbF8kdbak.png",
+    roleMr: "सामाजिक व राजकीय कार्यकर्ते",
+    roleEn: "Social & Political Activist",
+    nameMr: "डॉ. अनिल दिलीप पाटील",
+    nameEn: "Dr. Anil Dileep Patil",
+    stateMr: "महाराष्ट्र / भारत",
+    stateEn: "Maharashtra / India",
+    profileMr: "उद्योजक, पत्रकार आणि सामाजिक व राजकीय कार्यकर्ते. गेल्या एक वर्षापासून पत्रकारितेत सक्रिय असून जनहिताचे प्रश्न, सामाजिक विषय आणि नागरिकांच्या समस्या मांडत आहेत. Saitech Groupच्या माध्यमातून उद्योग व व्यवसाय क्षेत्रात कार्यरत असून, जनजागृती, जनसंपर्क, सामाजिक उपक्रम आणि विविध क्षेत्रांतील व्यक्तींशी समन्वय साधत सार्वजनिक जीवनात योगदान देत आहेत.",
+    profileEn: "Entrepreneur, journalist, and social and political activist. Active in journalism for the past year, he highlights public-interest issues, social concerns, and citizens' problems. Through Saitech Group, he works in business and industry while contributing to public life through awareness initiatives, community engagement, social programs, and cross-sector coordination."
   }
 ];
 
@@ -231,7 +232,7 @@ export const futureRoadmapPhases = [
     phase: "PHASE 03",
     titleMr: "प्रशिक्षण व कौशल्य विकास",
     titleEn: "Training & Skill Development",
-    descMr: "डिजिटल पत्रकारिता, सोशल मीडिया, तथ्य पडताळणी, सायबर सुरक्षा, कायदेशीर जागरूकता आणि आधुनिक पत्रकारितेसाठी प्रशिक्षण उपक्रम व पत्रकार कार्यशाळेचे आयोजन.सोबतच Meet the Press कार्यक्रम, पत्रकार सुरक्षा व हक्क संरक्षण अभियान, माध्यम संशोधन व अभ्यास प्रकल्प,मानवाधिकार जनजागृती उपक्रम,पर्यावरण संरक्षण मोहिमा,पत्रकारिता नैतिकता विषयक मार्गदर्शन,स्मरणिका, नियतकालिके आणि डिजिटल प्रकाशन,सामा���िक सेवा आणि जनहिताचे विशेष अभियान",
+    descMr: "डिजिटल पत्रकारिता, सोशल मीडिया, तथ्य पडताळणी, सायबर सुरक्षा, कायदेशीर जागरूकता आणि आधुनिक पत्रकारितेसाठी प्रशिक्षण उपक्रम व पत्रकार कार्यशाळेचे आयोजन.सोबतच Meet the Press कार्यक्रम, पत्रकार सुर���्षा व हक्क संरक्षण अभियान, माध्यम संशोधन व अभ्यास प्रकल्प,मानवाधिकार जनजागृती उपक्रम,पर्यावरण संरक्षण मोहिमा,पत्रकारिता नैतिकता विषयक मार्गदर्शन,स्मरणिका, नियतकालिके आणि डिजिटल प्रकाशन,सामा���िक सेवा आणि जनहिताचे विशेष अभियान",
     descEn: "Training programs and journalist workshops on digital journalism, social media, fact checking, cyber security, legal awareness, Meet the Press events, and public interest initiatives."
   },
   {
