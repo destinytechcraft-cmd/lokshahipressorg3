@@ -12,7 +12,7 @@ const leadershipPhotos = [
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ApxngpFHnMNEIIz9YjxeZID0qBqgyg.png',
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LujB1VEfJROXnogtvGEYmmJyJIeZIm.png',
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6b2evZ45iPQWZynIQjccWgmeOvsFUJ.png',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-vIMlSvZtcj4wZWRPPBUg7ZKla7CIij.png',
+  '/images/leadership/santoshkumar-jaiswal.png',
 ] as const;
 
 export function LeadershipSection() {
