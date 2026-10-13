@@ -92,14 +92,26 @@ export const all78Committees: CommitteeItem[] = [
 // Photo + Name + Designation + State + Short Profile
 export const leadershipMembers = [
   {
-    roleMr: "राष्ट्रीय अध्यक्ष",
-    roleEn: "National President",
-    nameMr: "नाव",
-    nameEn: "Name",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ItKOvWxrQXCYX5ZizyAIN58FbwXWyY.png",
+    roleMr: "संस्थापक व व्यवस्थापकीय संचालक",
+    roleEn: "Founder & Managing Director",
+    nameMr: "श्री. संदिप जाधव",
+    nameEn: "Shri. Sandip Jadhav",
     stateMr: "महाराष्ट्र / भारत",
     stateEn: "Maharashtra / India",
-    profileMr: "राष्ट्रीय धोरण व सर्वोच्च नेतृत्व",
-    profileEn: "National Policy & Apex Leadership"
+    profileMr: "पत्रकार | प्रभावी वक्ते | निवडणूक रणनीतिकार | राजकीय विश्लेषक | Hashtag Media Network चे संस्थापक",
+    profileEn: "Journalist | Public Speaker | Election Strategist | Political Analyst | Founder of Hashtag Media Network"
+  },
+  {
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ywKXaX2xniaW7XjGCLmJ5ft4B5x3Fn.png",
+    roleMr: "राष्ट्रीय उपाध्यक्ष",
+    roleEn: "National Vice President",
+    nameMr: "डॉ. संतोषकुमार आर. जयस्वाल",
+    nameEn: "Dr. Santoshkumar R. Jaiswal",
+    stateMr: "भारत",
+    stateEn: "India",
+    profileMr: "निवृत्त न्यायाधीश | ज्येष्ठ विधिज्ञ | कायदेविषयक सल्लागार | लवाद व मध्यस्थी तज्ज्ञ",
+    profileEn: "Retired Judge | Senior Advocate | Legal Advisor | Arbitration & Mediation Expert"
   },
   {
     roleMr: "राष्ट्रीय कार्य अध्यक्ष",
@@ -112,14 +124,15 @@ export const leadershipMembers = [
     profileEn: "National Organisational Planning & Operations"
   },
   {
-    roleMr: "राष्ट्रीय उपाध्यक्ष",
-    roleEn: "National Vice President",
-    nameMr: "नाव",
-    nameEn: "Name",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-negeNoJtpUo0WW8AvC7sYKxvRKaid7.png",
+    roleMr: "राष्ट्रीय कार्याध्यक्ष",
+    roleEn: "National Working President",
+    nameMr: "मा. प्रतापराव साळूंखे",
+    nameEn: "Hon. Prataprao Salunkhe",
     stateMr: "महाराष्ट्र / भारत",
     stateEn: "Maharashtra / India",
-    profileMr: "राष्ट्रीय समन्वय व प्रांतीय संपर्क",
-    profileEn: "National Coordination & State Liaison"
+    profileMr: "लोकशाही पत्रकार महासंघ भारताचे राष्ट्रीय कार्याध्यक्ष, सुपर महाराष्ट्र न्यूजचे संपादक, उद्योजक आणि सामाजिक कार्यकर्ते. पत्रकारितेच्या माध्यमातून शोषित, वंचित व पीडित घटकांच्या प्रश्नांना वाचा फोडत जनहितासाठी कार्यरत.",
+    profileEn: "National Working President of Lokshahi Patrakar Mahasangh Bharat, editor of Super Maharashtra News, entrepreneur and social leader serving public interest through journalism."
   },
   {
     roleMr: "कायदेशीर सल्लागार",
@@ -223,7 +236,7 @@ export const futureRoadmapPhases = [
     phase: "PHASE 03",
     titleMr: "प्रशिक्षण व कौशल्य विकास",
     titleEn: "Training & Skill Development",
-    descMr: "डिजिटल पत्रकारिता, सोशल मीडिया, तथ्य पडताळणी, सायबर सुरक्षा, कायदेशीर जागरूकता आणि आधुनिक पत्रकारितेसाठी प्रशिक्षण उपक्रम व पत्रकार कार्यशाळेचे आयोजन.सोबतच Meet the Press कार्यक्रम, पत्रकार सुरक्षा व हक्क संरक्षण अभियान, माध्यम संशोधन व अभ्यास प्रकल्प,मानवाधिकार जनजागृती उपक्रम,पर्यावरण संरक्षण मोहिमा,पत्रकारिता नैतिकता विषयक मार्गदर्शन,स्मरणिका, नियतकालिके आणि डिजिटल प्रकाशन,सामाजिक सेवा आणि जनहिताचे विशेष अभियान",
+    descMr: "डिजिटल पत्रकारिता, सोशल मीडिया, तथ्य पडताळणी, सायबर सुरक्षा, कायदेशीर जागरूकता आणि आधुनिक पत्रकारितेसाठी प्रशिक्षण उपक्रम व पत्रकार कार्यशाळेचे आयोजन.सोबतच Meet the Press कार्यक्रम, पत्रकार सुरक्षा व हक्क संरक्षण अभियान, माध्यम संशोधन व अभ्यास प्रकल्प,मानवाधिकार जनजागृती उपक्रम,पर्यावरण संरक्षण मोहिमा,पत्रकारिता नैतिकता विषयक मार्गदर्शन,स्मरणिका, नियतकालिके आणि डिजिटल प्रकाशन,सामा���िक सेवा आणि जनहिताचे विशेष अभियान",
     descEn: "Training programs and journalist workshops on digital journalism, social media, fact checking, cyber security, legal awareness, Meet the Press events, and public interest initiatives."
   },
   {

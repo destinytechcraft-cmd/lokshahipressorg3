@@ -28,12 +28,20 @@ export function LeadershipSection() {
             >
               <div>
                 {/* Photo frame */}
-                <div className="mb-4">
-                  <WFImage
-                    label="Photo"
-                    ratio="aspect-[4/3]"
-                    className="w-full rounded-xl"
-                  />
+                <div className="mb-4 overflow-hidden rounded-xl bg-neutral-100">
+                  {member.image ? (
+                    <img
+                      src={member.image}
+                      alt={lang === 'mr' ? `${member.nameMr} यांचे छायाचित्र` : `${member.nameEn} profile photo`}
+                      className="block h-auto w-full object-contain"
+                    />
+                  ) : (
+                    <WFImage
+                      label="Photo"
+                      ratio="aspect-[4/3]"
+                      className="w-full rounded-xl"
+                    />
+                  )}
                 </div>
 
                 <div className="space-y-1.5">
