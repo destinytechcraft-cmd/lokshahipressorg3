@@ -83,7 +83,7 @@ export const all78Committees: CommitteeItem[] = [
   { id: 73, nameMr: "पर्यावरण संरक्षण विकास समिती", nameEn: "Environmental Conservation Committee", categoryMr: "पर्यावरण", categoryEn: "Environment" },
   { id: 74, nameMr: "माहिती तंत्रज्ञान (IT) विकास समिती", nameEn: "Information Technology (IT) Committee", categoryMr: "तंत्रज्ञान", categoryEn: "Technology" },
   { id: 75, nameMr: "युवा व क्रीडा प्रबोधन विकास समिती", nameEn: "Youth & Sports Empowerment Committee", categoryMr: "क्रीडा", categoryEn: "Sports" },
-  { id: 76, nameMr: "दिव्यांग कल्याण विकास समिती", nameEn: "Divyang & Special Needs Welfare Committee", categoryMr: "सामाजिक", categoryEn: "Social" },
+  { id: 76, nameMr: "दिव्यांग कल्याण विकास समिती", nameEn: "Divyang & Special Needs Welfare Committee", categoryMr: "��ामाजिक", categoryEn: "Social" },
   { id: 77, nameMr: "गृहनिर्माण व सोसायटी विकास समिती", nameEn: "Housing Societies Welfare Committee", categoryMr: "जनहित", categoryEn: "Public Interest" },
   { id: 78, nameMr: "कायदा व सुव्यवस्था विकास समिती", nameEn: "Law & Order Assistance Committee", categoryMr: "कायदा व सुरक्षा", categoryEn: "Law & Security" }
 ];
@@ -209,6 +209,16 @@ export const leadershipMembers = [
     stateEn: "Maharashtra / India",
     profileMr: "उद्योजक, पत्रकार आणि सामाजिक व राजकीय कार्यकर्ते. गेल्या एक वर्षापासून पत्रकारितेत सक्रिय असून जनहिताचे प्रश्न, सामाजिक विषय आणि नागरिकांच्या समस्या मांडत आहेत. Saitech Groupच्या माध्यमातून उद्योग व व्यवसाय क्षेत्रात कार्यरत असून, जनजागृती, जनसंपर्क, सामाजिक उपक्रम आणि विविध क्षेत्रांतील व्यक्तींशी समन्वय साधत सार्वजनिक जीवनात योगदान देत आहेत.",
     profileEn: "Entrepreneur, journalist, and social and political activist. Active in journalism for the past year, he highlights public-interest issues, social concerns, and citizens' problems. Through Saitech Group, he works in business and industry while contributing to public life through awareness initiatives, community engagement, social programs, and cross-sector coordination."
+  },
+  {
+    roleMr: "राष्ट्रीय सरचिटणीस",
+    roleEn: "National General Secretary",
+    nameMr: "हलीमा शेख",
+    nameEn: "Halima Shaikh",
+    stateMr: "भारत",
+    stateEn: "India",
+    profileMr: "गेल्या तीस वर्षांपासून सामाजिक कार्य, पत्रकारिता आणि जनसेवेच्या क्षेत्रात सक्रिय. स्वयंप्रेरणा विकास संस्थेच्या अध्यक्षा म्हणून महिला सक्षमीकरण, सामाजिक न्याय, शिक्षण, आरोग्य, जनजागृती आणि सामाजिक परिवर्तनासाठी उल्लेखनीय कार्य. विविध प्रिंट मीडिया संस्थांमध्ये पत्रकार व उपसंपादक म्हणून कार्यरत राहून जनतेचे प्रश्न निर्भीडपणे आणि वस्तुनिष्ठपणे मांडणाऱ्या सामाजिक कार्यकर्त्या.",
+    profileEn: "Active for thirty years in social work, journalism and public service. As President of Swayamprerna Vikas Sanstha, she has advanced women's empowerment, social justice, education, healthcare, awareness and social transformation. As a journalist and sub-editor with print media organizations, she has fearlessly and objectively highlighted public issues while strengthening democratic values and responsible public dialogue."
   }
 ];
 
