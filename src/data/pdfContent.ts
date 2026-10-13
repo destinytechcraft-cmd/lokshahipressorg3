@@ -136,14 +136,15 @@ export const leadershipMembers = [
     profileEn: "An experienced legal professional with 12 years of practice and experience before the Bombay High Court, Supreme Court, district and subordinate courts. He advises on criminal law, revenue administration and legal matters while advancing access to justice and social welfare."
   },
   {
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XGXxF2I0oGcCVeyTPTIVs8qROy2WyS.png",
     roleMr: "राष्ट्रीय महामंत्री",
     roleEn: "National General Secretary",
-    nameMr: "नाव",
-    nameEn: "Name",
-    stateMr: "महाराष्ट्र / भारत",
-    stateEn: "Maharashtra / India",
-    profileMr: "केंद्रीय प्रशासकीय समन्वय व पत्रव्यवहार",
-    profileEn: "Central Administrative Affairs & Liaison"
+    nameMr: "टी. माधव",
+    nameEn: "T. Madhav",
+    stateMr: "भारत",
+    stateEn: "India",
+    profileMr: "पत्रकारिता, मंत्रालयीन अनुभव, प्रशासकीय समन्वय आणि जनसंपर्क क्षेत्रातील अनुभवी व्यक्तिमत्त्व. कायदा व पत्रकारितेचे शिक्षण घेतल्यानंतर नामांकित वर्तमानपत्रांमध्ये लेखन केले असून, दिल्लीतील केंद्र सरकारच्या विविध विभाग व समित्यांमध्ये समन्वयक म्हणून काम केले आहे. परकीय गुंतवणूक, रोजगारनिर्मिती आणि नागरिक-प्रशासन समन्वयासाठी महत्त्वपूर्ण योगदान.",
+    profileEn: "An experienced professional in journalism, ministry affairs, administrative coordination and public relations. After studying law and journalism, he wrote for leading newspapers and worked as a coordinator with central government departments and committees in Delhi, contributing to foreign investment, employment generation and citizen-administration coordination."
   },
   {
     roleMr: "राष्ट्रीय संघटनमंत्री",
