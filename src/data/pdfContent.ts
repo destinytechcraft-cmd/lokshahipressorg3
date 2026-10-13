@@ -92,114 +92,104 @@ export const all78Committees: CommitteeItem[] = [
 // Photo + Name + Designation + State + Short Profile
 export const leadershipMembers = [
   {
-    roleMr: "राष्ट्रीय अध्यक्ष",
-    roleEn: "National President",
-    nameMr: "नाव",
-    nameEn: "Name",
-    stateMr: "महाराष्ट्र / भारत",
-    stateEn: "Maharashtra / India",
-    profileMr: "राष्ट्रीय धोरण व सर्वोच्च नेतृत्व",
-    profileEn: "National Policy & Apex Leadership"
-  },
-  {
-    roleMr: "राष्ट्रीय कार्य अध्यक्ष",
+    roleMr: "राष्ट्रीय कार्याध्यक्ष",
     roleEn: "National Working President",
-    nameMr: "नाव",
-    nameEn: "Name",
+    nameMr: "मा. प्रतापराव साळूंखे",
+    nameEn: "Hon. Prataprao Salunkhe",
     stateMr: "महाराष्ट्र / भारत",
     stateEn: "Maharashtra / India",
-    profileMr: "राष्ट्रीय संघटनात्मक नियोजन व संचालन",
-    profileEn: "National Organisational Planning & Operations"
+    profileMr: "मा. प्रतापराव साळूंखे हे लोकशाही पत्रकार महासंघ भारताचे राष्ट्रीय कार्याध्यक्ष असून, पत्रकारिता, उद्योग आणि सामाजिक क्षेत्रातील प्रतिष्ठित व्यक्तिमत्त्व आहेत. ते सुपर महाराष्ट्र न्यूजचे संपादक असून, स्वतःच्या वर्तमानपत्राच्या माध्यमातूनही पत्रकारितेचे कार्य करतात. महाराष्ट्रातील ख्यातनाम उद्योजक म्हणून त्यांनी उद्योगासोबतच सामाजिक क्षेत्रात उल्लेखनीय योगदान दिले आहे. शोषित, वंचित आणि पीडित घटकांच्या प्रश्नांना वाचा फोडत, शासन-प्रशासन आणि सामान्य जनता यांच्यात दुवा म्हणून ते कार्य करतात. महाराष्ट्रासह संपूर्ण भारतभर विस्तारलेले त्यांचे कार्य पत्रकारितेची बांधिलकी, सामाजिक न्याय आणि जनहिताप्रती असलेली निष्ठा अधोरेखित करते.",
+    profileEn: "A respected journalist, entrepreneur, and social worker serving as National Working President, editor of Super Maharashtra News, and a bridge between citizens and public administration."
   },
   {
-    roleMr: "राष्ट्रीय उपाध्यक्ष",
-    roleEn: "National Vice President",
-    nameMr: "नाव",
-    nameEn: "Name",
-    stateMr: "महाराष्ट्र / भारत",
-    stateEn: "Maharashtra / India",
-    profileMr: "राष्ट्रीय समन्वय व प्रांतीय संपर्क",
-    profileEn: "National Coordination & State Liaison"
-  },
-  {
-    roleMr: "कायदेशीर सल्लागार",
-    roleEn: "Legal Advisor",
-    nameMr: "नाव",
-    nameEn: "Name",
-    stateMr: "महाराष्ट्र / भारत",
-    stateEn: "Maharashtra / India",
-    profileMr: "पत्रकार हक्क, विधी मार्गदर्शन व संरक्षण",
-    profileEn: "Journalist Rights, Legal Defense & Advisory"
+    roleMr: "राष्ट्रीय कायदेशीर सल्लागार",
+    roleEn: "National Legal Advisor",
+    nameMr: "ॲड. रमकांत पाटील",
+    nameEn: "Adv. Ramakant Patil",
+    stateMr: "नवी मुंबई / भारत",
+    stateEn: "Navi Mumbai / India",
+    profileMr: "ॲड. रमकांत पाटील हे गेल्या १२ वर्षांपासून वकिली क्षेत्रात कार्यरत असलेले अनुभवी विधिज्ञ आणि कायद्याचे सखोल अभ्यासक आहेत. मुंबई उच्च न्यायालयासह सर्वोच्च न्यायालय, जिल्हा न्यायालये तसेच विविध कनिष्ठ न्यायालयांमध्ये कायदेशीर प्रकरणांवर काम करण्याचा त्यांना अनुभव आहे. फौजदारी कायदा, महसुली प्रशासन आणि विविध कायदेशीर बाबींमध्ये ते पक्षकारांना मार्गदर्शन करतात. सर्वसामान्य नागरिकांना न्याय मिळवून देण्याची बांधिलकी जपत त्यांनी पत्रकार आणि सामाजिक संघटनांसोबतही कार्य केले आहे. त्यांचे कार्यक्षेत्र संपूर्ण भारतभर विस्तारलेले आहे.",
+    profileEn: "An experienced advocate with 12 years of practice across the Supreme Court, Bombay High Court, district courts, and subordinate courts, advising on criminal law, revenue administration, and public legal matters."
   },
   {
     roleMr: "राष्ट्रीय महामंत्री",
     roleEn: "National General Secretary",
-    nameMr: "नाव",
-    nameEn: "Name",
+    nameMr: "टी. माधव",
+    nameEn: "T. Madhav",
     stateMr: "महाराष्ट्र / भारत",
     stateEn: "Maharashtra / India",
-    profileMr: "केंद्रीय प्रशासकीय समन्वय व पत्रव्यवहार",
-    profileEn: "Central Administrative Affairs & Liaison"
+    profileMr: "पत्रकारिता, मंत्रालयीन अनुभव, प्रशासकीय समन्वय आणि जनसंपर्काचा अनुभव असलेले टी. माधव यांनी कायदा व पत्रकारितेचे शिक्षण घेतल्यानंतर नामांकित वर्तमानपत्रांमध्ये लिखाण केले आहे. दिल्ली येथे केंद्र सरकारच्या विविध विभागांत व समित्यांमध्ये समन्वयक म्हणून त्यांनी काम केले. परकीय गुंतवणूक भारतात आणणे, रोजगारनिर्मिती आणि स्वयंसेवी संस्थांच्या माध्यमातून जनहिताचे काम यांत त्यांनी महत्त्वपूर्ण भूमिका बजावली आहे. नागरिक आणि प्रशासकीय यंत्रणा यांच्यात समन्वय साधणे हे त्यांच्या कार्याचे महत्त्वाचे वैशिष्ट्य आहे.",
+    profileEn: "A journalist and public affairs professional with experience in central ministries, administrative coordination, foreign investment facilitation, employment initiatives, and citizen-government liaison."
   },
   {
-    roleMr: "राष्ट्रीय संघटनमंत्री",
-    roleEn: "National Organizing Secretary",
-    nameMr: "नाव",
-    nameEn: "Name",
+    roleMr: "सामाजिक व राजकीय कार्यकर्ते",
+    roleEn: "Social & Political Worker",
+    nameMr: "डॉ. अनिल दिलीप पाटील",
+    nameEn: "Dr. Anil Dilip Patil",
     stateMr: "महाराष्ट्र / भारत",
     stateEn: "Maharashtra / India",
-    profileMr: "देशव्यापी संघटन विस्तार व सदस्य संपर्क",
-    profileEn: "Nationwide Network & Membership Expansion"
+    profileMr: "डॉ. अनिल दिलीप पाटील हे पत्रकार, उद्योजक तसेच सामाजिक व राजकीय कार्यकर्ते आहेत. गेल्या एक वर्षापासून ते जनहिताचे प्रश्न, सामाजिक विषय आणि नागरिकांच्या समस्या मांडत आहेत. Saitech Group च्या माध्यमातून उद्योग व व्यवसाय क्षेत्रात कार्यरत असून, सामाजिक प्रश्नांबाबत जनजागृती, जनसंपर्क आणि समाजहिताच्या उपक्रमांमध्ये ते सक्रिय सहभाग घेतात. पत्रकारिता, उद्योग आणि सामाजिक क्षेत्रातील व्यक्तींशी संपर्क व समन्वय साधून ते सार्वजनिक जीवनात योगदान देत आहेत.",
+    profileEn: "A journalist, entrepreneur, and social and political worker focused on public-interest issues, civic awareness, business through Saitech Group, and community coordination."
   },
   {
     roleMr: "महाराष्ट्र प्रदेश अध्यक्ष",
     roleEn: "Maharashtra State President",
-    nameMr: "नाव",
-    nameEn: "Name",
+    nameMr: "मा. श्री. किशोर दादा पवार",
+    nameEn: "Hon. Shri Kishor Dada Pawar",
     stateMr: "महाराष्ट्र",
     stateEn: "Maharashtra",
-    profileMr: "राज्यस्तरीय नेतृत्व, समन्वय व धोरण",
-    profileEn: "State Leadership, Coordination & Policy"
+    profileMr: "गेल्या ६–७ वर्षांपासून पत्रकारितेत सक्रिय असलेले किशोर दादा पवार जनहिताचे प्रश्न, सामाजिक समस्या, प्रशासन आणि ग्रामीण भागातील प्रश्न प्रभावीपणे मांडतात. महाराष्ट्र प्रदेश अध्यक्ष म्हणून ते पत्रकारांना संघटित करणे, त्यांच्या हक्कांसाठी व्यासपीठ निर्माण करणे आणि संघटनेची सक्षम बांधणी करण्यासाठी प्रयत्नशील आहेत. Seva Social Welfare Global Foundation चे संस्थापक-अध्यक्ष म्हणून आरोग्य, शिक्षण, महिला सक्षमीकरण, रोजगारनिर्मिती आणि युवक विकासाच्या उपक्रमांना ते प्राधान्य देतात.",
+    profileEn: "A journalist and organisational leader with 6–7 years of experience, serving as Maharashtra State President and Founder-President of Seva Social Welfare Global Foundation."
   },
   {
-    roleMr: "महाराष्ट्र प्रदेश उपाध्यक्ष",
-    roleEn: "Maharashtra State Vice President",
-    nameMr: "नाव",
-    nameEn: "Name",
-    stateMr: "महाराष्ट्र",
-    stateEn: "Maharashtra",
-    profileMr: "विभागीय व जिल्हास्तरीय कार्य समन्वयक",
-    profileEn: "Divisional & District Operations Coordinator"
+    roleMr: "राष्ट्रीय संघटन मंत्री",
+    roleEn: "National Organising Minister",
+    nameMr: "ज्ञानेश्वर बुधवत",
+    nameEn: "Dnyaneshwar Budhwat",
+    stateMr: "महाराष्ट्र / भारत",
+    stateEn: "Maharashtra / India",
+    profileMr: "ज्ञानेश्वर बुधवत हे दैनिक लोकनेता या वर्तमानपत्राचे मुख्य संपादक असून, निर्भीड पत्रकारिता, सामाजिक बांधिलकी आणि जनहिताच्या प्रश्नांवरील परखड लेखणीसाठी ओळखले जातात. त्यांनी शोषित, वंचित आणि पीडित घटकांसह मराठवाडा व विदर्भातील शेतकऱ्यांच्या समस्या, हक्क आणि संघर्षांना प्रभावी व्यासपीठ मिळवून दिले आहे. विविध पत्रकार संघटनांतील अनुभव, सामाजिक चळवळीतील सहभाग आणि अभ्यासपूर्ण लेखनाच्या बळावर ते राष्ट्रीय स्तरावर संघटन बळकटीकरण, पत्रकारांच्या हक्कांचे संरक्षण आणि निर्भीड पत्रकारितेच्या संवर्धनासाठी कार्यरत आहेत.",
+    profileEn: "Editor-in-chief of Dainik Lokneta, known for fearless journalism, farmer-focused reporting, social commitment, and strengthening journalists' rights and organisation nationwide."
   },
   {
-    roleMr: "महाराष्ट्र प्रदेश संघटनमंत्री",
-    roleEn: "Maharashtra State Organizing Secretary",
-    nameMr: "नाव",
-    nameEn: "Name",
-    stateMr: "महाराष्ट्र",
-    stateEn: "Maharashtra",
-    profileMr: "राज्यव्यापी जिल्हा व तालुका संघटन बांधणी",
-    profileEn: "Statewide District & Taluka Organization Builder"
-  },
-  {
-    roleMr: "महाराष्ट्र कार्याध्यक्ष",
+    roleMr: "महाराष्ट्र प्रदेश कार्याध्यक्ष",
     roleEn: "Maharashtra State Working President",
-    nameMr: "नाव",
-    nameEn: "Name",
-    stateMr: "महाराष्ट्र",
-    stateEn: "Maharashtra",
-    profileMr: "राज्यस्तरीय दैनंदिन कामकाज व कार्यक्रम संचालन",
-    profileEn: "State Day-to-Day Operations & Program Executive"
+    nameMr: "श्री. सनम पाटील",
+    nameEn: "Shri Sanam Patil",
+    stateMr: "मुंबई व नवी मुंबई / महाराष्ट्र",
+    stateEn: "Mumbai & Navi Mumbai / Maharashtra",
+    profileMr: "श्री. सनम पाटील हे पत्रकारितेच्या क्षेत्रातील सक्रिय आणि सामाजिक बांधिलकी जपणारे व्यक्तिमत्त्व आहेत. नवी मुंबई क्राईम न्यूज, नवी मुंबई समाचार न्यूज तसेच विथ महाराष्ट्र यांसारख्या माध्यमसमूहांमध्ये त्यांनी काम केले आहे. प्रिंट आणि डिजिटल मीडियाच्या माध्यमातून जनतेचे प्रश्न मांडणे, अन्यायाविरुद्ध आवाज उठवणे आणि शोषित, पीडित व वंचित घटकांना न्याय मिळवून देण्यासाठी प्रयत्न करणे ही त्यांच्या पत्रकारितेची वैशिष्ट्ये आहेत. महाराष्ट्र प्रदेश कार्याध्यक्ष म्हणून ते पत्रकारांच्या हक्कांचे संरक्षण आणि संघटनात्मक बळकटीकरणासाठी कार्यरत आहेत.",
+    profileEn: "An active print and digital journalist associated with multiple news groups, working for public issues, social justice, journalist rights, and organisational strengthening in Maharashtra."
   },
   {
-    roleMr: "मंत्रालय कामकाज समिती अध्यक्ष",
-    roleEn: "Mantralaya Affairs Committee Chairman",
-    nameMr: "नाव",
-    nameEn: "Name",
-    stateMr: "महाराष्ट्र",
-    stateEn: "Maharashtra",
-    profileMr: "मंत्रालय, शासन व प्रशासकीय कामकाज समन्वय",
-    profileEn: "Mantralaya, Government Affairs & Administrative Liaison"
+    roleMr: "राष्ट्रीय सरचिटणीस",
+    roleEn: "National General Secretary",
+    nameMr: "हलीमा शेख",
+    nameEn: "Halima Shaikh",
+    stateMr: "महाराष्ट्र / भारत",
+    stateEn: "Maharashtra / India",
+    profileMr: "हलीमा शेख गेल्या तीस वर्षांपासून सामाजिक कार्य, पत्रकारिता आणि जनसेवेच्या क्षेत्रात सक्रिय आहेत. स्वयंप्रेरणा विकास संस्थेच्या अध्यक्षा म्हणून त्यांनी महिला सक्षमीकरण, सामाजिक न्याय, शिक्षण, आरोग्य, जनजागृती आणि सामाजिक परिवर्तनासाठी उल्लेखनीय कार्य केले आहे. विविध प्रिंट मीडिया संस्थांमध्ये पत्रकार आणि उपसंपादक म्हणून त्यांनी जनतेचे प्रश्न निर्भीडपणे, संवेदनशीलतेने आणि वस्तुनिष्ठ पद्धतीने मांडले. अन्याय, भ्रष्टाचार, सामाजिक विषमता आणि प्रशासनातील त्रुटींविरोधात आवाज उठवत त्यांनी लोकशाही मूल्ये आणि जबाबदार सार्वजनिक संवाद यांना बळ दिले आहे.",
+    profileEn: "A social worker, journalist, and public servant with 30 years of experience, advancing women’s empowerment, education, health, social justice, and responsible journalism."
+  },
+  {
+    roleMr: "राष्ट्रीय उपाध्यक्ष",
+    roleEn: "National Vice President",
+    nameMr: "डॉ. संतोषकुमार आर. जयस्वाल",
+    nameEn: "Dr. Santoshkumar R. Jaiswal",
+    stateMr: "महाराष्ट्र / भारत",
+    stateEn: "Maharashtra / India",
+    profileMr: "डॉ. संतोषकुमार आर. जयस्वाल हे निवृत्त न्यायाधीश, ज्येष्ठ विधिज्ञ, कायदेविषयक सल्लागार तसेच लवाद व मध्यस्थी तज्ज्ञ आहेत. त्यांनी मेट्रोपॉलिटन मॅजिस्ट्रेट, लघुवाद न्यायालयातील न्यायाधीश, दिवाणी न्यायाधीश आणि मुख्य न्यायदंडाधिकारी म्हणून विविध न्यायिक जबाबदाऱ्या सांभाळल्या आहेत. मुंबई पोर्ट ट्रस्टचे कायदेविषयक सल्लागार म्हणूनही त्यांनी काम केले आहे. बी.एस्सी., बी.जर्नॅलिझम, डी.फार्म., एलएल.एम. आणि पीएच.डी. (कायदा) या शैक्षणिक पात्रतेच्या बळावर ते कायदेविषयक मार्गदर्शन आणि नागरिकांमध्ये कायदेविषयक जागरूकता निर्माण करण्यासाठी कार्यरत आहेत.",
+    profileEn: "A retired judge, senior advocate, legal advisor, and arbitration and mediation expert with extensive judicial experience and qualifications including LL.M. and Ph.D. in Law."
+  },
+  {
+    roleMr: "पत्रकार व निवडणूक रणनीतिकार",
+    roleEn: "Journalist & Election Strategist",
+    nameMr: "श्री. संदिप जाधव",
+    nameEn: "Shri Sandip Jadhav",
+    stateMr: "महाराष्ट्र / भारत",
+    stateEn: "Maharashtra / India",
+    profileMr: "श्री. संदिप जाधव हे पत्रकार, प्रभावी वक्ते, निवडणूक रणनीतिकार, राजकीय विश्लेषक आणि Hashtag Media Network चे संस्थापक आहेत. गेल्या ८ वर्षांहून अधिक काळ त्यांनी राज्य व देशपातळीवरील माध्यम समूहांमध्ये काम केले आहे. ग्राउंड रिपोर्टिंग, शोध पत्रकारिता, राजकीय विश्लेषण आणि जनहिताच्या विषयांची तथ्याधारित मांडणी ही त्यांची प्रमुख ताकद आहे. विविध राज्यांतील निवडणूक मोहिमा, राजकीय संवाद आणि कॅम्पेन मॅनेजमेंटमध्ये त्यांनी भूमिका बजावली असून, संविधान, लोकशाही, सामाजिक परिवर्तन आणि पत्रकारितेची जबाबदारी या विषयांवर ते मार्गदर्शन करतात.",
+    profileEn: "A journalist, public speaker, political analyst, election strategist, and founder of Hashtag Media Network, known for ground reporting, campaign management, and fact-based public communication."
   }
 ];
 
@@ -223,7 +213,7 @@ export const futureRoadmapPhases = [
     phase: "PHASE 03",
     titleMr: "प्रशिक्षण व कौशल्य विकास",
     titleEn: "Training & Skill Development",
-    descMr: "डिजिटल पत्रकारिता, सोशल मीडिया, तथ्य पडताळणी, सायबर सुरक्षा, कायदेशीर जागरूकता आणि आधुनिक पत्रकारितेसाठी प्रशिक्षण उपक्रम व पत्रकार कार्यशाळेचे आयोजन.सोबतच Meet the Press कार्यक्रम, पत्रकार सुरक्षा व हक्क संरक्षण अभियान, माध्यम संशोधन व अभ्यास प्रकल्प,मानवाधिकार जनजागृती उपक्रम,पर्यावरण संरक्षण मोहिमा,पत्रकारिता नैतिकता विषयक मार्गदर्शन,स्मरणिका, नियतकालिके आणि डिजिटल प्रकाशन,सामाजिक सेवा आणि जनहिताचे विशेष अभियान",
+    descMr: "डिजिटल पत्रकारिता, सोशल मीडिया, तथ्य पडताळणी, सायबर सुरक्षा, कायदेशीर जागरूकता आणि आधुनिक पत्रकारितेसाठी प्रशिक्षण उपक्रम व पत्रकार कार्यशाळेचे आयोजन.सोबतच Meet the Press कार्यक्रम, पत्रकार सुरक्षा व हक्क संरक्षण अभियान, माध्यम संशोधन व अभ्यास प्रकल्प,मानवाधिकार जनजागृती उपक्रम,पर्यावरण संरक्षण मोहिमा,पत्रकारिता नैतिकता विषयक मार्गदर्शन,स्मरणिका, नियतकालिके आणि डिजिटल प्रकाशन,सामा���िक सेवा आणि जनहिताचे विशेष अभियान",
     descEn: "Training programs and journalist workshops on digital journalism, social media, fact checking, cyber security, legal awareness, Meet the Press events, and public interest initiatives."
   },
   {

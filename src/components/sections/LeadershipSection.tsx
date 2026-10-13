@@ -44,16 +44,16 @@ export function LeadershipSection() {
                     {lang === 'mr' ? member.nameMr : member.nameEn}
                   </h4>
                   <div className="text-xs text-neutral-500 font-semibold">
-                    📍 {lang === 'mr' ? member.stateMr : member.stateEn}
+                    {lang === 'mr' ? 'कार्य क्षेत्र: ' : 'Area: '}
+                    {lang === 'mr' ? member.stateMr : member.stateEn}
                   </div>
                 </div>
 
-                {/* Short Profile from PDF Page 16 */}
                 <div className="border-t border-[#172A4A]/10 mt-3 pt-3">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-400 block mb-1">
-                    Short Profile
+                    {lang === 'mr' ? 'परिचय' : 'Profile'}
                   </span>
-                  <p className="text-xs text-neutral-600 font-medium">
+                  <p className="text-xs leading-relaxed text-neutral-600 font-medium">
                     {lang === 'mr' ? member.profileMr : member.profileEn}
                   </p>
                 </div>
