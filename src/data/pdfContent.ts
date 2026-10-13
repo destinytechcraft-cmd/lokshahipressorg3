@@ -189,14 +189,15 @@ export const leadershipMembers = [
     profileEn: "Statewide District & Taluka Organization Builder"
   },
   {
-    roleMr: "महाराष्ट्र कार्याध्यक्ष",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-nPmtHFGfs7l2M7bvSSBrcQ7f6bbycj.png",
+    roleMr: "महाराष्ट्र प्रदेश कार्याध्यक्ष",
     roleEn: "Maharashtra State Working President",
-    nameMr: "नाव",
-    nameEn: "Name",
+    nameMr: "श्री. सनम पाटील",
+    nameEn: "Shri. Sanam Patil",
     stateMr: "महाराष्ट्र",
     stateEn: "Maharashtra",
-    profileMr: "राज्यस्तरीय दैनंदिन कामकाज व कार्यक्रम संचालन",
-    profileEn: "State Day-to-Day Operations & Program Executive"
+    profileMr: "नवी मुंबई क्राईम न्यूज, नवी मुंबई समाचार न्यूज आणि विथ महाराष्ट्र यांसारख्या माध्यमसमूहांमध्ये कार्यरत असलेले सक्रिय पत्रकार. प्रिंट व डिजिटल मीडियाच्या माध्यमातून जनतेचे प्रश्न, अन्याय, शोषित व वंचित घटकांचे प्रश्न निर्भीडपणे मांडणारे आणि सामान्य नागरिकांना न्याय मिळवून देण्यासाठी प्रयत्नशील. महाराष्ट्र प्रदेश कार्याध्यक्ष म्हणून पत्रकारांच्या हक्कांचे संरक्षण, संघटनात्मक बळकटीकरण आणि जनतेच्या प्रश्नांना प्रभावी व्यासपीठ देण्यासाठी कार्यरत.",
+    profileEn: "An active journalist who has worked with media groups including Navi Mumbai Crime News, Navi Mumbai Samachar News and With Maharashtra. Through print and digital media, he fearlessly highlights public issues, injustice and the concerns of marginalized communities while working to secure justice for citizens. As Maharashtra State Working President, he works to protect journalists' rights, strengthen the organization and provide a strong platform for public concerns."
   },
   {
     roleMr: "मंत्रालय कामकाज समिती अध्यक्ष",
