@@ -147,14 +147,15 @@ export const leadershipMembers = [
     profileEn: "An experienced professional in journalism, ministry affairs, administrative coordination and public relations. After studying law and journalism, he wrote for leading newspapers and worked as a coordinator with central government departments and committees in Delhi, contributing to foreign investment, employment generation and citizen-administration coordination."
   },
   {
-    roleMr: "राष्ट्रीय संघटनमंत्री",
-    roleEn: "National Organizing Secretary",
-    nameMr: "नाव",
-    nameEn: "Name",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-9psnSInNWaPhm3LVlaJNUVRrTClwKw.png",
+    roleMr: "राष्ट्रीय संघटन मंत्री",
+    roleEn: "National Organizing Minister",
+    nameMr: "ज्ञानेश्वर बुधवत",
+    nameEn: "Dnyaneshwar Budhwat",
     stateMr: "महाराष्ट्र / भारत",
     stateEn: "Maharashtra / India",
-    profileMr: "देशव्यापी संघटन विस्तार व सदस्य संपर्क",
-    profileEn: "Nationwide Network & Membership Expansion"
+    profileMr: "दैनिक लोकनेता या वर्तमानपत्राचे मुख्य संपादक. निर्भीड पत्रकारिता, सामाजिक बांधिलकी आणि जनहिताच्या प्रश्नांवरील परखड लेखणीसाठी ओळखले जातात. शेतकरी, शोषित व वंचित घटकांच्या प्रश्नांना व्यासपीठ देत पत्रकार संघटनांमध्ये सक्रिय योगदान देणारे आणि राष्ट्रीय स्तरावर संघटनात्मक बळकटीकरण, पत्रकार हक्कांचे संरक्षण व लोकशाही मूल्यांच्या संवर्धनासाठी कार्यरत.",
+    profileEn: "Editor-in-Chief of the daily Lokneta, known for fearless journalism, social commitment and strong advocacy of public-interest issues. He amplifies the concerns of farmers and marginalized communities and works nationally to strengthen the organization, protect journalists' rights and uphold democratic values."
   },
   {
     roleMr: "महाराष्ट्र प्रदेश अध्यक्ष",
@@ -173,7 +174,7 @@ export const leadershipMembers = [
     nameEn: "Name",
     stateMr: "महाराष्ट्र",
     stateEn: "Maharashtra",
-    profileMr: "विभागीय व जिल्हास्तरीय कार्य समन्वयक",
+    profileMr: "विभागीय व जि���्हास्तरीय कार्य समन्वयक",
     profileEn: "Divisional & District Operations Coordinator"
   },
   {
@@ -292,7 +293,7 @@ export const sampleEvents = [
     placeEn: "Location",
     dateMr: "दिनांक",
     dateEn: "Date",
-    organizerMr: "आयोजक / समिती",
+    organizerMr: "आयोजक / सम���ती",
     organizerEn: "Organizer / Committee",
     descMr: "कार्यक्रमाची माहिती",
     descEn: "Program Details"
