@@ -86,7 +86,7 @@ export function Hero({
     <section className="w-full bg-[#F7F3EC] sm:py-3 md:py-5">
       <div className="mx-auto w-full max-w-6xl px-0 sm:px-4">
         <div
-          className="relative w-full aspect-[16/9] min-h-[235px] max-h-[310px] sm:aspect-auto sm:h-[580px] md:h-[660px] lg:h-[720px] xl:h-[760px] flex items-end justify-start overflow-hidden sm:rounded-2xl md:rounded-3xl border-b-4 sm:border-2 sm:border-b-4 border-[#E30620] bg-[#0B1E36] sm:shadow-lg"
+          className="relative w-full aspect-[16/9] min-h-[235px] max-h-[310px] sm:aspect-auto sm:min-h-0 sm:max-h-none sm:h-[460px] md:h-[530px] lg:h-[580px] xl:h-[620px] flex items-end justify-start overflow-hidden sm:rounded-2xl md:rounded-3xl border-b-4 sm:border-2 sm:border-b-4 border-[#E30620] bg-[#0B1E36] sm:shadow-lg"
         >
           {/* Background Image Slides with Smooth Crossfade */}
           <div className="absolute inset-0 w-full h-full overflow-hidden select-none pointer-events-none z-0">
@@ -120,7 +120,7 @@ export function Hero({
           </div>
 
           {/* Hero Foreground Content - Positioned to Left Bottom */}
-          <div className="relative z-10 w-full px-3.5 sm:px-6 md:px-8 pb-6 sm:pb-8 md:pb-12 pt-2 sm:pt-6 flex flex-col items-start justify-end text-left mr-auto">
+          <div className="relative z-10 w-full px-3.5 sm:px-6 md:px-8 pb-6 sm:pb-7 md:pb-9 pt-2 sm:pt-6 flex flex-col items-start justify-end text-left mr-auto">
             <div className="flex flex-col items-start text-left max-w-4xl lg:max-w-5xl">
               {/* Top Eyebrow Header */}
               <div className="flex flex-wrap items-center justify-start gap-1 sm:gap-2.5 mb-1 sm:mb-2">
