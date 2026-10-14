@@ -16,11 +16,11 @@ export function OrgNetworkSection() {
   return (
     <SectionShell id="org-network" title={t('sec_org_network')}>
       <div className="space-y-6 text-left">
-        <div className="rounded-xl border-2 border-neutral-300 bg-neutral-50 p-6">
-          <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
+        <div className="rounded-2xl border-2 border-blue-500/70 bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/20 p-6 sm:p-7 shadow-xs">
+          <p className="text-sm sm:text-base md:text-[17px] text-[#172A4A]/90 leading-relaxed font-medium">
             {lang === 'mr'
-              ? 'महासंघाचे कार्यक्षेत्र संपूर्ण भारतभर विस्तारलेले असून विविध राज्ये, विभाग, जिल्हे आणि स्थानिक स्तरांवर संघटनात्मक जाळे उभारण्याचे कार्य सातत्याने सुरू आहे. गेल्या ११ वर्षांपासून पत्रकारिता, सामाजिक बांधिलकी आणि लोकशाही मूल्यांच्या संरक्षणासाठी लोकशाही परिवाराच काम सुरू असून शासनमान्य नोंदणी मात्र अलीकडच्या काळात झाली आहे.'
-              : 'The federation’s reach is spread across India and the work of building an organizational network across states, divisions, districts and local levels is ongoing.'}
+              ? 'महासंघाचे कार्यक्षेत्र संपूर्ण भारतभर विस्तारलेले असून विविध राज्ये, विभाग, जिल्हे आणि स्थानिक स्तरांवर संघटनात्मक जाळे उभारण्याचे कार्य सातत्याने सुरू आहे. गेल्या ११ वर्षांपासून पत्रकारिता, सामाजिक बांधिलकी आणि लोकशाही मूल्यांच्या संरक्षणासाठी लोकशाही परिवाराचे काम सुरू असून शासनमान्य नोंदणी मात्र अलीकडच्या काळात झाली आहे.'
+              : 'The federation’s reach is spread across India and the work of building an organizational network across states, divisions, districts and local levels is ongoing. Operating continuously for over 11 years, the Lokshahi Pariwar has actively worked for media rights, social accountability, and constitutional democracy, with formal registration in recent times.'}
           </p>
         </div>
 

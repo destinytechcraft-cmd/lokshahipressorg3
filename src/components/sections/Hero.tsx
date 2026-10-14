@@ -192,8 +192,15 @@ export function HeroIntroSection({
   return (
     <section className="bg-white border-b border-[#172A4A]/15 py-10 sm:py-14 text-left">
       <div className="mx-auto w-full max-w-6xl px-4">
-        <div className="rounded-2xl border-2 border-[#172A4A]/10 bg-[#F7F3EC]/60 p-6 sm:p-9 shadow-xs">
-          <div className="border-l-4 border-[#E30620] pl-4 sm:pl-5 mb-5">
+        <div className="relative rounded-3xl border-2 border-[#172A4A]/15 bg-gradient-to-br from-[#FAF8F5] via-white to-[#F7F3EC]/80 p-6 sm:p-9 shadow-md overflow-hidden">
+          {/* Subtle National Tricolor Top Stripe */}
+          <div className="absolute top-0 left-0 right-0 h-1.5 flex">
+            <div className="flex-1 bg-[#FF9933]" />
+            <div className="flex-1 bg-white" />
+            <div className="flex-1 bg-[#138808]" />
+          </div>
+
+          <div className="border-l-4 border-[#E30620] pl-4 sm:pl-5 mb-5 mt-1">
             <span className="text-[10px] sm:text-xs font-black uppercase tracking-[0.25em] text-[#E30620] block mb-1">
               {lang === 'mr' ? 'राष्ट्रीय नोंदणीकृत व्यासपीठ' : 'NATIONALLY REGISTERED PLATFORM'}
             </span>
@@ -253,17 +260,17 @@ export function HeroIntroSection({
               </a>
             </div>
 
-            {/* लोकशाही परिवार — पत्रकारांचे एक राष्ट्रीय कुटुंब */}
-            <div className="rounded-2xl border border-[#172A4A]/15 bg-white p-5 sm:p-6 shadow-xs text-left">
-              <h4 className="flex items-center gap-2 text-base sm:text-lg font-black text-[#172A4A] mb-2.5">
-                <span className="text-lg">🏛️</span>
+            {/* लोकशाही परिवार ,पत्रकारांचे एक राष्ट्रीय कुटुंब */}
+            <div className="rounded-2xl border-2 border-amber-500/80 bg-gradient-to-br from-amber-50/60 via-white to-orange-50/30 p-5 sm:p-7 shadow-xs text-left">
+              <h4 className="flex items-center gap-2 text-lg sm:text-xl md:text-2xl font-black text-[#172A4A] leading-snug tracking-tight mb-3">
+                <span className="text-xl sm:text-2xl">🏛️</span>
                 <span>
                   {lang === 'mr'
-                    ? 'लोकशाही परिवार — पत्रकारांचे एक राष्ट्रीय कुटुंब'
-                    : 'Lokshahi Pariwar — A National Family of Journalists'}
+                    ? 'लोकशाही परिवार ,पत्रकारांचे एक राष्ट्रीय कुटुंब'
+                    : 'Lokshahi Pariwar, A National Family of Journalists'}
                 </span>
               </h4>
-              <p className="text-xs sm:text-sm text-[#172A4A]/85 leading-relaxed font-medium">
+              <p className="text-sm sm:text-base md:text-[16.5px] text-[#172A4A]/90 leading-relaxed font-medium">
                 {lang === 'mr' ? (
                   <>
                     <span className="text-[#E30620] font-black">लोक</span>शाही पत्रकार महासंघ भारत ही केवळ पत्रकारांची संघटना नसून पत्रकार, समाजसेवक आणि लोकशाही मूल्यांवर विश्वास ठेवणाऱ्या नागरिकांचे एक संयुक्त राष्ट्रीय कुटुंब आहे. समाजहित, पत्रकारांचे संरक्षण आणि समाजसेवकांच्या कल्याणाचा विचार करून महासंघ विविध सामाजिक, शैक्षणिक आणि जनहिताचे उपक्रम सातत्याने राबवितो.
@@ -277,13 +284,13 @@ export function HeroIntroSection({
             </div>
 
             {/* निर्भय पत्रकारितेच्या रक्षणाचा ठाम निर्धार */}
-            <div className="rounded-2xl border border-[#172A4A]/15 bg-white p-5 sm:p-6 shadow-xs text-left">
-              <h4 className="text-base sm:text-lg font-black text-[#172A4A] mb-2.5">
+            <div className="rounded-2xl border-2 border-blue-500/80 bg-gradient-to-br from-blue-50/60 via-white to-indigo-50/30 p-5 sm:p-7 shadow-xs text-left">
+              <h4 className="text-lg sm:text-xl md:text-2xl font-black text-[#172A4A] leading-snug tracking-tight mb-3">
                 {lang === 'mr'
                   ? 'निर्भय पत्रकारितेच्या रक्षणाचा ठाम निर्धार :'
                   : 'Firm Commitment to Protecting Fearless Journalism :'}
               </h4>
-              <p className="text-xs sm:text-sm md:text-base text-[#172A4A]/85 leading-relaxed font-medium">
+              <p className="text-sm sm:text-base md:text-[16.5px] text-[#172A4A]/90 leading-relaxed font-medium">
                 {lang === 'mr'
                   ? '“जेव्हा एखादा पत्रकार धाडसी शोधपत्रकारिता करून सत्य जनतेसमोर आणतो, तेव्हा अनेकदा त्याच्यावर दबाव, धमक्या, खोटे गुन्हे किंवा अन्याय होण्याची शक्यता निर्माण होते. अशा प्रत्येक प्रसंगी लोकशाही पत्रकार महासंघ भारत संबंधित पत्रकाराच्या न्याय, संरक्षण आणि सन्मानासाठी ठामपणे त्यांच्या पाठीशी उभा राहतो. आमचा ठाम विश्वास आहे की निर्भय पत्रकारितेचे संरक्षण म्हणजेच लोकशाहीचे संरक्षण.”'
                   : '“When a journalist undertakes daring investigative journalism to bring truth before the public, they often face pressure, threats, false cases, or injustice. On every such occasion, Lokshahi Patrakar Mahasangh Bharat stands firmly behind them for their justice, protection, and dignity. We firmly believe that defending fearless journalism is defending democracy itself.”'}

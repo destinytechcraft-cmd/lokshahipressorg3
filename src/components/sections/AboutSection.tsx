@@ -63,13 +63,16 @@ export function AboutSection({ isHome = false }: { isHome?: boolean }) {
           {!isHome && (
             <>
               {/* Lokshahi Family Card */}
-              <div className="rounded-2xl border-2 border-black bg-white p-5 sm:p-5.5 shadow-xs text-left">
-                <h3 className="text-base sm:text-lg font-black text-black tracking-tight mb-2">
-                  {lang === 'mr'
-                    ? 'लोकशाही परिवार — पत्रकारांचे एक राष्ट्रीय कुटुंब'
-                    : 'Lokshahi Family — A National Journalist Community'}
+              <div className="rounded-2xl border-2 border-amber-500/80 bg-gradient-to-br from-amber-50/60 via-white to-orange-50/30 p-5 sm:p-7 shadow-xs text-left">
+                <h3 className="flex items-center gap-2 text-lg sm:text-xl md:text-2xl font-black text-[#172A4A] tracking-tight leading-snug mb-3">
+                  <span className="text-xl sm:text-2xl">🏛️</span>
+                  <span>
+                    {lang === 'mr'
+                      ? 'लोकशाही परिवार ,पत्रकारांचे एक राष्ट्रीय कुटुंब'
+                      : 'Lokshahi Family, A National Journalist Community'}
+                  </span>
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-800 leading-relaxed font-normal not-italic">
+                <p className="text-sm sm:text-base md:text-[16.5px] text-neutral-800 leading-relaxed font-normal not-italic">
                   {lang === 'mr'
                     ? 'लोकशाही पत्रकार महासंघ भारत ही केवळ पत्रकारांची संघटना नसून पत्रकार, समाजसेवक आणि लोकशाही मूल्यांवर विश्वास ठेवणाऱ्या नागरिकांचे एक संयुक्त राष्ट्रीय कुटुंब आहे. समाजहित, पत्रकारांचे संरक्षण आणि समाजसेवकांच्या कल्याणाचा विचार करून महासंघ विविध सामाजिक, शैक्षणिक आणि जनहिताचे उपक्रम सातत्याने राबवितो.'
                     : 'Lokshahi Patrakar Mahasangh Bharat is not merely an occupational union, but a unified national family of truth-seeking journalists, social reformers, and citizens dedicated to constitutional democracy. Prioritizing public interest and journalists’ security, the federation regularly undertakes social, educational, and welfare initiatives nationwide.'}
@@ -77,13 +80,13 @@ export function AboutSection({ isHome = false }: { isHome?: boolean }) {
               </div>
 
               {/* Fearless Journalism Defense */}
-              <div className="rounded-2xl border-2 border-black bg-white p-5 sm:p-5.5 shadow-xs text-left">
-                <h3 className="text-base sm:text-lg font-black text-black tracking-tight mb-2">
+              <div className="rounded-2xl border-2 border-blue-500/80 bg-gradient-to-br from-blue-50/60 via-white to-indigo-50/30 p-5 sm:p-7 shadow-xs text-left">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-black text-[#172A4A] tracking-tight leading-snug mb-3">
                   {lang === 'mr'
-                    ? 'निर्भय पत्रकारितेच्या रक्षणाचा ठाम निर्धार'
-                    : 'Uncompromising Defense of Fearless Journalism'}
+                    ? 'निर्भय पत्रकारितेच्या रक्षणाचा ठाम निर्धार :'
+                    : 'Uncompromising Defense of Fearless Journalism :'}
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-800 leading-relaxed font-normal not-italic">
+                <p className="text-sm sm:text-base md:text-[16.5px] text-neutral-800 leading-relaxed font-normal not-italic">
                   {lang === 'mr'
                     ? 'जेव्हा एखादा पत्रकार धाडसी शोधपत्रकारिता करून सत्य जनतेसमोर आणतो, तेव्हा अनेकदा त्याच्यावर दबाव, धमक्या, खोटे गुन्हे किंवा अन्याय होण्याची शक्यता निर्माण होते. अशा प्रत्येक प्रसंगी लोकशाही पत्रकार महासंघ भारत संबंधित पत्रकाराच्या न्याय, संरक्षण आणि सन्मानासाठी ठामपणे त्यांच्या पाठीशी उभा राहतो. आमचा ठाम विश्वास आहे की निर्भय पत्रकारितेचे संरक्षण म्हणजेच लोकशाहीचे संरक्षण.'
                     : 'When any journalist uncovers systemic corruption through fearless investigative reporting, they often face intimidation, false FIRs, and harassment. In every such crisis, Lokshahi Patrakar Mahasangh Bharat stands firmly behind them for justice, security, and honor. Protecting fearless journalism is protecting democracy.'}

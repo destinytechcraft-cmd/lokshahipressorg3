@@ -15,6 +15,7 @@ import { SocialSection } from './components/sections/SocialSection';
 import { AchievementsSection } from './components/sections/AchievementsSection';
 import { RoadmapSection } from './components/sections/RoadmapSection';
 import { MediaSection } from './components/sections/MediaSection';
+import { DigitalBlogSection } from './components/sections/DigitalBlogSection';
 import { EventsSection } from './components/sections/EventsSection';
 import { MembershipSection } from './components/sections/MembershipSection';
 import { HelpDeskSection } from './components/sections/HelpDeskSection';
@@ -22,8 +23,10 @@ import { GrievanceSection } from './components/sections/GrievanceSection';
 import { LeadershipSection } from './components/sections/LeadershipSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { OrgNetworkSection } from './components/sections/OrgNetworkSection';
+import { HomeOrgPreview } from './components/sections/HomeOrgPreview';
 import { GallerySection } from './components/sections/GallerySection';
 import { JoinMembershipModal, QuickIssueModal } from './components/modals/InteractiveModals';
+import { FloatingWhatsApp } from './components/common/FloatingWhatsApp';
 import type { DictKey } from './types';
 
 export default function App() {
@@ -121,6 +124,7 @@ export default function App() {
             <PageHero titleKey="nav_media" onNavigate={navigate} />
             <MediaCoverage />
             <MediaSection />
+            <DigitalBlogSection />
           </>
         );
 
@@ -185,6 +189,8 @@ export default function App() {
               onVoiceClick={() => navigate('/help-desk')}
               onKnowMoreClick={() => navigate('/about')}
             />
+            {/* Added only on homepage before भारतभर संघटनात्मक जाळे */}
+            <HomeOrgPreview onSeeMore={() => navigate('/organisation')} />
             <OrgNetworkSection />
             <MediaCoverage />
           </>
@@ -197,6 +203,9 @@ export default function App() {
       <PageShell nameKey={nameKey} currentPath={currentPath} onNavigate={navigate}>
         {renderPageContent()}
       </PageShell>
+
+      {/* Persistent Floating WhatsApp Support for whole website */}
+      <FloatingWhatsApp />
 
       {/* Interactive Modals */}
       <JoinMembershipModal

@@ -14,28 +14,58 @@ export default defineConfig(() => {
           server.middlewares.use('/api/embed-site', async (_req, res) => {
             try {
               const https = await import('https');
-              https.get('https://sites.google.com/view/lokshahipressorg/home', (targetRes) => {
-                let body = '';
-                targetRes.on('data', (chunk) => (body += chunk));
-                targetRes.on('end', () => {
-                  const modified = body.replace(
-                    '<head>',
-                    '<head><base href="https://sites.google.com/view/lokshahipressorg/home">'
-                  );
-                  res.writeHead(200, {
-                    'Content-Type': 'text/html; charset=utf-8',
-                    'Access-Control-Allow-Origin': '*',
-                    'Cache-Control': 'no-cache',
+              const fetchPage = (targetUrl: string, redirectCount = 0): void => {
+                if (redirectCount > 5) {
+                  res.writeHead(500, { 'Content-Type': 'text/plain' });
+                  res.end('Too many redirects');
+                  return;
+                }
+                const options = {
+                  headers: {
+                    'User-Agent':
+                      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+                    'Accept':
+                      'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                    'Accept-Language': 'mr,en-US,en;q=0.9',
+                  },
+                };
+                https
+                  .get(targetUrl, options, (targetRes) => {
+                    if (
+                      targetRes.statusCode &&
+                      targetRes.statusCode >= 300 &&
+                      targetRes.statusCode < 400 &&
+                      targetRes.headers.location
+                    ) {
+                      fetchPage(targetRes.headers.location, redirectCount + 1);
+                      return;
+                    }
+                    let body = '';
+                    targetRes.on('data', (chunk) => (body += chunk));
+                    targetRes.on('end', () => {
+                      const modified = body.replace(
+                        '<head>',
+                        '<head><base href="https://sites.google.com/" target="_blank">'
+                      );
+                      res.writeHead(200, {
+                        'Content-Type': 'text/html; charset=utf-8',
+                        'Access-Control-Allow-Origin': '*',
+                        'Cache-Control': 'no-cache',
+                      });
+                      res.end(modified);
+                    });
+                  })
+                  .on('error', () => {
+                    res.writeHead(500, { 'Content-Type': 'text/plain' });
+                    res.end('Failed to fetch site');
                   });
-                  res.end(modified);
-                });
-              });
+              };
+              fetchPage('https://sites.google.com/view/lokshahipressorg/home');
             } catch {
               res.writeHead(500, { 'Content-Type': 'text/plain' });
               res.end('Failed to proxy site');
             }
           });
-
         },
       },
     ],

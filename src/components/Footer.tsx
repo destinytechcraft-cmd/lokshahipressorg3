@@ -73,10 +73,22 @@ export function Footer({ onNavigate }: { onNavigate?: (path: string) => void }) 
                 : 'For journalists’ justice, rights and dignity… For citizens’ justice… In defense of democracy…'}
             </p>
 
-            <div className="pt-2 text-xs sm:text-sm text-[#F7F3EC]/90 font-bold flex flex-wrap items-center gap-x-3 gap-y-1">
-              <span>{lang === 'mr' ? '📍 राष्ट्रीय कार्यालय : उलवे (नवी मुंबई) | राज्य कार्यालय : बदलापूर (ठाणे)' : '📍 National Office : Ulwe (Navi Mumbai) | State Office : Badlapur (Thane)'}</span>
-              <span className="text-white/40">•</span>
-              <a href="mailto:help@lokshahipressorg.com" className="hover:text-[#E30620] transition-colors">✉️ help@lokshahipressorg.com</a>
+            <div className="pt-2 text-xs sm:text-sm text-[#F7F3EC]/90 font-bold space-y-1.5">
+              <div>
+                <span>{lang === 'mr' ? '📍 राष्ट्रीय कार्यालय : नवी मुंबई | राज्य कार्यालय : ठाणे' : '📍 National Office : Navi Mumbai | State Office : Thane'}</span>
+              </div>
+              <div>
+                <a href="mailto:help@lokshahipressorg.com" className="hover:text-[#E30620] transition-colors inline-flex items-center gap-1.5">
+                  <span>✉️</span>
+                  <span>help@lokshahipressorg.com</span>
+                </a>
+              </div>
+              <div>
+                <a href="tel:+918788734440" className="hover:text-[#E30620] transition-colors inline-flex items-center gap-1.5">
+                  <span>📞</span>
+                  <span>+91 878 873 4440</span>
+                </a>
+              </div>
             </div>
           </div>
 

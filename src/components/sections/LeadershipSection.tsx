@@ -18,14 +18,14 @@ export function LeadershipSection() {
           <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
             <span className="text-[11px] font-black uppercase tracking-[0.2em] text-[#E30620] flex items-center gap-1.5">
               <span className="h-2 w-2 rounded-full bg-[#E30620]" />
-              {lang === 'mr' ? 'राष्ट्रीय व प्रांतीय नेतृत्व' : 'National & State Leadership'}
+              {lang === 'mr' ? 'राष्ट्रीय व राज्यस्तरीय नेतृत्व' : 'National & State Leadership'}
             </span>
             <span className="text-xs font-bold text-neutral-500 bg-[#172A4A]/5 px-2.5 py-0.5 rounded-full border border-[#172A4A]/10">
               {lang === 'mr' ? 'लोकशाही पत्रकार महासंघ, भारत' : 'Lokshahi Patrakar Mahasangh Bharat'}
             </span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-black text-[#172A4A] tracking-tight">
-            {lang === 'mr' ? 'टीम लोकशाही — राष्ट्रीय व प्रांतीय नेतृत्व' : 'Team Lokshahi — Apex Leadership Council'}
+            {lang === 'mr' ? 'टीम लोकशाही — राष्ट्रीय व राज्यस्तरीय नेतृत्व' : 'Team Lokshahi — Apex Leadership Council'}
           </h3>
           <p className="mt-2 text-sm font-medium text-neutral-600 max-w-3xl leading-relaxed">
             {lang === 'mr'
