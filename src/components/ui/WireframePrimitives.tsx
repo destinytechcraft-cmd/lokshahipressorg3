@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import type { DictKey } from '../../types';
+import orgBannerImage from '../../assets/images/regenerated_image_1791943561579.jpg';
 
 export function cn(...classes: (string | boolean | undefined | null)[]): string {
   return classes.filter(Boolean).join(' ');
@@ -189,6 +190,8 @@ export function SectionShell({
   className?: string;
   topBanner?: React.ReactNode;
 }) {
+  const { lang } = useLanguage();
+
   return (
     <section id={id} className={cn('border-b border-dashed border-[#172A4A]/20 py-10 sm:py-12', className)}>
       <div className="mx-auto w-full max-w-6xl px-4">
@@ -199,9 +202,25 @@ export function SectionShell({
         )}
         {title && (
           <div className="mb-6 sm:mb-8 flex items-center justify-between gap-2 sm:gap-3 flex-wrap sm:flex-nowrap">
-            <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
-              {icon}
+            <div className="flex flex-col gap-3.5 min-w-0 flex-1">
+              {id === 'organisation' && (
+                <div className="overflow-hidden rounded-2xl border-2 border-[#172A4A]/25 bg-white shadow-md max-w-4xl w-full h-[300px] sm:h-[400px] md:h-[480px] mb-4 mx-auto">
+                  <img
+                    src={orgBannerImage}
+                    alt={lang === 'mr' ? 'लोकशाही पत्रकार महासंघ संघटना रचना' : 'Lokshahi Patrakar Mahasangh Organisation'}
+                    className="w-full h-full object-cover object-center"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.includes('संगठन1.jpeg')) {
+                        target.src = '/संगठन1.jpeg';
+                      }
+                    }}
+                  />
+                </div>
+              )}
               <h2 className="text-base sm:text-2xl font-black tracking-tight text-[#172A4A] min-w-0 break-words leading-tight flex items-center gap-2">
+                {icon}
                 {title}
               </h2>
             </div>

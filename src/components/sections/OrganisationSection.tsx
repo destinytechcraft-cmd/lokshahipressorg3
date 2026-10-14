@@ -7,6 +7,7 @@ interface TierItem {
   titleMr: string;
   titleEn: string;
   descMr: string;
+  descEn: string;
 }
 
 const organizationalTiers: TierItem[] = [
@@ -14,43 +15,50 @@ const organizationalTiers: TierItem[] = [
     id: 'national',
     titleMr: 'राष्ट्रीय स्तर',
     titleEn: 'National Level',
-    descMr: 'सर्वोच्च राष्ट्रीय परिषद • Apex National Body',
+    descMr: 'सर्वोच्च राष्ट्रीय परिषद',
+    descEn: 'Apex National Council',
   },
   {
     id: 'state',
     titleMr: 'राज्य स्तर',
     titleEn: 'State Level',
-    descMr: 'राज्य कार्यकारणी • State Executive Committee',
+    descMr: 'राज्य कार्यकारणी',
+    descEn: 'State Executive Committee',
   },
   {
     id: 'divisional',
     titleMr: 'विभागीय स्तर',
     titleEn: 'Divisional Level',
-    descMr: 'महसूल विभाग स्तर • Revenue Divisional Level',
+    descMr: 'महसूल विभाग स्तर',
+    descEn: 'Revenue Divisional Level',
   },
   {
     id: 'district',
     titleMr: 'जिल्हा स्तर',
     titleEn: 'District Level',
-    descMr: 'जिल्हा कार्यकारणी • District Executive Committee',
+    descMr: 'जिल्हा कार्यकारणी',
+    descEn: 'District Executive Committee',
   },
   {
     id: 'taluka',
     titleMr: 'तालुका स्तर',
     titleEn: 'Taluka Level',
-    descMr: 'तालुका समिती • Taluka Working Committee',
+    descMr: 'तालुका समिती',
+    descEn: 'Taluka Working Committee',
   },
   {
     id: 'city_rural',
     titleMr: 'शहर / ग्रामीण स्तर',
     titleEn: 'City / Rural Level',
-    descMr: 'स्थानिक गाव, शहर व वाडी वस्ती पातळी • Grassroots & Local Level',
+    descMr: 'स्थानिक गाव, शहर व वाडी वस्ती पातळी',
+    descEn: 'Grassroots, City & Rural Level',
   },
   {
     id: 'committees',
     titleMr: 'राष्ट्र, राज्य, व स्थानिक पातळीवरील समित्या',
     titleEn: 'National, State, and Local Level Committees',
-    descMr: '७८ विविध विषय व विकास समित्या • 78 Specialized Subject Committees',
+    descMr: '७८ विविध विषय व विकास समित्या',
+    descEn: '78 Specialized Subject Committees',
   },
 ];
 
@@ -112,7 +120,7 @@ export function OrganisationSection() {
                     {lang === 'mr' ? tier.titleMr : tier.titleEn}
                   </h4>
                   <p className="mt-1 text-xs text-neutral-600 font-medium">
-                    {tier.descMr}
+                    {lang === 'mr' ? tier.descMr : tier.descEn}
                   </p>
                 </div>
 

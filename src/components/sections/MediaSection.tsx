@@ -18,11 +18,13 @@ import {
   Link as LinkIcon,
   Copy,
   Check,
+  Bell,
 } from 'lucide-react';
 
 const EMBED_URL = 'https://sites.google.com/view/lokshahipressorg/home';
 const OFFICIAL_FB_URL = 'https://www.facebook.com/share/1Ekodo5ECG/?mibextid=wwXIfr';
 const OFFICIAL_WA_URL = 'https://wa.me/918788734440';
+const OFFICIAL_YT_URL = 'https://youtube.com/@lokshahipatrakarmahasanghindia?si=Bf0f_OWURoC1FCox';
 
 export function MediaSection() {
   const { t, lang } = useLanguage();
@@ -287,23 +289,21 @@ export function MediaSection() {
       embedSource: 'facebook.com/live/convention-2026',
     },
     {
-      id: 'yt-video-1',
+      id: 'yt-channel-1',
       platform: 'youtube',
-      type: 'video',
-      author: 'Lokshahi Patrakar Media TV',
-      authorMr: 'लोकशाही पत्रकार मीडिया टीव्ही',
-      timeMr: 'काल • 🔴 विशेष प्रसारण',
-      timeEn: 'Yesterday • 🔴 Special Broadcast',
+      type: 'youtube-channel',
+      author: 'Lokshahi Patrakar Mahasangh India',
+      authorMr: 'लोकशाही पत्रकार महासंघ भारत',
+      handle: '@lokshahipatrakarmahasanghindia',
+      timeMr: 'अधिकृत चॅनेल • 🔴 अधिकृत यूट्यूब प्रसारण',
+      timeEn: 'Official Channel • 🔴 Official YouTube Broadcast',
       contentMr:
-        'पत्रकार संरक्षण कायदा आणि डिजिटल मीडिया पत्रकारांचे अधिकार या विषयावर विशेष परिसंवाद. कायदेतज्ज्ञ व ज्येष्ठ पत्रकारांचे महत्त्वपूर्ण मार्गदर्शन व विश्लेषण.',
+        'लोकशाही पत्रकार महासंघाचे अधिकृत यूट्यूब चॅनेल! पत्रकारांचे न्याय्य हक्क, संरक्षण कायदे, राज्यव्यापी अधिवेशने आणि विशेष पत्रकार परिषदांचे थेट प्रक्षेपण पाहण्यासाठी आत्ताच सबस्क्राईब करा.',
       contentEn:
-        'Special panel discussion on journalist protection laws and legal safeguards for digital news creators and field reporters.',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ',
-      thumbnail: '/hero-photo-1.jpg',
-      views: '16.4K views',
-      duration: '18:45',
-      url: 'https://youtube.com',
-      embedSource: 'youtube.com/watch?v=media-rights-panel',
+        'Official YouTube Channel of Lokshahi Patrakar Mahasangh India! Subscribe now for upcoming live press conferences, journalist legal rights sessions, and national conventions.',
+      url: OFFICIAL_YT_URL,
+      embedSource: 'youtube.com/@lokshahipatrakarmahasanghindia',
+      badge: 'OFFICIAL YOUTUBE',
     },
     {
       id: 'fb-post-2',
@@ -584,7 +584,7 @@ export function MediaSection() {
                 }`}
               >
                 <YouTubeIcon size={14} />
-                <span>YouTube Media</span>
+                <span>{lang === 'mr' ? 'यूट्यूब चॅनेल' : 'YouTube Channel'}</span>
               </button>
               <button
                 type="button"
@@ -635,22 +635,24 @@ export function MediaSection() {
                 <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 inline-block" />
               </span>
               <span className="text-[11px] font-bold text-white/70 ml-2 hidden sm:inline">
-                📱 facebook.com/share/1Ekodo5ECG/
+                {activeTab === 'youtube'
+                  ? '📺 youtube.com/@lokshahipatrakarmahasanghindia'
+                  : '📱 facebook.com/share/1Ekodo5ECG/'}
               </span>
             </div>
 
             <div className="flex items-center gap-2 px-3 py-1 bg-white/10 rounded-lg text-[11px] text-white/90 font-mono">
               <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
-              <span>LIVE FEED CAROUSEL</span>
+              <span>{activeTab === 'youtube' ? 'YOUTUBE OFFICIAL EMBED' : 'LIVE FEED CAROUSEL'}</span>
             </div>
 
             <a
-              href={OFFICIAL_FB_URL}
+              href={activeTab === 'youtube' ? OFFICIAL_YT_URL : OFFICIAL_FB_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[11px] text-white hover:text-amber-300 font-bold hidden sm:inline flex items-center gap-1"
             >
-              <span>fb.com/lokshahipress</span>
+              <span>{activeTab === 'youtube' ? 'yt/@lokshahipatrakarmahasanghindia' : 'fb.com/lokshahipress'}</span>
               <ExternalLink className="h-3 w-3" />
             </a>
           </div>
@@ -927,52 +929,58 @@ export function MediaSection() {
                   );
                 }
 
-                // Card 2: YouTube Media Broadcast Embed Card
-                if (post.type === 'video') {
+                // Card 2: YouTube Official Channel Embed Card (embedded perfectly for channel with no videos uploaded yet)
+                if (post.type === 'youtube-channel' || post.platform === 'youtube') {
                   return (
                     <article
                       key={post.id}
-                      className="w-[320px] sm:w-[380px] shrink-0 rounded-2xl border-2 border-[#FF0000]/30 bg-white p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                      className="w-[320px] sm:w-[380px] shrink-0 rounded-2xl border-2 border-[#FF0000]/40 bg-white p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
                     >
                       <div>
-                        {/* Video Author Header */}
+                        {/* Channel Author Header */}
                         <div className="flex items-center justify-between pb-3 border-b border-neutral-100">
                           <div className="flex items-center gap-2.5">
-                            <div className="h-10 w-10 rounded-full border border-neutral-200 bg-white p-0.5 shrink-0 overflow-hidden flex items-center justify-center">
+                            <div className="relative h-11 w-11 rounded-full border-2 border-[#FF0000] p-0.5 bg-white shrink-0 overflow-hidden flex items-center justify-center">
                               <Logo className="h-full w-full object-contain" />
+                              <span className="absolute -bottom-0.5 -right-0.5 rounded-full bg-[#FF0000] p-0.5 text-white shadow-xs">
+                                <YouTubeIcon size={10} />
+                              </span>
                             </div>
                             <div>
                               <div className="flex items-center gap-1">
                                 <h4 className="text-xs sm:text-sm font-black text-[#172A4A] leading-tight">
                                   {lang === 'mr' ? post.authorMr : post.author}
                                 </h4>
+                                <CheckCircle2 className="h-4 w-4 text-[#FF0000] shrink-0 fill-[#FF0000] text-white" />
                               </div>
-                              <p className="text-[10px] text-neutral-500 font-semibold">
-                                {lang === 'mr' ? post.timeMr : post.timeEn}
+                              <p className="text-[10px] text-neutral-500 font-bold font-mono">
+                                @lokshahipatrakarmahasanghindia
                               </p>
                             </div>
                           </div>
-                          <span className="rounded-full bg-red-100 px-2 py-0.5 text-[10px] font-black text-red-700 flex items-center gap-1">
+                          <span className="rounded-full bg-[#FF0000]/10 border border-[#FF0000]/25 px-2.5 py-0.5 text-[10px] font-black text-[#FF0000] flex items-center gap-1">
                             <YouTubeIcon size={12} />
-                            <span>VIDEO</span>
+                            <span>{lang === 'mr' ? 'अधिकृत चॅनेल' : 'OFFICIAL'}</span>
                           </span>
                         </div>
 
-                        {/* Caption Text */}
+                        {/* Caption / Description */}
                         <p className="mt-3 text-xs text-neutral-800 leading-relaxed font-semibold">
                           {lang === 'mr' ? post.contentMr : post.contentEn}
                         </p>
 
-                        {/* Embedded Source Link Pill */}
-                        <div className="mt-2.5 mb-1 flex items-center justify-between text-[10px] font-semibold text-neutral-500 bg-neutral-50 rounded-lg px-2.5 py-1.5 border border-neutral-200/70">
+                        {/* Embedded Source Link Pill with Copy Button */}
+                        <div className="mt-2.5 mb-2 flex items-center justify-between text-[10px] font-semibold text-neutral-500 bg-neutral-50 rounded-lg px-2.5 py-1.5 border border-neutral-200/70">
                           <div className="flex items-center gap-1.5 truncate">
-                            <LinkIcon className="h-3 w-3 text-[#FF0000] shrink-0" />
-                            <span className="truncate text-neutral-700 font-mono font-medium">{post.embedSource}</span>
+                            <YouTubeIcon size={12} className="shrink-0 text-[#FF0000]" />
+                            <span className="truncate text-neutral-700 font-mono font-medium">
+                              youtube.com/@lokshahipatrakarmahasanghindia
+                            </span>
                           </div>
                           <button
                             type="button"
                             onClick={() => handleCopyLink(post.url, post.id)}
-                            className="flex items-center gap-1 text-[10px] font-bold text-[#172A4A] hover:text-[#E30620] transition-colors cursor-pointer shrink-0 ml-2"
+                            className="flex items-center gap-1 text-[10px] font-bold text-[#172A4A] hover:text-[#FF0000] transition-colors cursor-pointer shrink-0 ml-2"
                           >
                             {copiedLink === post.id ? (
                               <>
@@ -988,44 +996,102 @@ export function MediaSection() {
                           </button>
                         </div>
 
-                        {/* Video Media Container with Thumbnail & Play Overlay */}
-                        <div className="relative mt-2 rounded-xl overflow-hidden border border-neutral-200 aspect-video bg-black group cursor-pointer">
-                          <img
-                            src={post.thumbnail}
-                            alt="Video Thumbnail"
-                            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 opacity-85"
-                          />
-                          <a
-                            href={post.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-all"
-                          >
-                            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF0000] text-white shadow-lg transition-transform group-hover:scale-110">
-                              <Play className="h-6 w-6 fill-white ml-0.5" />
+                        {/* Embedded YouTube Channel Player Screen (Optimized for channel with no videos uploaded yet) */}
+                        <div className="relative mt-2 rounded-xl overflow-hidden border border-neutral-800 bg-[#0F0F0F] aspect-[16/10] text-white flex flex-col justify-between p-3.5 shadow-inner group">
+                          {/* Dark Radial Ambience */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-[#1c1c1c] via-[#0f0f0f] to-[#050505] pointer-events-none" />
+                          <div className="absolute -right-6 -top-6 w-28 h-28 rounded-full bg-[#FF0000]/15 blur-2xl pointer-events-none" />
+
+                          {/* Top Embedded Header Bar */}
+                          <div className="relative z-10 flex items-center justify-between border-b border-white/10 pb-2">
+                            <div className="flex items-center gap-1.5">
+                              <span className="flex h-5 w-5 items-center justify-center rounded-md bg-[#FF0000] text-white">
+                                <Play className="h-2.5 w-2.5 fill-white" />
+                              </span>
+                              <span className="text-[11px] font-black tracking-wide">YouTube</span>
+                              <span className="text-[9px] text-neutral-400 font-mono hidden sm:inline">• Channel Hub</span>
+                            </div>
+                            <span className="inline-flex items-center gap-1 rounded-full bg-red-950/80 border border-red-500/40 px-2 py-0.5 text-[9px] font-bold text-red-300">
+                              <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
+                              <span>{lang === 'mr' ? 'अधिकृत चॅनेल' : 'Official Launch'}</span>
                             </span>
-                          </a>
-                          <span className="absolute bottom-2 right-2 rounded-md bg-black/80 px-2 py-0.5 text-[10px] font-mono font-bold text-white">
-                            {post.duration}
-                          </span>
-                          <span className="absolute bottom-2 left-2 rounded-md bg-black/80 px-2 py-0.5 text-[10px] font-sans font-bold text-white">
-                            {post.views}
-                          </span>
+                          </div>
+
+                          {/* Center Screen: Official Logo & Launch Notification */}
+                          <div className="relative z-10 my-auto text-center py-1">
+                            <div className="mx-auto mb-1.5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#172A4A] to-[#E30620] p-1.5 shadow-lg border border-white/20">
+                              <Logo className="h-full w-full object-contain filter drop-shadow" />
+                            </div>
+                            <h5 className="text-xs font-black text-white tracking-tight line-clamp-1">
+                              {lang === 'mr' ? 'लोकशाही पत्रकार महासंघ भारत' : 'Lokshahi Patrakar Mahasangh India'}
+                            </h5>
+                            <p className="mt-0.5 text-[10px] font-medium text-neutral-300">
+                              {lang === 'mr'
+                                ? 'नवीन व्हिडिओ व थेट प्रक्षेपण लवकरच!'
+                                : 'New Videos & Live Streams Premiering Soon!'}
+                            </p>
+
+                            {/* Embedded In-Player Subscribe CTA */}
+                            <a
+                              href={post.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="mt-2.5 inline-flex items-center gap-1.5 rounded-full bg-[#FF0000] hover:bg-[#cc0000] text-white px-4 py-1.5 text-[11px] font-black shadow-md transition-all hover:scale-105 active:scale-95"
+                            >
+                              <YouTubeIcon size={13} />
+                              <span>{lang === 'mr' ? 'चॅनेल सबस्क्राईब करा' : 'Subscribe to Channel'}</span>
+                              <ExternalLink className="h-3 w-3" />
+                            </a>
+                          </div>
+
+                          {/* Bottom Info Bar of Player */}
+                          <div className="relative z-10 flex items-center justify-between pt-2 border-t border-white/10 text-[9px] text-neutral-400">
+                            <span className="flex items-center gap-1 font-mono text-neutral-300">
+                              <Bell className="h-3 w-3 text-amber-400 fill-amber-400" />
+                              <span>{lang === 'mr' ? 'सर्व नोटिफिकेशन्स सुरू ठेवा' : 'Turn on Notifications'}</span>
+                            </span>
+                            <span className="font-bold text-red-400 font-mono">@lokshahipatrakarmahasanghindia</span>
+                          </div>
+                        </div>
+
+                        {/* Broadcast Pillars Row */}
+                        <div className="mt-2.5 grid grid-cols-2 gap-1.5 text-[10px] font-semibold text-neutral-700">
+                          <div className="flex items-center gap-1 rounded-lg bg-neutral-50 border border-neutral-200/80 px-2 py-1.5">
+                            <span className="text-red-500 font-bold shrink-0">🔴</span>
+                            <span className="truncate">{lang === 'mr' ? 'थेट पत्रकार परिषद' : 'Live Press Briefings'}</span>
+                          </div>
+                          <div className="flex items-center gap-1 rounded-lg bg-neutral-50 border border-neutral-200/80 px-2 py-1.5">
+                            <span className="text-blue-600 font-bold shrink-0">🛡️</span>
+                            <span className="truncate">{lang === 'mr' ? 'पत्रकार हक्क मार्गदर्शन' : 'Legal Rights Series'}</span>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Video Actions */}
-                      <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-between">
+                      {/* Card Action Bar */}
+                      <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center gap-2">
                         <a
                           href={post.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 text-xs font-black text-[#FF0000] hover:underline"
+                          className="flex items-center justify-center gap-2 flex-1 rounded-xl bg-[#FF0000] hover:bg-[#cc0000] py-2.5 text-xs font-black text-white shadow-xs transition-colors"
                         >
                           <YouTubeIcon size={16} />
-                          <span>{lang === 'mr' ? 'यूट्यूबवर व्हिडिओ पहा' : 'Watch on YouTube'}</span>
+                          <span>{lang === 'mr' ? 'यूट्यूबवर चॅनेल उघडा' : 'Open Official Channel'}</span>
+                          <ExternalLink className="h-3.5 w-3.5" />
                         </a>
-                        <span className="text-[10px] text-neutral-400 font-bold">1080p HD</span>
+                        <a
+                          href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+                            (lang === 'mr'
+                              ? 'लोकशाही पत्रकार महासंघाचे अधिकृत यूट्यूब चॅनेल जॉइन करा आणि सबस्क्राईब करा: '
+                              : 'Subscribe to Lokshahi Patrakar Mahasangh India Official YouTube Channel: ') + post.url
+                          )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={lang === 'mr' ? 'व्हॉट्सॲपवर शेअर करा' : 'Share on WhatsApp'}
+                          className="flex items-center justify-center h-9 w-9 rounded-xl bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors shrink-0"
+                        >
+                          <WhatsAppIcon size={18} />
+                        </a>
                       </div>
                     </article>
                   );
@@ -1258,248 +1324,7 @@ export function MediaSection() {
             </div>
           </div>
 
-          {/* Quick Embedded Channels & Permanent Links Directory Strip */}
-          <div className="border-t border-neutral-200/80 bg-white p-4 sm:p-5">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-3">
-              <div className="flex items-center gap-2">
-                <LinkIcon className="h-4 w-4 text-[#E30620]" />
-                <span className="text-xs font-black uppercase tracking-wider text-[#172A4A]">
-                  {lang === 'mr' ? 'अधिकृत सोशल व मीडिया एम्बेड लिंक्स' : 'Official Social & Media Embedded Links'}
-                </span>
-              </div>
-              <span className="text-[10px] font-bold text-neutral-500">
-                {lang === 'mr' ? 'थेट उघडा व अधिकृत अपडेट्स मिळवा' : 'Click to visit and connect with the federation'}
-              </span>
-            </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              <a
-                href={OFFICIAL_FB_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between p-3 rounded-xl border border-neutral-200 bg-neutral-50 hover:bg-blue-50 hover:border-[#1877F2] transition-all group"
-              >
-                <div className="flex items-center gap-2.5 min-w-0">
-                  <FacebookIcon size={20} />
-                  <div className="min-w-0 text-left">
-                    <p className="text-xs font-black text-[#172A4A] truncate">Facebook Page</p>
-                    <p className="text-[10px] text-neutral-500 font-mono truncate">facebook.com/share/1Ekodo5ECG</p>
-                  </div>
-                </div>
-                <ExternalLink className="h-3.5 w-3.5 text-neutral-400 group-hover:text-[#1877F2] shrink-0" />
-              </a>
-
-              <a
-                href={OFFICIAL_WA_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between p-3 rounded-xl border border-neutral-200 bg-neutral-50 hover:bg-emerald-50 hover:border-[#25D366] transition-all group"
-              >
-                <div className="flex items-center gap-2.5 min-w-0">
-                  <WhatsAppIcon size={20} />
-                  <div className="min-w-0 text-left">
-                    <p className="text-xs font-black text-[#172A4A] truncate">WhatsApp 24x7 Helpdesk</p>
-                    <p className="text-[10px] text-neutral-500 font-mono truncate">wa.me/918788734440</p>
-                  </div>
-                </div>
-                <ExternalLink className="h-3.5 w-3.5 text-neutral-400 group-hover:text-[#25D366] shrink-0" />
-              </a>
-
-              <a
-                href={EMBED_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between p-3 rounded-xl border border-neutral-200 bg-neutral-50 hover:bg-amber-50 hover:border-amber-400 transition-all group"
-              >
-                <div className="flex items-center gap-2.5 min-w-0">
-                  <span className="text-lg">🌐</span>
-                  <div className="min-w-0 text-left">
-                    <p className="text-xs font-black text-[#172A4A] truncate">Google Sites News Portal</p>
-                    <p className="text-[10px] text-neutral-500 font-mono truncate">sites.google.com/view/lokshahipressorg</p>
-                  </div>
-                </div>
-                <ExternalLink className="h-3.5 w-3.5 text-neutral-400 group-hover:text-amber-600 shrink-0" />
-              </a>
-
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between p-3 rounded-xl border border-neutral-200 bg-neutral-50 hover:bg-red-50 hover:border-[#FF0000] transition-all group"
-              >
-                <div className="flex items-center gap-2.5 min-w-0">
-                  <YouTubeIcon size={20} />
-                  <div className="min-w-0 text-left">
-                    <p className="text-xs font-black text-[#172A4A] truncate">YouTube Press Channel</p>
-                    <p className="text-[10px] text-neutral-500 font-mono truncate">youtube.com/@lokshahipress</p>
-                  </div>
-                </div>
-                <ExternalLink className="h-3.5 w-3.5 text-neutral-400 group-hover:text-[#FF0000] shrink-0" />
-              </a>
-
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between p-3 rounded-xl border border-neutral-200 bg-neutral-50 hover:bg-pink-50 hover:border-[#E1306C] transition-all group"
-              >
-                <div className="flex items-center gap-2.5 min-w-0">
-                  <InstagramIcon size={20} />
-                  <div className="min-w-0 text-left">
-                    <p className="text-xs font-black text-[#172A4A] truncate">Instagram Media Feed</p>
-                    <p className="text-[10px] text-neutral-500 font-mono truncate">instagram.com/lokshahipress</p>
-                  </div>
-                </div>
-                <ExternalLink className="h-3.5 w-3.5 text-neutral-400 group-hover:text-[#E1306C] shrink-0" />
-              </a>
-
-              <a
-                href="/membership-form.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between p-3 rounded-xl border border-neutral-200 bg-neutral-50 hover:bg-red-50 hover:border-[#E30620] transition-all group"
-              >
-                <div className="flex items-center gap-2.5 min-w-0">
-                  <span className="text-lg">📄</span>
-                  <div className="min-w-0 text-left">
-                    <p className="text-xs font-black text-[#172A4A] truncate">Membership Circular PDF</p>
-                    <p className="text-[10px] text-neutral-500 font-mono truncate">lokshahipressorg.com/membership.pdf</p>
-                  </div>
-                </div>
-                <ExternalLink className="h-3.5 w-3.5 text-neutral-400 group-hover:text-[#E30620] shrink-0" />
-              </a>
-            </div>
-
-            {/* Official Facebook Video & Reels Embedded Links Directory */}
-            <div className="mt-5 pt-4 border-t border-neutral-100">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2.5">
-                <div className="flex items-center gap-1.5">
-                  <FacebookIcon size={16} />
-                  <span className="text-[11px] font-black uppercase tracking-wider text-[#1877F2]">
-                    {lang === 'mr' ? 'अधिकृत फेसबुक व्हिडिओ व रील्स लिंक्स (९ व्हिडिओ)' : 'Official Facebook Video & Reel Embed Links (9 Links)'}
-                  </span>
-                </div>
-                <span className="text-[10px] font-bold text-neutral-400">
-                  {lang === 'mr' ? 'थेट लिंक कॉपी करा किंवा फेसबुकवर उघडा' : 'Direct permanent links'}
-                </span>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                {[
-                  {
-                    titleMr: 'पत्रकार हक्क व संरक्षण परिषद कायदेशीर मार्गदर्शन',
-                    titleEn: 'Journalist Rights & Security Convention Session',
-                    badge: 'VIDEO',
-                    url: 'https://www.facebook.com/share/v/1JG48PjXvK/?mibextid=wwXIfr',
-                    id: 'dir-v1',
-                  },
-                  {
-                    titleMr: 'पत्रकार संरक्षण कायद्याची प्रभावी अंमलबजावणी मोहीम',
-                    titleEn: 'Journalist Protection Act Campaign',
-                    badge: 'REEL',
-                    url: 'https://www.facebook.com/share/r/1HAscg1bWn/?mibextid=wwXIfr',
-                    id: 'dir-r1',
-                  },
-                  {
-                    titleMr: 'सत्यासाठी लढणार, अन्यायाला भिडणार! एकता मेळावा',
-                    titleEn: 'Press Unity Anthem & Highlights',
-                    badge: 'REEL',
-                    url: 'https://www.facebook.com/share/r/1RM159QQ6U/?mibextid=wwXIfr',
-                    id: 'dir-r2',
-                  },
-                  {
-                    titleMr: 'ग्रामीण व तालुका पत्रकारांच्या समस्यांवर शासन निवेदन',
-                    titleEn: 'Rural Journalists Govt Memorandum',
-                    badge: 'REEL',
-                    url: 'https://www.facebook.com/share/r/1BxfKawSfu/?mibextid=wwXIfr',
-                    id: 'dir-r3',
-                  },
-                  {
-                    titleMr: 'डिजिटल मीडिया व यूट्यूब पत्रकारांचे कायदेशीर कवच',
-                    titleEn: 'Digital Media Rights Legal Safeguards',
-                    badge: 'REEL',
-                    url: 'https://www.facebook.com/share/r/1L3aTJz8j9/?mibextid=wwXIfr',
-                    id: 'dir-r4',
-                  },
-                  {
-                    titleMr: 'पत्रकारांसाठी मोफत आरोग्य विमा व वैद्यकीय सहाय्य योजना',
-                    titleEn: 'Journalist Medical Insurance Initiative',
-                    badge: 'REEL',
-                    url: 'https://www.facebook.com/share/r/1Er5Csbft7/?mibextid=wwXIfr',
-                    id: 'dir-r5',
-                  },
-                  {
-                    titleMr: 'लोकशाहीचा चौथा स्तंभ अधिक सक्षम करण्यासाठी संमेलन',
-                    titleEn: 'Grand Media Rights Convention',
-                    badge: 'REEL',
-                    url: 'https://www.facebook.com/share/r/1EqFdY2qsS/?mibextid=wwXIfr',
-                    id: 'dir-r6',
-                  },
-                  {
-                    titleMr: 'जिल्हास्तरीय कार्यकारणी आढावा व सत्कार सोहळा',
-                    titleEn: 'District Executive Review Felicitation',
-                    badge: 'REEL',
-                    url: 'https://www.facebook.com/share/r/1KuKYcgpC6/?mibextid=wwXIfr',
-                    id: 'dir-r7',
-                  },
-                  {
-                    titleMr: 'पत्रकार संरक्षण कायदा: महत्त्वाचे कायदे व हक्क',
-                    titleEn: 'Journalist Safety Legal Provisions',
-                    badge: 'REEL',
-                    url: 'https://www.facebook.com/share/r/14rcoPLCgY6/?mibextid=wwXIfr',
-                    id: 'dir-r8',
-                  },
-                ].map((item, idx) => (
-                  <div
-                    key={item.id}
-                    className="flex items-center justify-between gap-2 p-2.5 rounded-lg border border-neutral-200/80 bg-neutral-50 hover:bg-blue-50/60 hover:border-[#1877F2]/40 transition-colors text-left"
-                  >
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-1.5 mb-0.5">
-                        <span className="rounded bg-[#1877F2] text-white text-[9px] font-black px-1.5 py-0.2">
-                          #{idx + 1} {item.badge}
-                        </span>
-                        <p className="text-[11px] font-bold text-[#172A4A] truncate">
-                          {lang === 'mr' ? item.titleMr : item.titleEn}
-                        </p>
-                      </div>
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[10px] text-[#1877F2] font-mono truncate block hover:underline"
-                      >
-                        {item.url.replace('https://www.', '')}
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-1 shrink-0">
-                      <button
-                        type="button"
-                        onClick={() => handleCopyLink(item.url, item.id)}
-                        title="Copy Link"
-                        className="p-1 rounded text-neutral-400 hover:text-[#172A4A] transition-colors cursor-pointer"
-                      >
-                        {copiedLink === item.id ? (
-                          <Check className="h-3.5 w-3.5 text-emerald-600" />
-                        ) : (
-                          <Copy className="h-3.5 w-3.5" />
-                        )}
-                      </button>
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Open in Facebook"
-                        className="p-1 rounded text-neutral-400 hover:text-[#1877F2] transition-colors"
-                      >
-                        <ExternalLink className="h-3.5 w-3.5" />
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </SectionShell>

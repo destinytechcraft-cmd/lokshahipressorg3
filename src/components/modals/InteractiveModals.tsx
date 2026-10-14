@@ -16,10 +16,10 @@ export function JoinMembershipModal({
   if (!isOpen) return null;
 
   const categories = [
-    { mr: 'पत्रकार सदस्यत्व (Journalist)', en: 'Journalist Membership' },
-    { mr: 'डिजिटल पत्रकार (Digital Media)', en: 'Digital Journalist Membership' },
-    { mr: 'समाजसेवक सदस्यत्व (Social Worker)', en: 'Social Worker Membership' },
-    { mr: 'सहयोगी सदस्यत्व (Associate)', en: 'Associate Membership' },
+    { mr: 'पत्रकार सदस्यत्व', en: 'Journalist Membership' },
+    { mr: 'डिजिटल पत्रकार सदस्यत्व', en: 'Digital Journalist Membership' },
+    { mr: 'समाजसेवक सदस्यत्व', en: 'Social Worker Membership' },
+    { mr: 'सहयोगी सदस्यत्व', en: 'Associate Membership' },
   ];
 
   return (

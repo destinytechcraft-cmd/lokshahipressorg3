@@ -71,31 +71,31 @@ export const dict: Record<DictKey, { mr: string; en: string }> = {
     en: 'Contact Us',
   },
   btn_join: {
-    mr: 'JOIN US',
+    mr: 'सामील व्हा',
     en: 'JOIN US',
   },
   btn_voice: {
-    mr: 'RAISE YOUR VOICE',
+    mr: 'तुमचा आवाज उठवा',
     en: 'RAISE YOUR VOICE',
   },
   btn_helpdesk: {
-    mr: 'JOURNALIST HELP DESK',
+    mr: 'पत्रकार मदत कक्ष',
     en: 'JOURNALIST HELP DESK',
   },
   btn_submit: {
-    mr: 'Submit',
+    mr: 'सादर करा',
     en: 'Submit',
   },
   btn_join_member: {
-    mr: 'JOIN LOKSHAHI PATRAKAR MAHASANGH',
+    mr: 'लोकशाही पत्रकार महासंघात सामील व्हा',
     en: 'JOIN LOKSHAHI PATRAKAR MAHASANGH',
   },
   btn_submit_issue: {
-    mr: 'SUBMIT YOUR ISSUE',
+    mr: 'आपली समस्या नोंदवा',
     en: 'SUBMIT YOUR ISSUE',
   },
   sec_media_coverage: {
-    mr: 'मीडिया कव्हरेज',
+    mr: 'वृत्तपत्र व मीडिया कव्हरेज',
     en: 'Media Coverage',
   },
   sec_stats: {
@@ -103,7 +103,7 @@ export const dict: Record<DictKey, { mr: string; en: string }> = {
     en: 'Our Strength',
   },
   sec_about: {
-    mr: 'ABOUT US',
+    mr: 'आमच्याविषयी',
     en: 'About Us',
   },
   sec_role: {
@@ -115,7 +115,7 @@ export const dict: Record<DictKey, { mr: string; en: string }> = {
     en: 'Vision',
   },
   sec_org: {
-    mr: 'ORGANISATION — संघटनेची रचना',
+    mr: 'संघटनेची रचना',
     en: 'Organisation',
   },
   sec_committees: {
@@ -123,7 +123,7 @@ export const dict: Record<DictKey, { mr: string; en: string }> = {
     en: 'Committees',
   },
   sec_rights: {
-    mr: "JOURNALISTS' RIGHTS — पत्रकारांचे न्याय, हक्क आणि अधिकार",
+    mr: 'पत्रकारांचे न्याय, हक्क आणि अधिकार',
     en: "Journalists' Rights",
   },
   sec_social: {
@@ -131,15 +131,15 @@ export const dict: Record<DictKey, { mr: string; en: string }> = {
     en: 'Social Work',
   },
   sec_achievements: {
-    mr: 'OUR ACHIEVEMENTS — आमची 11 वर्षांची वाटचाल',
+    mr: 'आमची ११ वर्षांची वाटचाल व यश',
     en: 'Our Achievements',
   },
   sec_roadmap: {
-    mr: 'FUTURE ROADMAP — भविष्यातील रोडमॅप',
+    mr: 'भविष्यातील रोडमॅप व धोरणात्मक वाटचाल',
     en: 'Future Roadmap',
   },
   sec_media: {
-    mr: 'News Articles',
+    mr: 'वृत्तपत्र व बातम्या',
     en: 'News Articles',
   },
   sec_events: {
@@ -147,23 +147,23 @@ export const dict: Record<DictKey, { mr: string; en: string }> = {
     en: 'Events & Programs',
   },
   sec_membership: {
-    mr: 'MEMBERSHIP',
+    mr: 'सदस्यत्व नोंदणी व माहिती',
     en: 'Membership',
   },
   sec_helpdesk: {
-    mr: 'JOURNALIST & PUBLIC HELPDESK — पत्रकार व जन मदत कक्ष',
+    mr: 'पत्रकार व जन मदत कक्ष',
     en: 'Journalist & Public Helpdesk',
   },
   sec_grievance: {
-    mr: 'PUBLIC GRIEVANCE — जनतेच्या प्रश्नांना वाचा फोडण्यासाठी',
+    mr: 'जनतेच्या प्रश्नांना वाचा फोडण्यासाठी तक्रार निवारण',
     en: 'Public Grievance',
   },
   sec_leadership: {
-    mr: 'LEADERSHIP — टीम लोकशाही',
+    mr: 'नेतृत्व — टीम लोकशाही',
     en: 'Leadership',
   },
   sec_contact: {
-    mr: 'CONTACT US',
+    mr: 'आमच्याशी संपर्क साधा',
     en: 'Contact Us',
   },
   sec_org_network: {

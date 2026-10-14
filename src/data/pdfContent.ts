@@ -469,6 +469,8 @@ export const leadershipMembers: LeadershipMember[] = [
 export const futureRoadmapPhases = [
   {
     phase: "PHASE 01",
+    phaseMr: "टप्पा ०१",
+    phaseEn: "PHASE 01",
     titleMr: "संघटन विस्तार",
     titleEn: "Organisational Expansion",
     descMr: "भारताच्या विविध राज्यांमध्ये महासंघाचे संघटनात्मक जाळे मजबूत करणे.",
@@ -476,20 +478,26 @@ export const futureRoadmapPhases = [
   },
   {
     phase: "PHASE 02",
-    titleMr: "Journalist Help Desk",
+    phaseMr: "टप्पा ०२",
+    phaseEn: "PHASE 02",
+    titleMr: "पत्रकार मदत कक्ष",
     titleEn: "Journalist Help Desk",
     descMr: "पत्रकारांच्या प्रश्नांसाठी राष्ट्रीय पातळीवर संपर्क व मार्गदर्शन व्यवस्था विकसित करणे.",
     descEn: "Developing a national-level contact and guidance mechanism for journalists' issues."
   },
   {
     phase: "PHASE 03",
+    phaseMr: "टप्पा ०३",
+    phaseEn: "PHASE 03",
     titleMr: "प्रशिक्षण व कौशल्य विकास",
     titleEn: "Training & Skill Development",
-    descMr: "डिजिटल पत्रकारिता, सोशल मीडिया, तथ्य पडताळणी, सायबर सुरक्षा, कायदेशीर जागरूकता आणि आधुनिक पत्रकारितेसाठी प्रशिक्षण उपक्रम व पत्रकार कार्यशाळेचे आयोजन.सोबतच Meet the Press कार्यक्रम, पत्रकार सुरक्षा व हक्क संरक्षण अभियान, माध्यम संशोधन व अभ्यास प्रकल्प,मानवाधिकार जनजागृती उपक्रम,पर्यावरण संरक्षण मोहिमा,पत्रकारिता नैतिकता विषयक मार्गदर्शन,स्मरणिका, नियतकालिके आणि डिजिटल प्रकाशन,सामाजिक सेवा आणि जनहिताचे विशेष अभियान",
+    descMr: "डिजिटल पत्रकारिता, सोशल मीडिया, तथ्य पडताळणी, सायबर सुरक्षा, कायदेशीर जागरूकता आणि आधुनिक पत्रकारितेसाठी प्रशिक्षण उपक्रम व पत्रकार कार्यशाळेचे आयोजन. सोबतच ‘मीट द प्रेस’ (Meet the Press) वार्तालाप, पत्रकार सुरक्षा व हक्क संरक्षण अभियान, माध्यम संशोधन व अभ्यास प्रकल्प, मानवाधिकार जनजागृती उपक्रम, पर्यावरण संरक्षण मोहिमा, पत्रकारिता नैतिकता विषयक मार्गदर्शन, स्मरणिका, नियतकालिके आणि डिजिटल प्रकाशन, सामाजिक सेवा आणि जनहिताचे विशेष अभियान.",
     descEn: "Training programs and journalist workshops on digital journalism, social media, fact checking, cyber security, legal awareness, Meet the Press events, and public interest initiatives."
   },
   {
     phase: "PHASE 04",
+    phaseMr: "टप्पा ०४",
+    phaseEn: "PHASE 04",
     titleMr: "पत्रकार हक्क अभियान",
     titleEn: "Journalist Rights Campaign",
     descMr: "पत्रकारांच्या न्याय्य हक्क आणि प्रश्नांसाठी राष्ट्रीय स्तरावर जनजागृती व संघटनात्मक अभियान.",
@@ -497,6 +505,8 @@ export const futureRoadmapPhases = [
   },
   {
     phase: "PHASE 05",
+    phaseMr: "टप्पा ०५",
+    phaseEn: "PHASE 05",
     titleMr: "सामाजिक जनहित अभियान",
     titleEn: "Public Welfare Initiative",
     descMr: "देशभरातील जनहिताचे प्रश्न संबंधित शासन-प्रशासनापर्यंत पोहोचवण्यासाठी सामाजिक उपक्रम.",
@@ -504,21 +514,27 @@ export const futureRoadmapPhases = [
   },
   {
     phase: "PHASE 06",
-    titleMr: "Digital Journalist Network",
+    phaseMr: "टप्पा ०६",
+    phaseEn: "PHASE 06",
+    titleMr: "डिजिटल पत्रकार नेटवर्क",
     titleEn: "Digital Journalist Network",
     descMr: "देशभरातील सदस्य पत्रकारांना जोडणारे डिजिटल नेटवर्क तयार करणे.",
     descEn: "Creating a digital network connecting member journalists across India."
   },
   {
     phase: "PHASE 07",
-    titleMr: "National Media & Journalist Convention",
+    phaseMr: "टप्पा ०७",
+    phaseEn: "PHASE 07",
+    titleMr: "राष्ट्रीय पत्रकार अधिवेशन व परिषद",
     titleEn: "National Media & Journalist Convention",
     descMr: "देशभरातील पत्रकारांना एका व्यासपीठावर आणण्यासाठी राष्ट्रीय स्तरावरील परिषद/अधिवेशन व देशव्यापी चर्चासत्रांचे आयोजन.",
     descEn: "Organizing national-level conventions and nationwide symposiums to bring journalists together on one platform."
   },
   {
     phase: "PHASE 08",
-    titleMr: "Research & Documentation",
+    phaseMr: "टप्पा ०८",
+    phaseEn: "PHASE 08",
+    titleMr: "संशोधन व दस्तऐवजीकरण",
     titleEn: "Research & Documentation",
     descMr: "पत्रकारांचे प्रश्न, पत्रकारितेतील बदल आणि सामाजिक प्रश्नांवर अभ्यास व दस्तऐवजीकरण.",
     descEn: "Study and documentation of journalists' issues, media evolution, and social questions."

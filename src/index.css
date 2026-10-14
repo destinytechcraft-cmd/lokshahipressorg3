@@ -50,15 +50,18 @@
     font-weight: 700;
   }
 
-  /* Marathi: Mukta with normal = semi bold (600), heading = bold (700/800) */
-  html[lang="mr"] body, .lang-mr body {
-    font-family: 'Mukta', 'Montserrat', sans-serif;
-    font-weight: 600;
+  /* Marathi: Mukta and Noto Sans Devanagari with normal = semi bold (600), heading = bold (700/800) */
+  html[lang="mr"],
+  .lang-mr,
+  html[lang="mr"] body,
+  .lang-mr body,
+  html[lang="mr"] * {
+    font-family: 'Mukta', 'Noto Sans Devanagari', 'Montserrat', sans-serif;
   }
 
   html[lang="mr"] h1, html[lang="mr"] h2, html[lang="mr"] h3, html[lang="mr"] h4, html[lang="mr"] h5, html[lang="mr"] h6,
   .lang-mr h1, .lang-mr h2, .lang-mr h3, .lang-mr h4, .lang-mr h5, .lang-mr h6 {
-    font-family: 'Mukta', 'Montserrat', sans-serif;
+    font-family: 'Mukta', 'Noto Sans Devanagari', 'Montserrat', sans-serif;
     font-weight: 700;
   }
 

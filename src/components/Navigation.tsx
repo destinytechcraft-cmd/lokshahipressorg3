@@ -40,7 +40,7 @@ export function LanguageDropdown() {
         type="button"
         onClick={() => setOpen((prev) => !prev)}
         onBlur={() => setTimeout(() => setOpen(false), 200)}
-        className="flex items-center gap-1 sm:gap-1.5 rounded-lg border border-[#172A4A]/25 bg-white px-2 sm:px-3 py-1.5 text-xs font-bold text-[#172A4A] hover:border-[#E30620] hover:text-[#E30620] transition-colors cursor-pointer shadow-2xs"
+        className="flex items-center gap-1.5 sm:gap-2 rounded-lg border border-[#172A4A]/25 bg-white px-2.5 sm:px-3.5 py-1.5 md:py-2 text-xs md:text-sm font-bold text-[#172A4A] hover:border-[#E30620] hover:text-[#E30620] transition-colors cursor-pointer shadow-2xs"
         aria-haspopup="listbox"
         aria-expanded={open}
       >
@@ -134,20 +134,20 @@ export function Header({
         <button
           type="button"
           onClick={() => handleNavClick('/')}
-          className="flex min-w-0 items-center gap-2 sm:gap-2.5 text-left cursor-pointer group flex-1"
+          className="flex min-w-0 items-center gap-2.5 sm:gap-3 md:gap-4 text-left cursor-pointer group flex-1"
         >
           <img
             src={lang === 'en'
               ? 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/svg%20artboard%20copy-ehciRDupxecaWve0aPWnNuQdU7GEvb.svg'
               : 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/svg%20artboard-eWBKKf7NmMizh6trK5quOrzLpBPGhS.svg'}
             alt={lang === 'en' ? 'Lokshahi Patrakar Mahasangh logo' : 'लोकशाही पत्रकार महासंघ लोगो'}
-            className="h-9 w-9 sm:h-11 sm:w-11 shrink-0 object-contain transition-transform group-hover:scale-105 drop-shadow-xs"
+            className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 shrink-0 object-contain transition-transform group-hover:scale-105 drop-shadow-xs"
           />
           <div className="min-w-0 flex-1">
-            <div className="text-xs sm:text-base md:text-lg font-black tracking-tight text-[#172A4A] group-hover:text-[#E30620] transition-colors leading-tight line-clamp-2">
+            <div className="text-xs sm:text-base md:text-xl lg:text-2xl font-black tracking-tight text-[#172A4A] group-hover:text-[#E30620] transition-colors leading-tight line-clamp-2">
               {t('brand')}
             </div>
-            <div className="text-[10px] sm:text-[11px] font-semibold text-[#E30620] flex items-center gap-1.5 leading-tight truncate">
+            <div className="text-[10px] sm:text-xs md:text-[13px] lg:text-sm font-semibold text-[#E30620] flex items-center gap-1.5 leading-tight truncate mt-0.5">
               <span>{t('values')}</span>
             </div>
           </div>
@@ -181,7 +181,7 @@ export function Header({
 
       {/* Desktop Navigation */}
       <nav className="hidden border-t border-[#172A4A]/10 bg-[#F7F3EC]/70 md:block">
-        <div className="mx-auto flex w-full max-w-6xl flex-wrap gap-x-1 gap-y-1 px-4 py-1.5">
+        <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-x-1.5 md:gap-x-2 gap-y-1.5 px-4 py-2 md:py-2.5">
           {navItems.map((item) => {
             const isActive = currentPath === item.href;
             return (
@@ -191,7 +191,7 @@ export function Header({
                 onClick={() => handleNavClick(item.href)}
                 aria-current={isActive ? 'page' : undefined}
                 className={cn(
-                  'rounded-md px-2.5 py-1 text-xs font-bold transition-all cursor-pointer select-none inline-flex items-center gap-1.5',
+                  'rounded-lg px-2.5 sm:px-3 md:px-3.5 py-1 md:py-1.5 text-xs md:text-[13px] lg:text-sm font-bold transition-all cursor-pointer select-none inline-flex items-center gap-1.5',
                   isActive
                     ? 'bg-[#172A4A] text-white shadow-2xs'
                     : 'text-[#172A4A]/80 hover:bg-[#172A4A]/10 hover:text-[#E30620]'

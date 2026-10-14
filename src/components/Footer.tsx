@@ -40,7 +40,7 @@ export function Footer({ onNavigate }: { onNavigate?: (path: string) => void }) 
         {/* Core Values Strip strictly as requested in PDF Page 17 */}
         <div className="mb-10 pb-8 border-b border-white/10 text-center">
           <span className="text-xs font-black uppercase tracking-[0.25em] text-[#E30620] block mb-3">
-            {lang === 'mr' ? 'OUR VALUES — आमची मूल्ये' : 'OUR VALUES — CORE ETHICAL PILLARS'}
+            {lang === 'mr' ? 'आमची मूलभूत मूल्ये' : 'OUR VALUES — CORE ETHICAL PILLARS'}
           </span>
           <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2">
             {footerValues.map((val, idx) => (
@@ -106,7 +106,7 @@ export function Footer({ onNavigate }: { onNavigate?: (path: string) => void }) 
           {/* Social Media from PDF Page 17 */}
           <div className="md:col-span-2 space-y-3">
             <div className="text-xs font-black uppercase tracking-widest text-[#E30620]">
-              Social Media
+              {lang === 'mr' ? 'सोशल मीडिया' : 'Social Media'}
             </div>
             <div className="flex flex-wrap items-center gap-2">
               <a
@@ -128,7 +128,7 @@ export function Footer({ onNavigate }: { onNavigate?: (path: string) => void }) 
                 <InstagramIcon size={16} />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://youtube.com/@lokshahipatrakarmahasanghindia?si=Bf0f_OWURoC1FCox"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="YouTube"
@@ -161,7 +161,9 @@ export function Footer({ onNavigate }: { onNavigate?: (path: string) => void }) 
         {/* Copyright Line strictly from PDF Page 18:
             © 2026 Lokshahi Patrakar Mahasangh Bharat. All Rights Reserved. */}
         <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-[#F7F3EC]/70">
-          © 2026 Lokshahi Patrakar Mahasangh Bharat. All Rights Reserved.
+          {lang === 'mr'
+            ? '© २०२६ लोकशाही पत्रकार महासंघ भारत. सर्व हक्क सुरक्षित.'
+            : '© 2026 Lokshahi Patrakar Mahasangh Bharat. All Rights Reserved.'}
         </div>
       </div>
     </footer>

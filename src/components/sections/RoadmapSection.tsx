@@ -55,15 +55,17 @@ export function RoadmapSection() {
         </div>
 
         {/* 8 Phases Grid */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
           {futureRoadmapPhases.map((phaseItem) => (
             <WFCard
               key={phaseItem.phase}
-              label={phaseItem.phase}
-              className="flex flex-col justify-between hover:border-neutral-500 transition-colors p-5 bg-white shadow-2xs"
+              label={lang === 'mr' ? phaseItem.phaseMr : phaseItem.phaseEn}
+              className={`flex flex-col justify-start hover:border-neutral-500 transition-colors p-5 bg-white shadow-2xs ${
+                lang === 'mr' ? 'font-mukta' : ''
+              }`}
             >
-              <div>
-                <h4 className="text-sm font-bold text-neutral-900 mb-2">
+              <div className="mt-0">
+                <h4 className="text-sm sm:text-base font-bold text-neutral-900 mb-1.5 leading-snug">
                   {lang === 'mr' ? phaseItem.titleMr : phaseItem.titleEn}
                 </h4>
                 <p className="text-xs text-neutral-600 leading-relaxed">

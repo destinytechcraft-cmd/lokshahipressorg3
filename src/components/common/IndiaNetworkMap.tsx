@@ -90,7 +90,7 @@ export function IndiaNetworkMap({ className = '' }: IndiaNetworkMapProps) {
               </span>
             </p>
             <div className="mt-1 text-[9px] text-[#E30620] font-semibold">
-              {lang === 'mr' ? activeState.name : activeState.mr}
+              {lang === 'mr' ? 'सक्रिय राज्य समिती व शाखा' : activeState.mr}
             </div>
           </div>
         )}
@@ -262,7 +262,7 @@ export function IndiaNetworkMap({ className = '' }: IndiaNetworkMapProps) {
                       <span>{lang === 'mr' ? state.mr : state.name}</span>
                     </div>
                     <span className="text-[10px] text-neutral-500 font-medium">
-                      {lang === 'mr' ? state.name : state.mr}
+                      {lang === 'mr' ? 'सक्रिय' : state.mr}
                     </span>
                   </button>
                 );

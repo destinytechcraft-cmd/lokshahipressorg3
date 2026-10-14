@@ -84,8 +84,7 @@ export function Hero({
 
   return (
     <section
-      style={{ height: '840px', minHeight: '840px' }}
-      className="relative w-full h-[840px] min-h-[840px] flex items-center justify-start overflow-hidden border-b-4 border-[#E30620] bg-[#0B1E36]"
+      className="relative w-full h-[calc(100dvh-60px)] min-h-[360px] max-h-[460px] sm:h-[calc(100dvh-64px)] sm:max-h-[500px] md:h-[calc(100dvh-110px)] md:max-h-[520px] lg:h-[calc(100dvh-112px)] lg:max-h-[550px] xl:max-h-[570px] flex items-end justify-start overflow-hidden border-b-4 border-[#E30620] bg-[#0B1E36]"
     >
       {/* Background Image Slides with Smooth Crossfade */}
       <div className="absolute inset-0 w-full h-full overflow-hidden select-none pointer-events-none z-0">
@@ -113,27 +112,27 @@ export function Hero({
           );
         })}
 
-        {/* Balanced high-legibility dark overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/35" />
+        {/* Clear visibility on photos above with high-contrast protection for text at bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 via-45% to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
       </div>
 
-      {/* Hero Foreground Content */}
-      <div className="relative z-10 w-full max-w-6xl px-3 sm:px-6 lg:px-8 py-4 sm:py-16 md:py-20 flex flex-col items-start text-left mr-auto">
+      {/* Hero Foreground Content - Anchored at the bottom so sliding photos remain visible */}
+      <div className="relative z-10 w-full max-w-6xl px-3 sm:px-6 lg:px-8 pb-3.5 sm:pb-5 md:pb-6 pt-0 flex flex-col items-start text-left mr-auto">
         <div className="flex flex-col items-start text-left max-w-4xl lg:max-w-5xl">
           {/* Top Eyebrow Header */}
-          <div className="flex flex-wrap items-center justify-start gap-1 sm:gap-3 mb-1 sm:mb-4">
-            <span className="text-sm sm:text-base md:text-lg font-black uppercase tracking-wide text-white drop-shadow-md">
+          <div className="flex flex-wrap items-center justify-start gap-1 sm:gap-2.5 mb-1.5 sm:mb-3">
+            <span className="text-xs sm:text-base md:text-lg font-black uppercase tracking-wide text-white drop-shadow-md">
               {lang === 'mr' ? 'लोकशाही पत्रकार महासंघ भारत' : 'LOKSHAHI PATRAKAR MAHASANGH BHARAT'}
             </span>
             <span className="hidden sm:inline text-white/50 text-base font-bold select-none">•</span>
-            <span className="text-sm sm:text-base md:text-lg font-black uppercase tracking-wide text-[#E30620] drop-shadow-md">
+            <span className="text-xs sm:text-base md:text-lg font-black uppercase tracking-wide text-[#E30620] drop-shadow-md">
               {lang === 'mr' ? 'राष्ट्रीय नोंदणीकृत व्यासपीठ' : 'Nationally Registered Body'}
             </span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-xl leading-tight sm:text-5xl sm:leading-tight md:text-6xl lg:text-7xl font-black text-white tracking-tight drop-shadow-2xl text-left">
+          <h1 className="text-2xl leading-tight sm:text-4xl sm:leading-tight md:text-5xl lg:text-6xl font-black text-white tracking-tight drop-shadow-2xl text-left">
             {lang === 'mr' ? (
               <>
                 <span className="text-[#E30620]">सत्यासाठी</span> लढणार, <span className="text-white">अन्यायाला</span> भिडणार!
@@ -146,7 +145,7 @@ export function Hero({
           </h1>
 
           {/* Strength Badges */}
-          <div className="mt-2 sm:mt-6 flex flex-wrap items-center justify-start gap-1 sm:gap-3 max-w-2xl">
+          <div className="mt-2.5 sm:mt-4 md:mt-5 flex flex-wrap items-center justify-start gap-1.5 sm:gap-3 max-w-2xl">
             {heroBadges.map((badge, idx) => (
               <span
                 key={idx}
@@ -159,23 +158,6 @@ export function Hero({
         </div>
       </div>
 
-      {/* Interactive Slide Indicator Dots */}
-      <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-8 z-30 flex items-center gap-1.5 sm:gap-2 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-full border border-white/20 shadow-md">
-        {backgroundSlides.map((slide, idx) => (
-          <button
-            key={slide.id}
-            type="button"
-            onClick={() => setCurrentSlide(idx)}
-            aria-label={`Slide ${idx + 1}`}
-            title={`Slide ${idx + 1} (${slide.durationMs / 1000}s)`}
-            className={`h-2.5 rounded-full transition-all cursor-pointer ${
-              idx === currentSlide
-                ? 'w-6 sm:w-7 bg-[#E30620]'
-                : 'w-2.5 bg-white/60 hover:bg-white'
-            }`}
-          />
-        ))}
-      </div>
 
       {/* Indian Tricolor Bottom Accent Band */}
       <div className="absolute bottom-0 left-0 right-0 h-1.5 flex z-20">
@@ -262,12 +244,9 @@ export function HeroIntroSection({
                 className="w-full sm:w-auto min-h-[46px] px-7 sm:px-8 py-3 inline-flex items-center justify-center gap-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-sm sm:text-base font-black tracking-wide shadow-md hover:shadow-lg transition-all duration-150 cursor-pointer select-none active:scale-[0.98] text-center"
               >
                 <span className="w-2.5 h-2.5 rounded-full bg-white flex-shrink-0 animate-pulse" />
-                <span>Journalist & Public Helpdesk</span>
-                {lang === 'mr' && (
-                  <span className="text-[11px] font-bold text-emerald-100 hidden lg:inline">
-                    (पत्रकार व जन मदत कक्ष)
-                  </span>
-                )}
+                <span>
+                  {lang === 'mr' ? 'पत्रकार व जन मदत कक्ष' : 'Journalist & Public Helpdesk'}
+                </span>
               </a>
             </div>
 
