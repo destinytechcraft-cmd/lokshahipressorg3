@@ -17,6 +17,52 @@ export interface BackgroundSlide {
   durationMs: number;
 }
 
+// 6 Background Slides for the event photos with custom timings (1st slide: 8s, rest: 4s)
+const backgroundSlides: BackgroundSlide[] = [
+  {
+    id: 1,
+    imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ZyFveTX0izQX1vVdtTV2j9Hr1LSkf3.png',
+    titleMr: 'लोकशाही पत्रकार महासंघ बैठक व पत्रकार प्रशिक्षण मेळावा',
+    titleEn: 'Press Federation Meeting and Journalist Training Seminar',
+    durationMs: 8000,
+  },
+  {
+    id: 2,
+    imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-NPaPIGpkmpzfHfjquZmJDNy2xVyoEA.png',
+    titleMr: 'शिवस्मारक सोलापूर येथील पत्रकार व मान्यवरांचा कार्यक्रम',
+    titleEn: 'Journalists and Dignitaries at ShivSmarak Solapur',
+    durationMs: 4000,
+  },
+  {
+    id: 3,
+    imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-57ZnFUnCzZXAljLU1jgwfdl8G0YfQK.png',
+    titleMr: 'वृत्तपत्र व पत्रकारांचा विशेष कार्यक्रम',
+    titleEn: 'Special Newspaper and Journalist Event',
+    durationMs: 4000,
+  },
+  {
+    id: 4,
+    imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uGiASrsN5C6sr7gQ8coskqIi7UBvAw.png',
+    titleMr: 'ज्येष्ठ मान्यवरांची सदिच्छा भेट',
+    titleEn: 'Courtesy Meeting with Senior Dignitaries',
+    durationMs: 4000,
+  },
+  {
+    id: 5,
+    imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-92H0pAshBqurUFJIkPT3pUk4oUMhKe.png',
+    titleMr: 'दैनिक लोकनेता वर्धापन दिन सोहळा',
+    titleEn: 'Dainik Lokneta Anniversary Celebration',
+    durationMs: 4000,
+  },
+  {
+    id: 6,
+    imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-deIesYcbJyAzcCmzvJem8F9RxpPs0E.png',
+    titleMr: 'प्रशासकीय अधिकाऱ्यांची सदिच्छा भेट',
+    titleEn: 'Courtesy Meeting with Administrative Officials',
+    durationMs: 4000,
+  },
+];
+
 export function Hero({
   onJoinClick,
   onVoiceClick,
@@ -27,143 +73,100 @@ export function Hero({
   const { lang } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // 6 Background Slides for the event photos
-  const backgroundSlides: BackgroundSlide[] = [
-    {
-      id: 1,
-      imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ZyFveTX0izQX1vVdtTV2j9Hr1LSkf3.png',
-      titleMr: 'लोकशाही पत्रकार महासंघ बैठक व पत्रकार प्रशिक्षण मेळावा',
-      titleEn: 'Press Federation Meeting and Journalist Training Seminar',
-      durationMs: 4000,
-    },
-    {
-      id: 2,
-      imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-NPaPIGpkmpzfHfjquZmJDNy2xVyoEA.png',
-      titleMr: 'शिवस्मारक सोलापूर येथील पत्रकार व मान्यवरांचा कार्यक्रम',
-      titleEn: 'Journalists and Dignitaries at ShivSmarak Solapur',
-      durationMs: 4000,
-    },
-    {
-      id: 3,
-      imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-57ZnFUnCzZXAljLU1jgwfdl8G0YfQK.png',
-      titleMr: 'वृत्तपत्र व पत्रकारांचा विशेष कार्यक्रम',
-      titleEn: 'Special Newspaper and Journalist Event',
-      durationMs: 4000,
-    },
-    {
-      id: 4,
-      imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uGiASrsN5C6sr7gQ8coskqIi7UBvAw.png',
-      titleMr: 'ज्येष्ठ मान्यवरांची सदिच्छा भेट',
-      titleEn: 'Courtesy Meeting with Senior Dignitaries',
-      durationMs: 4000,
-    },
-    {
-      id: 5,
-      imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-92H0pAshBqurUFJIkPT3pUk4oUMhKe.png',
-      titleMr: 'दैनिक लोकनेता वर्धापन दिन सोहळा',
-      titleEn: 'Dainik Lokneta Anniversary Celebration',
-      durationMs: 4000,
-    },
-    {
-      id: 6,
-      imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-deIesYcbJyAzcCmzvJem8F9RxpPs0E.png',
-      titleMr: 'प्रशासकीय अधिकाऱ्यांची सदिच्छा भेट',
-      titleEn: 'Courtesy Meeting with Administrative Officials',
-      durationMs: 4000,
-    },
-  ];
-
   useEffect(() => {
-    const duration = backgroundSlides[currentSlide].durationMs;
+    const currentDuration = backgroundSlides[currentSlide]?.durationMs || 4000;
     const timer = setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % backgroundSlides.length);
-    }, duration);
+    }, currentDuration);
 
     return () => clearTimeout(timer);
-  }, [currentSlide, backgroundSlides.length]);
+  }, [currentSlide]);
 
   return (
-    <section
-      className="relative w-full h-[calc(100dvh-60px)] min-h-[360px] max-h-[460px] sm:h-[calc(100dvh-64px)] sm:max-h-[500px] md:h-[calc(100dvh-110px)] md:max-h-[520px] lg:h-[calc(100dvh-112px)] lg:max-h-[550px] xl:max-h-[570px] flex items-end justify-start overflow-hidden border-b-4 border-[#E30620] bg-[#0B1E36]"
-    >
-      {/* Background Image Slides with Smooth Crossfade */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden select-none pointer-events-none z-0">
-        {backgroundSlides.map((slide, idx) => {
-          const isActive = idx === currentSlide;
-          return (
-            <div
-              key={slide.id}
-              className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${
-                isActive ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              <img
-                src={slide.imageSrc}
-                alt={slide.titleEn}
-                onError={(e) => {
-                  const fallback = `/hero-photo-${idx + 1}.jpg`;
-                  if (e.currentTarget.src !== fallback) {
-                    e.currentTarget.src = fallback;
-                  }
-                }}
-                className="w-full h-full object-cover object-center sm:object-[center_30%] scale-105 transition-transform duration-[4000ms] ease-out"
-              />
-            </div>
-          );
-        })}
+    <section className="w-full bg-[#F7F3EC] sm:py-3 md:py-5">
+      <div className="mx-auto w-full max-w-6xl px-0 sm:px-4">
+        <div
+          className="relative w-full aspect-[16/9] min-h-[235px] max-h-[310px] sm:aspect-auto sm:h-[580px] md:h-[660px] lg:h-[720px] xl:h-[760px] flex items-end justify-start overflow-hidden sm:rounded-2xl md:rounded-3xl border-b-4 sm:border-2 sm:border-b-4 border-[#E30620] bg-[#0B1E36] sm:shadow-lg"
+        >
+          {/* Background Image Slides with Smooth Crossfade */}
+          <div className="absolute inset-0 w-full h-full overflow-hidden select-none pointer-events-none z-0">
+            {backgroundSlides.map((slide, idx) => {
+              const isActive = idx === currentSlide;
+              return (
+                <div
+                  key={slide.id}
+                  className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${
+                    isActive ? 'opacity-100' : 'opacity-0'
+                  }`}
+                >
+                  <img
+                    src={slide.imageSrc}
+                    alt={slide.titleEn}
+                    onError={(e) => {
+                      const fallback = `/hero-photo-${idx + 1}.jpg`;
+                      if (e.currentTarget.src !== fallback) {
+                        e.currentTarget.src = fallback;
+                      }
+                    }}
+                    className="w-full h-full object-cover object-center sm:object-[center_20%] scale-100 sm:scale-102 transition-transform duration-[4000ms] ease-out"
+                  />
+                </div>
+              );
+            })}
 
-        {/* Clear visibility on photos above with high-contrast protection for text at bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 via-45% to-black/10" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
-      </div>
-
-      {/* Hero Foreground Content - Anchored at the bottom so sliding photos remain visible */}
-      <div className="relative z-10 w-full max-w-6xl px-3 sm:px-6 lg:px-8 pb-3.5 sm:pb-5 md:pb-6 pt-0 flex flex-col items-start text-left mr-auto">
-        <div className="flex flex-col items-start text-left max-w-4xl lg:max-w-5xl">
-          {/* Top Eyebrow Header */}
-          <div className="flex flex-wrap items-center justify-start gap-1 sm:gap-2.5 mb-1.5 sm:mb-3">
-            <span className="text-xs sm:text-base md:text-lg font-black uppercase tracking-wide text-white drop-shadow-md">
-              {lang === 'mr' ? 'लोकशाही पत्रकार महासंघ भारत' : 'LOKSHAHI PATRAKAR MAHASANGH BHARAT'}
-            </span>
-            <span className="hidden sm:inline text-white/50 text-base font-bold select-none">•</span>
-            <span className="text-xs sm:text-base md:text-lg font-black uppercase tracking-wide text-[#E30620] drop-shadow-md">
-              {lang === 'mr' ? 'राष्ट्रीय नोंदणीकृत व्यासपीठ' : 'Nationally Registered Body'}
-            </span>
+            {/* Clear visibility on photos above with high-contrast protection for text at bottom */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 via-35% to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-2xl leading-tight sm:text-4xl sm:leading-tight md:text-5xl lg:text-6xl font-black text-white tracking-tight drop-shadow-2xl text-left">
-            {lang === 'mr' ? (
-              <>
-                <span className="text-[#E30620]">सत्यासाठी</span> लढणार, <span className="text-white">अन्यायाला</span> भिडणार!
-              </>
-            ) : (
-              <>
-                <span className="text-[#E30620]">Fight for Truth</span>, <span className="text-white">Stand Against Injustice!</span>
-              </>
-            )}
-          </h1>
+          {/* Hero Foreground Content - Positioned to Left Bottom */}
+          <div className="relative z-10 w-full px-3.5 sm:px-6 md:px-8 pb-6 sm:pb-8 md:pb-12 pt-2 sm:pt-6 flex flex-col items-start justify-end text-left mr-auto">
+            <div className="flex flex-col items-start text-left max-w-4xl lg:max-w-5xl">
+              {/* Top Eyebrow Header */}
+              <div className="flex flex-wrap items-center justify-start gap-1 sm:gap-2.5 mb-1 sm:mb-2">
+                <span className="text-[9.5px] sm:text-base md:text-lg font-black uppercase tracking-wide text-white drop-shadow-md">
+                  {lang === 'mr' ? 'लोकशाही पत्रकार महासंघ भारत' : 'LOKSHAHI PATRAKAR MAHASANGH BHARAT'}
+                </span>
+                <span className="hidden sm:inline text-white/50 text-base font-bold select-none">•</span>
+                <span className="text-[9.5px] sm:text-base md:text-lg font-black uppercase tracking-wide text-[#E30620] drop-shadow-md">
+                  {lang === 'mr' ? 'राष्ट्रीय नोंदणीकृत व्यासपीठ' : 'Nationally Registered Body'}
+                </span>
+              </div>
 
-          {/* Strength Badges */}
-          <div className="mt-2.5 sm:mt-4 md:mt-5 flex flex-wrap items-center justify-start gap-1.5 sm:gap-3 max-w-2xl">
-            {heroBadges.map((badge, idx) => (
-              <span
-                key={idx}
-                className={`rounded-xl border px-2 sm:px-3.5 py-0.5 sm:py-1.5 text-[9px] sm:text-sm font-bold shadow-sm backdrop-blur-md transition-transform hover:scale-105 ${badge.color}`}
-              >
-                {badge[lang]}
-              </span>
-            ))}
+              {/* Main Headline */}
+              <h1 className="text-[17px] leading-tight sm:text-4xl sm:leading-tight md:text-5xl lg:text-5xl xl:text-6xl font-black text-white tracking-tight drop-shadow-2xl text-left">
+                {lang === 'mr' ? (
+                  <>
+                    <span className="text-[#E30620]">सत्यासाठी</span> लढणार, <span className="text-white">अन्यायाला</span> भिडणार!
+                  </>
+                ) : (
+                  <>
+                    <span className="text-[#E30620]">Fight for Truth</span>, <span className="text-white">Stand Against Injustice!</span>
+                  </>
+                )}
+              </h1>
+
+              {/* Strength Badges */}
+              <div className="mt-2 sm:mt-3.5 md:mt-4 flex flex-wrap items-center justify-start gap-1 sm:gap-2.5 max-w-2xl">
+                {heroBadges.map((badge, idx) => (
+                  <span
+                    key={idx}
+                    className={`rounded-lg sm:rounded-xl border px-1.5 sm:px-3 py-0.5 sm:py-1 text-[8.5px] sm:text-xs md:text-sm font-bold shadow-sm backdrop-blur-md transition-transform hover:scale-105 ${badge.color}`}
+                  >
+                    {badge[lang]}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Indian Tricolor Bottom Accent Band */}
+          <div className="absolute bottom-0 left-0 right-0 h-1.5 flex z-20">
+            <div className="h-full flex-1 bg-[#E6530C]" />
+            <div className="h-full flex-1 bg-white" />
+            <div className="h-full flex-1 bg-[#287A18]" />
           </div>
         </div>
-      </div>
-
-
-      {/* Indian Tricolor Bottom Accent Band */}
-      <div className="absolute bottom-0 left-0 right-0 h-1.5 flex z-20">
-        <div className="h-full flex-1 bg-[#E6530C]" />
-        <div className="h-full flex-1 bg-white" />
-        <div className="h-full flex-1 bg-[#287A18]" />
       </div>
     </section>
   );
@@ -188,7 +191,7 @@ export function HeroIntroSection({
 
   return (
     <section className="bg-white border-b border-[#172A4A]/15 py-10 sm:py-14 text-left">
-      <div className="mx-auto w-full max-w-5xl px-4 sm:px-6">
+      <div className="mx-auto w-full max-w-6xl px-4">
         <div className="rounded-2xl border-2 border-[#172A4A]/10 bg-[#F7F3EC]/60 p-6 sm:p-9 shadow-xs">
           <div className="border-l-4 border-[#E30620] pl-4 sm:pl-5 mb-5">
             <span className="text-[10px] sm:text-xs font-black uppercase tracking-[0.25em] text-[#E30620] block mb-1">

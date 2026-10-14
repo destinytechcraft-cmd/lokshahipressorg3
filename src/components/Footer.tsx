@@ -74,7 +74,7 @@ export function Footer({ onNavigate }: { onNavigate?: (path: string) => void }) 
             </p>
 
             <div className="pt-2 text-xs sm:text-sm text-[#F7F3EC]/90 font-bold flex flex-wrap items-center gap-x-3 gap-y-1">
-              <span>{lang === 'mr' ? '📍 राष्ट्रीय कार्यालय : बदलापूर (ठाणे) | राज्य कार्यालय : उलवे (नवी मुंबई)' : '📍 National Office : Thane | State Office : Navi Mumbai'}</span>
+              <span>{lang === 'mr' ? '📍 राष्ट्रीय कार्यालय : उलवे (नवी मुंबई) | राज्य कार्यालय : बदलापूर (ठाणे)' : '📍 National Office : Ulwe (Navi Mumbai) | State Office : Badlapur (Thane)'}</span>
               <span className="text-white/40">•</span>
               <a href="mailto:help@lokshahipressorg.com" className="hover:text-[#E30620] transition-colors">✉️ help@lokshahipressorg.com</a>
             </div>

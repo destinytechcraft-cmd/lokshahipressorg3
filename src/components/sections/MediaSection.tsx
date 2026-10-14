@@ -43,8 +43,11 @@ export function MediaSection() {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const scrollAmount = direction === 'left' ? -380 : 380;
-      scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      const container = scrollContainerRef.current;
+      const firstCard = container.firstElementChild as HTMLElement;
+      const cardWidth = firstCard ? firstCard.offsetWidth + 16 : 320;
+      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
 
@@ -537,12 +540,12 @@ export function MediaSection() {
           </div>
 
           {/* Filter Pills and Carousel Navigation Buttons */}
-          <div className="mt-5 pt-4 border-t border-neutral-200/80 flex flex-wrap items-center justify-between gap-3">
-            <div className="flex flex-wrap items-center gap-2">
+          <div className="mt-5 pt-4 border-t border-neutral-200/80 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none [scrollbar-width:none] -mx-1 px-1 flex-nowrap">
               <button
                 type="button"
                 onClick={() => setActiveTab('all')}
-                className={`rounded-lg px-3 py-1.5 text-xs font-bold transition-all cursor-pointer ${
+                className={`rounded-lg px-3 py-1.5 text-xs font-bold transition-all cursor-pointer shrink-0 ${
                   activeTab === 'all'
                     ? 'bg-[#172A4A] text-white shadow-xs'
                     : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
@@ -553,7 +556,7 @@ export function MediaSection() {
               <button
                 type="button"
                 onClick={() => setActiveTab('reels')}
-                className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition-all cursor-pointer ${
+                className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition-all cursor-pointer shrink-0 ${
                   activeTab === 'reels'
                     ? 'bg-[#1877F2] text-white shadow-xs'
                     : 'bg-blue-50 text-[#1877F2] hover:bg-blue-100 border border-[#1877F2]/30'
@@ -565,7 +568,7 @@ export function MediaSection() {
               <button
                 type="button"
                 onClick={() => setActiveTab('facebook')}
-                className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition-all cursor-pointer ${
+                className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition-all cursor-pointer shrink-0 ${
                   activeTab === 'facebook'
                     ? 'bg-[#1877F2] text-white shadow-xs'
                     : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
@@ -577,7 +580,7 @@ export function MediaSection() {
               <button
                 type="button"
                 onClick={() => setActiveTab('youtube')}
-                className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition-all cursor-pointer ${
+                className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition-all cursor-pointer shrink-0 ${
                   activeTab === 'youtube'
                     ? 'bg-[#FF0000] text-white shadow-xs'
                     : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
@@ -589,7 +592,7 @@ export function MediaSection() {
               <button
                 type="button"
                 onClick={() => setActiveTab('statements')}
-                className={`rounded-lg px-3 py-1.5 text-xs font-bold transition-all cursor-pointer ${
+                className={`rounded-lg px-3 py-1.5 text-xs font-bold transition-all cursor-pointer shrink-0 ${
                   activeTab === 'statements'
                     ? 'bg-[#E30620] text-white shadow-xs'
                     : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
@@ -600,26 +603,28 @@ export function MediaSection() {
             </div>
 
             {/* Scroll Element Controls */}
-            <div className="flex items-center gap-2">
-              <span className="text-[11px] font-bold text-neutral-500 hidden sm:inline">
-                {lang === 'mr' ? 'स्क्रोल करा ➔' : 'Scroll Posts ➔'}
+            <div className="flex items-center justify-between sm:justify-end gap-2 pt-1 sm:pt-0 border-t sm:border-t-0 border-neutral-100">
+              <span className="text-[11px] font-bold text-neutral-500 flex items-center gap-1">
+                <span>{lang === 'mr' ? '👈 स्वाइप करा / स्क्रोल 👉' : '👈 Swipe / Scroll 👉'}</span>
               </span>
-              <button
-                type="button"
-                onClick={() => scroll('left')}
-                aria-label="Scroll left"
-                className="flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-100 hover:text-black transition-colors cursor-pointer shadow-2xs"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </button>
-              <button
-                type="button"
-                onClick={() => scroll('right')}
-                aria-label="Scroll right"
-                className="flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-100 hover:text-black transition-colors cursor-pointer shadow-2xs"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </button>
+              <div className="flex items-center gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => scroll('left')}
+                  aria-label="Scroll left"
+                  className="flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-100 hover:text-black transition-colors cursor-pointer shadow-2xs"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => scroll('right')}
+                  aria-label="Scroll right"
+                  className="flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-100 hover:text-black transition-colors cursor-pointer shadow-2xs"
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -658,10 +663,10 @@ export function MediaSection() {
           </div>
 
           {/* Horizontally Scrollable Element Container */}
-          <div className="bg-[#F7F3EC]/50 p-4 sm:p-6">
+          <div className="bg-[#F7F3EC]/50 p-2.5 sm:p-6">
             <div
               ref={scrollContainerRef}
-              className="flex gap-5 sm:gap-6 overflow-x-auto pb-4 pt-1 px-1 select-none scroll-smooth [scrollbar-width:thin] [scrollbar-color:#172A4A33_transparent]"
+              className="flex gap-3.5 sm:gap-6 overflow-x-auto pb-4 pt-1 px-1 sm:px-2 snap-x snap-mandatory scroll-smooth [scrollbar-width:thin] [scrollbar-color:#172A4A33_transparent]"
             >
               {filteredPosts.map((post) => {
                 // Card 1: Official Facebook Page Live Embed Card
@@ -669,7 +674,7 @@ export function MediaSection() {
                   return (
                     <article
                       key={post.id}
-                      className="w-[320px] sm:w-[380px] shrink-0 rounded-2xl border-2 border-[#1877F2]/40 bg-white p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                      className="w-[84vw] max-w-[340px] sm:w-[380px] shrink-0 snap-center sm:snap-start rounded-2xl border-2 border-[#1877F2]/40 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
                     >
                       <div>
                         {/* Page Header */}
@@ -788,7 +793,7 @@ export function MediaSection() {
                   return (
                     <article
                       key={post.id}
-                      className="w-[320px] sm:w-[380px] shrink-0 rounded-2xl border-2 border-[#1877F2]/30 bg-white p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                      className="w-[84vw] max-w-[340px] sm:w-[380px] shrink-0 snap-center sm:snap-start rounded-2xl border-2 border-[#1877F2]/30 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
                     >
                       <div>
                         {/* Header with Original Logo */}
@@ -852,35 +857,45 @@ export function MediaSection() {
                           </button>
                         </div>
 
-                        {/* Responsive Embedded Video / Reel Frame with Real Facebook Embed */}
-                        <div className="relative mt-2 rounded-xl overflow-hidden border border-neutral-200 aspect-[16/10] bg-neutral-900 group">
-                          {/* Embedded Facebook Video/Reel iframe */}
-                          <iframe
-                            src={`https://www.facebook.com/plugins/video.php?height=300&href=${encodeURIComponent(
-                              post.url
-                            )}&show_text=false&width=360`}
-                            title={post.contentMr || 'Facebook Video'}
-                            className="w-full h-full border-0 absolute inset-0 z-0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen
+                        {/* Video / Reel Preview Banner */}
+                        <a
+                          href={post.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="relative mt-2 block rounded-xl overflow-hidden border border-neutral-200 aspect-[16/10] bg-neutral-950 group cursor-pointer"
+                        >
+                          <img
+                            src={post.image || '/leadership-banner.jpg'}
+                            alt={post.contentMr || 'Facebook Reel'}
+                            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 opacity-85"
                           />
-                          {post.image && (
-                            <img
-                              src={post.image}
-                              alt="Thumbnail"
-                              className="h-full w-full object-cover opacity-80 pointer-events-none"
-                            />
-                          )}
-                          <a
-                            href={post.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="absolute bottom-2 right-2 z-10 rounded-md bg-black/85 hover:bg-[#1877F2] text-white px-2 py-1 text-[10px] font-bold flex items-center gap-1 transition-colors"
-                          >
-                            <Play className="h-3 w-3 fill-white" />
-                            <span>Open in FB ↗</span>
-                          </a>
-                        </div>
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/20 group-hover:via-black/10 transition-colors" />
+
+                          {/* Center Big Play Button with Pulse */}
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-lg transition-transform duration-200 group-hover:scale-110 group-hover:bg-[#166fe5]">
+                              <Play className="h-5 w-5 fill-white ml-0.5" />
+                            </div>
+                          </div>
+
+                          {/* Top-left Badge */}
+                          <div className="absolute top-2 left-2 flex items-center gap-1 rounded-md bg-black/75 px-2 py-0.5 text-[10px] font-bold text-white backdrop-blur-xs">
+                            <FacebookIcon size={12} />
+                            <span>Facebook Reel</span>
+                          </div>
+
+                          {/* Bottom Info Strip */}
+                          <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[10px] font-bold text-white">
+                            <span className="flex items-center gap-1 rounded bg-black/60 px-1.5 py-0.5 backdrop-blur-xs">
+                              <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
+                              <span>HD Video</span>
+                            </span>
+                            <span className="flex items-center gap-1 text-white group-hover:text-blue-300 transition-colors">
+                              <span>{lang === 'mr' ? 'फेसबुकवर पहा' : 'Watch on FB'}</span>
+                              <ExternalLink className="h-3 w-3" />
+                            </span>
+                          </div>
+                        </a>
 
                         {/* Reaction Stats */}
                         <div className="mt-3 flex items-center justify-between text-[11px] text-neutral-500 font-semibold px-1">
@@ -934,7 +949,7 @@ export function MediaSection() {
                   return (
                     <article
                       key={post.id}
-                      className="w-[320px] sm:w-[380px] shrink-0 rounded-2xl border-2 border-[#FF0000]/40 bg-white p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                      className="w-[84vw] max-w-[340px] sm:w-[380px] shrink-0 snap-center sm:snap-start rounded-2xl border-2 border-[#FF0000]/40 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
                     >
                       <div>
                         {/* Channel Author Header */}
@@ -1102,7 +1117,7 @@ export function MediaSection() {
                   return (
                     <article
                       key={post.id}
-                      className="w-[320px] sm:w-[380px] shrink-0 rounded-2xl border-2 border-[#25D366]/40 bg-white p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                      className="w-[84vw] max-w-[340px] sm:w-[380px] shrink-0 snap-center sm:snap-start rounded-2xl border-2 border-[#25D366]/40 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
                     >
                       <div>
                         {/* Post Header */}
@@ -1190,7 +1205,7 @@ export function MediaSection() {
                 return (
                   <article
                     key={post.id}
-                    className="w-[320px] sm:w-[380px] shrink-0 rounded-2xl border-2 border-[#172A4A]/15 bg-white p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                    className="w-[84vw] max-w-[340px] sm:w-[380px] shrink-0 snap-center sm:snap-start rounded-2xl border-2 border-[#172A4A]/15 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
                   >
                     <div>
                       {/* Post Header with Original Logo */}

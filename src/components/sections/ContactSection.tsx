@@ -88,7 +88,7 @@ export function ContactSection() {
                       {lang === 'mr' ? 'राष्ट्रीय कार्यालय' : 'National Office'}
                     </h4>
                     <span className="text-[11px] font-bold text-neutral-500">
-                      {lang === 'mr' ? 'बदलापूर, जि. ठाणे' : 'Badlapur, Dist. Thane'}
+                      {lang === 'mr' ? 'उलवे नोड, नवी मुंबई' : 'Ulwe Node, Navi Mumbai'}
                     </span>
                   </div>
                 </div>
@@ -107,8 +107,8 @@ export function ContactSection() {
                   </span>
                   <p className="font-bold text-neutral-900 leading-relaxed text-sm">
                     {lang === 'mr'
-                      ? 'ऑफिस नं : 407, शुभ वास्तु सोसायटी, न्यू पनवेल हायवे, कोणार्क गार्डन जवळ, बदलापूर (पूर्व) ता अंबरनाथ जि ठाणे.- 421503'
-                      : 'Office No: 407, Shubh Vastu Society, New Panvel Highway, Near Konark Garden, Badlapur (East), Tal. Ambernath, Dist. Thane - 421503'}
+                      ? '१०५, सी विंग, स्वस्तिक आराधना इमारत, सेक्टर २, उलवे नोड, नवी मुंबई ४१०२०६'
+                      : '105, C Wing, Swastik Aradhana Building, Sector 2, Ulwe Node, Navi Mumbai - 410206'}
                   </p>
                 </div>
 
@@ -174,7 +174,7 @@ export function ContactSection() {
                       {lang === 'mr' ? 'राज्य कार्यालय' : 'State Office'}
                     </h4>
                     <span className="text-[11px] font-bold text-neutral-500">
-                      {lang === 'mr' ? 'उलवे नोड, नवी मुंबई' : 'Ulwe Node, Navi Mumbai'}
+                      {lang === 'mr' ? 'बदलापूर, जि. ठाणे' : 'Badlapur, Dist. Thane'}
                     </span>
                   </div>
                 </div>
@@ -204,8 +204,8 @@ export function ContactSection() {
                   </span>
                   <p className="font-bold text-neutral-900 leading-relaxed text-sm">
                     {lang === 'mr'
-                      ? '१०५, सी विंग, स्वस्तिक आराधना इमारत, सेक्टर २, उलवे नोड, नवी मुंबई ४१०२०६'
-                      : '105, C Wing, Swastik Aradhana Building, Sector 2, Ulwe Node, Navi Mumbai - 410206'}
+                      ? 'ऑफिस नं : 407, शुभ वास्तु सोसायटी, न्यू पनवेल हायवे, कोणार्क गार्डन जवळ, बदलापूर (पूर्व) ता अंबरनाथ जि ठाणे.- 421503'
+                      : 'Office No: 407, Shubh Vastu Society, New Panvel Highway, Near Konark Garden, Badlapur (East), Tal. Ambernath, Dist. Thane - 421503'}
                   </p>
                 </div>
 
