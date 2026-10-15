@@ -1,8 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
-import { SectionShell, WFButton } from '../ui/WireframePrimitives';
+import { SectionShell } from '../ui/WireframePrimitives';
 import { WhatsAppIcon } from '../SocialIcons';
-import { GOOGLE_FORM_LINKS } from '../../config/forms';
 import { MapPin, Phone, Mail, Globe, ExternalLink, Building2, Building, ShieldCheck } from 'lucide-react';
 
 export function ContactSection() {
@@ -256,26 +255,6 @@ export function ContactSection() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Google Form CTA */}
-        <div className="rounded-2xl border border-[#172A4A]/15 bg-white p-6 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div>
-            <span className="text-sm font-black text-[#172A4A] block">
-              {lang === 'mr' ? 'थेट संपर्क किंवा संदेश पाठवण्यासाठी :' : 'For direct inquiries or messages :'}
-            </span>
-            <span className="text-xs text-[#172A4A]/70 font-semibold">
-              {lang === 'mr' ? 'आमच्या अधिकृत फॉर्मद्वारे संदेश पाठवा' : 'Send a message via our official online form'}
-            </span>
-          </div>
-          <WFButton
-            variant="solid"
-            href={GOOGLE_FORM_LINKS.contact}
-            target="_blank"
-            className="px-6 py-3 text-xs sm:text-sm font-black bg-[#E30620] hover:bg-[#c7051b] text-white shadow-md uppercase tracking-wider rounded-xl shrink-0"
-          >
-            {lang === 'mr' ? 'संपर्क फॉर्म उघडा ↗' : 'OPEN CONTACT FORM ↗'}
-          </WFButton>
         </div>
       </div>
     </SectionShell>

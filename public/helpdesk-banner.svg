@@ -1,0 +1,423 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background:#ffffff; font-family:'Mukta', 'Noto Sans Devanagari', 'Montserrat', Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2B40"/>
+      <stop offset="50%" stop-color="#243850"/>
+      <stop offset="100%" stop-color="#152232"/>
+    </linearGradient>
+
+    <linearGradient id="deskGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C29B7F"/>
+      <stop offset="15%" stop-color="#B28A6E"/>
+      <stop offset="100%" stop-color="#8F6A50"/>
+    </linearGradient>
+
+    <linearGradient id="deskShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6E4F39"/>
+      <stop offset="100%" stop-color="#4A3424"/>
+    </linearGradient>
+
+    <linearGradient id="laptopScreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A4856"/>
+      <stop offset="100%" stop-color="#1E2833"/>
+    </linearGradient>
+
+    <!-- Badge Gradients -->
+    <linearGradient id="badgeBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#55B6F5"/>
+      <stop offset="100%" stop-color="#218AD6"/>
+    </linearGradient>
+
+    <linearGradient id="badgeCoral" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7B75"/>
+      <stop offset="100%" stop-color="#E84A42"/>
+    </linearGradient>
+
+    <linearGradient id="badgeTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DC9BC"/>
+      <stop offset="100%" stop-color="#1FA598"/>
+    </linearGradient>
+
+    <linearGradient id="badgeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4BA3E3"/>
+      <stop offset="100%" stop-color="#1F75BD"/>
+    </linearGradient>
+
+    <!-- Filters for soft drop shadow -->
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.3"/>
+    </filter>
+    <filter id="badgeShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- 1. Background (Dark Teal/Navy Slate) -->
+  <rect width="1200" height="675" fill="url(#bgGradient)"/>
+
+  <!-- 2. Watermark line graphics & icons on dark background -->
+  <g opacity="0.12" stroke="#FFFFFF" fill="none" stroke-width="2">
+    <!-- Wavy wave lines connecting badges -->
+    <path d="M 500,280 C 650,220 750,340 900,280 C 1050,220 1150,300 1200,260" stroke-width="1.5"/>
+    <path d="M 500,320 C 650,260 750,380 900,320 C 1050,260 1150,340 1200,300" stroke-width="1.5"/>
+    <path d="M 500,360 C 650,300 750,420 900,360 C 1050,300 1150,380 1200,340" stroke-width="1.5"/>
+    <path d="M 500,400 C 650,340 750,460 900,400 C 1050,340 1150,420 1200,380" stroke-width="1.5"/>
+
+    <!-- Subtle background icons -->
+    <!-- Phone icon (top left of dark section) -->
+    <g transform="translate(440, 210) rotate(-25) scale(0.9)">
+      <path d="M10,25 C10,12 25,5 35,12 L45,22 C48,25 48,30 45,33 L38,40 C38,40 45,55 60,62 L67,55 C70,52 75,52 78,55 L88,65 C95,75 88,90 75,90 C50,90 10,50 10,25 Z" stroke-width="2.5"/>
+    </g>
+    <!-- Envelope (mid left) -->
+    <g transform="translate(570, 275) scale(0.8)">
+      <rect x="0" y="0" width="65" height="42" rx="6" stroke-width="2.5"/>
+      <path d="M 0,0 L 32.5,24 L 65,0" stroke-width="2.5"/>
+    </g>
+    <!-- Camera watermark -->
+    <g transform="translate(65, 520) scale(0.9)">
+      <rect x="0" y="10" width="75" height="50" rx="8" stroke-width="2.5"/>
+      <path d="M 25,10 L 30,0 L 45,0 L 50,10" stroke-width="2.5"/>
+      <circle cx="37.5" cy="35" r="15" stroke-width="2.5"/>
+    </g>
+    <!-- Microphone watermark (bottom right) -->
+    <g transform="translate(850, 535) scale(0.9)">
+      <rect x="15" y="0" width="22" height="45" rx="11" stroke-width="2.5"/>
+      <path d="M 4,22 C 4,42 48,42 48,22" stroke-width="2.5"/>
+      <line x1="26" y1="42" x2="26" y2="60" stroke-width="2.5"/>
+      <line x1="12" y1="60" x2="40" y2="60" stroke-width="2.5"/>
+    </g>
+    <!-- Notebook watermark (far right) -->
+    <g transform="translate(1085, 500) rotate(15) scale(0.85)">
+      <rect x="10" y="0" width="60" height="85" rx="8" stroke-width="2.5"/>
+      <line x1="5" y1="12" x2="15" y2="12" stroke-width="3"/>
+      <line x1="5" y1="24" x2="15" y2="24" stroke-width="3"/>
+      <line x1="5" y1="36" x2="15" y2="36" stroke-width="3"/>
+      <line x1="5" y1="48" x2="15" y2="48" stroke-width="3"/>
+      <line x1="5" y1="60" x2="15" y2="60" stroke-width="3"/>
+      <line x1="5" y1="72" x2="15" y2="72" stroke-width="3"/>
+    </g>
+    <!-- Lock watermark (top right) -->
+    <g transform="translate(1090, 205) scale(0.85)">
+      <rect x="0" y="18" width="50" height="40" rx="6" stroke-width="2.5"/>
+      <path d="M 12,18 L 12,10 C 12,3 38,3 38,10 L 38,18" stroke-width="2.5"/>
+      <circle cx="25" cy="36" r="4" fill="#fff"/>
+    </g>
+  </g>
+
+  <!-- 3. Top Header Swirls & Indian Tricolor Ribbons -->
+  <!-- Upper Tricolor Ribbon Arc -->
+  <g>
+    <!-- Saffron stripe -->
+    <path d="M 0,110 Q 300,10 650,45 T 1200,35 L 1200,0 L 0,0 Z" fill="#FF9933"/>
+    <!-- White divider line -->
+    <path d="M 0,118 Q 300,18 650,53 T 1200,43 L 1200,35 Q 850,45 650,45 T 0,110 Z" fill="#FFFFFF"/>
+    <!-- Green stripe -->
+    <path d="M 0,128 Q 300,28 650,63 T 1200,53 L 1200,43 Q 850,53 650,53 T 0,118 Z" fill="#138808"/>
+  </g>
+
+  <!-- Top White Container Body with Wave Cutout -->
+  <path d="M 0,0 L 1200,0 L 1200,185 C 1050,195 900,210 750,225 C 500,250 250,150 0,380 Z" fill="#FFFFFF" filter="url(#softShadow)"/>
+
+  <!-- Wave Accent Borders (Saffron & Green swoops) -->
+  <path d="M 0,380 C 250,150 500,250 750,225 C 900,210 1050,195 1200,185 L 1200,195 C 1050,205 900,220 750,235 C 500,260 250,160 0,390 Z" fill="#FF9933"/>
+  <path d="M 0,390 C 250,160 500,260 750,235 C 900,220 1050,205 1200,195 L 1200,202 C 1050,212 900,227 750,242 C 500,267 250,167 0,397 Z" fill="#138808"/>
+
+  <!-- Lower Left Tricolor Swoop Framing the Desk -->
+  <path d="M -20,280 C 60,320 100,420 0,550 L -20,550 Z" fill="#FF9933" opacity="0.9"/>
+  <path d="M -15,310 C 65,350 95,435 0,530 L -15,530 Z" fill="#FFFFFF"/>
+  <path d="M -10,330 C 60,370 85,445 0,515 L -10,515 Z" fill="#138808" opacity="0.9"/>
+
+  <path d="M 370,675 C 470,600 520,520 480,440 L 490,443 C 530,523 480,605 380,675 Z" fill="#FF9933"/>
+  <path d="M 380,675 C 480,605 530,523 490,443 L 497,445 C 537,525 487,607 387,675 Z" fill="#138808"/>
+
+  <!-- 4. Top Header Content -->
+  <!-- Official Logo of Lokshahi Patrakar Mahasangh Bharat -->
+  <g transform="translate(48, 38)">
+    <circle cx="65" cy="65" r="63" fill="#FFFFFF" stroke="#E30620" stroke-width="4" filter="url(#softShadow)"/>
+    <!-- Logo outer colored rings (Saffron, Green, Blue, Red) -->
+    <path d="M 65,15 A 50 50 0 0 1 115,65 L 102,65 A 37 37 0 0 0 65,28 Z" fill="#138808"/>
+    <path d="M 115,65 A 50 50 0 0 1 65,115 L 65,102 A 37 37 0 0 0 102,65 Z" fill="#1877F2"/>
+    <path d="M 65,115 A 50 50 0 0 1 15,65 L 28,65 A 37 37 0 0 0 65,102 Z" fill="#FF9933"/>
+    <path d="M 15,65 A 50 50 0 0 1 65,15 L 65,28 A 37 37 0 0 0 28,65 Z" fill="#E30620"/>
+
+    <!-- Inner black circle with pen fist emblem -->
+    <circle cx="65" cy="65" r="34" fill="#0B1320"/>
+    <g transform="translate(50, 48) scale(0.65)">
+      <!-- Pen nib & torch/fist emblem -->
+      <path d="M 23,2 L 23,28 L 12,48 L 23,52 L 23,54 L 21,54 L 21,55 L 25,55 L 25,54 L 23,54 Z" fill="#E30620"/>
+      <!-- White fist holding pen -->
+      <path d="M 16,18 C 16,15 20,15 22,17 C 24,15 28,15 30,17 C 32,15 36,15 37,18 L 37,32 C 37,38 29,42 23,42 C 17,42 16,36 16,30 Z" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Ring Text around Logo -->
+    <text x="65" y="24" fill="#000" font-size="7.5" font-weight="900" text-anchor="middle" letter-spacing="1">PATRAKAR</text>
+    <text x="65" y="112" fill="#000" font-size="7.5" font-weight="900" text-anchor="middle" letter-spacing="1">BHARAT</text>
+  </g>
+
+  <!-- Big Title & Subtitle in Header -->
+  <g transform="translate(300, 45)">
+    <!-- Devanagari Title -->
+    <text x="0" y="58" fill="#1C2D42" font-size="64" font-weight="900" letter-spacing="0.5">पत्रकार हेल्पडेस्क</text>
+    <!-- English Subtitle -->
+    <text x="40" y="98" fill="#172A4A" font-size="30" font-weight="800" letter-spacing="5">JOURNALIST HELPDESK</text>
+  </g>
+
+  <!-- 5. Modern Workstation Desk (Bottom Left) -->
+  <!-- Desk Base Table Top -->
+  <g transform="translate(0, 395)">
+    <!-- Table Surface -->
+    <polygon points="0,0 520,0 480,240 0,240" fill="url(#deskGrad)"/>
+    <!-- Front Desk Edge / Thickness with 3D depth -->
+    <polygon points="0,240 480,240 470,280 0,280" fill="url(#deskShadow)"/>
+
+    <!-- LAPTOP -->
+    <g transform="translate(135, -170)">
+      <!-- Laptop Screen Back Frame -->
+      <rect x="25" y="0" width="245" height="160" rx="10" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="2"/>
+      <!-- Inner Screen Bezel -->
+      <rect x="33" y="8" width="229" height="144" rx="4" fill="#0F172A"/>
+      <!-- Display Area with reflection/gradient -->
+      <rect x="37" y="12" width="221" height="136" rx="2" fill="url(#laptopScreen)"/>
+      <!-- Top Webcam dot -->
+      <circle cx="147.5" cy="5" r="2" fill="#64748B"/>
+
+      <!-- Laptop Base & Keyboard Base (Isometric Perspective) -->
+      <polygon points="10,160 285,160 305,215 -10,215" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5" filter="url(#softShadow)"/>
+      <polygon points="-10,215 305,215 300,222 -15,222" fill="#94A3B8"/>
+
+      <!-- Keyboard area -->
+      <polygon points="28,166 267,166 280,202 15,202" fill="#1E293B" rx="3"/>
+      <!-- Individual Key Rows (subtle grid lines) -->
+      <g stroke="#334155" stroke-width="1.2">
+        <line x1="26" y1="173" x2="269" y2="173"/>
+        <line x1="23" y1="180" x2="272" y2="180"/>
+        <line x1="20" y1="187" x2="275" y2="187"/>
+        <line x1="17" y1="194" x2="278" y2="194"/>
+      </g>
+      <!-- Trackpad -->
+      <polygon points="115,204 180,204 182,213 113,213" fill="#CBD5E1" stroke="#94A3B8" stroke-width="1"/>
+    </g>
+
+    <!-- HEADSET (Left of Laptop) -->
+    <g transform="translate(60, 40) rotate(-15)">
+      <!-- Headband Arc -->
+      <path d="M 20,60 C 20,5 95,5 95,60" fill="none" stroke="#2B3746" stroke-width="9" stroke-linecap="round"/>
+      <path d="M 22,60 C 22,12 93,12 93,60" fill="none" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Left Earpad -->
+      <rect x="8" y="55" width="22" height="42" rx="10" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+      <rect x="13" y="60" width="12" height="32" rx="6" fill="#475569"/>
+
+      <!-- Right Earpad -->
+      <rect x="85" y="55" width="22" height="42" rx="10" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+      <rect x="90" y="60" width="12" height="32" rx="6" fill="#475569"/>
+
+      <!-- Microphone Boom Arm -->
+      <path d="M 20,82 C 10,95 20,115 50,118" fill="none" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+      <!-- Mic Head Foam -->
+      <ellipse cx="53" cy="118" rx="8" ry="6" fill="#0F172A"/>
+    </g>
+
+    <!-- GOOSENECK CONFERENCE MICROPHONE (Right of Laptop) -->
+    <g transform="translate(365, 85)">
+      <!-- Round Base Stand -->
+      <ellipse cx="40" cy="50" rx="30" ry="12" fill="#1E293B" stroke="#475569" stroke-width="2" filter="url(#softShadow)"/>
+      <ellipse cx="40" cy="46" rx="20" ry="8" fill="#334155"/>
+      <circle cx="40" cy="45" r="4" fill="#E30620"/> <!-- Status LED -->
+
+      <!-- Gooseneck Flexible Stem -->
+      <path d="M 40,45 C 40,0 15, -40 2, -65" fill="none" stroke="#1E293B" stroke-width="5" stroke-linecap="round"/>
+      <path d="M 40,45 C 40,0 15, -40 2, -65" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+      <!-- Microphone Capsule -->
+      <g transform="translate(2, -65) rotate(25)">
+        <rect x="-7" y="-22" width="14" height="25" rx="6" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+        <line x1="-5" y1="-14" x2="5" y2="-14" stroke="#64748B" stroke-width="1"/>
+        <line x1="-5" y1="-8" x2="5" y2="-8" stroke="#64748B" stroke-width="1"/>
+        <!-- Red ring indicator -->
+        <line x1="-7" y1="-4" x2="7" y2="-4" stroke="#E30620" stroke-width="2"/>
+      </g>
+    </g>
+
+    <!-- SPIRAL NOTEPAD & PEN (Front of Laptop) -->
+    <g transform="translate(210, 115) rotate(-6)">
+      <!-- Notebook Cover & Pages -->
+      <polygon points="0,0 145,0 145,85 0,85" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5" filter="url(#softShadow)"/>
+      <polygon points="2,2 143,2 143,83 2,83" fill="#F8FAFC"/>
+      <!-- Lined paper horizontal rules -->
+      <g stroke="#93C5FD" stroke-width="1" opacity="0.65">
+        <line x1="12" y1="18" x2="135" y2="18"/>
+        <line x1="12" y1="28" x2="135" y2="28"/>
+        <line x1="12" y1="38" x2="135" y2="38"/>
+        <line x1="12" y1="48" x2="135" y2="48"/>
+        <line x1="12" y1="58" x2="135" y2="58"/>
+        <line x1="12" y1="68" x2="135" y2="68"/>
+        <line x1="12" y1="78" x2="135" y2="78"/>
+      </g>
+      <!-- Spiral Wire Binding at Top -->
+      <g stroke="#1E293B" stroke-width="2" fill="none">
+        <line x1="15" y1="-4" x2="15" y2="6"/>
+        <line x1="28" y1="-4" x2="28" y2="6"/>
+        <line x1="41" y1="-4" x2="41" y2="6"/>
+        <line x1="54" y1="-4" x2="54" y2="6"/>
+        <line x1="67" y1="-4" x2="67" y2="6"/>
+        <line x1="80" y1="-4" x2="80" y2="6"/>
+        <line x1="93" y1="-4" x2="93" y2="6"/>
+        <line x1="106" y1="-4" x2="106" y2="6"/>
+        <line x1="119" y1="-4" x2="119" y2="6"/>
+        <line x1="132" y1="-4" x2="132" y2="6"/>
+      </g>
+      <!-- Top header line of pad -->
+      <rect x="0" y="0" width="145" height="10" fill="#2563EB"/>
+
+      <!-- Pen laying diagonally across pad -->
+      <g transform="translate(68, 12) rotate(42)">
+        <polygon points="0,0 8,0 8,90 4,98 0,90" fill="#1E293B"/>
+        <polygon points="0,20 8,20 8,70 0,70" fill="#D97706"/> <!-- Golden body -->
+        <polygon points="2,90 6,90 4,98" fill="#F8FAFC"/> <!-- Nib -->
+        <circle cx="4" cy="98" r="0.8" fill="#1E293B"/>
+        <rect x="0" y="10" width="8" height="5" fill="#E2E8F0"/>
+        <line x1="9" y1="8" x2="9" y2="35" stroke="#94A3B8" stroke-width="1.8"/> <!-- Clip -->
+      </g>
+    </g>
+
+    <!-- Additional Document / Papers next to pad -->
+    <g transform="translate(325, 115) rotate(12)">
+      <polygon points="0,0 100,0 100,75 0,75" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#softShadow)"/>
+      <line x1="10" y1="15" x2="90" y2="15" stroke="#CBD5E1" stroke-width="1.5"/>
+      <line x1="10" y1="28" x2="90" y2="28" stroke="#CBD5E1" stroke-width="1.5"/>
+      <line x1="10" y1="41" x2="90" y2="41" stroke="#CBD5E1" stroke-width="1.5"/>
+      <line x1="10" y1="54" x2="70" y2="54" stroke="#CBD5E1" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- 6. Four Connected Circular Feature Badges (Right Half) -->
+  <!-- Center connecting fine lines -->
+  <g stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4">
+    <line x1="645" y1="440" x2="830" y2="440"/>
+    <line x1="645" y1="640" x2="830" y2="640"/>
+    <line x1="645" y1="440" x2="645" y2="640"/>
+    <line x1="830" y1="440" x2="830" y2="640"/>
+  </g>
+
+  <!-- Badge 1: सहायता (Top Left of group) -->
+  <g transform="translate(645, 435)" filter="url(#badgeShadow)">
+    <circle cx="0" cy="0" r="68" fill="#FFFFFF" stroke="#2563EB" stroke-width="3"/>
+    <circle cx="0" cy="0" r="62" fill="url(#badgeBlue)"/>
+
+    <!-- Speech Chat Bubbles with Question Mark Icon -->
+    <g transform="translate(-32, -32) scale(1.1)" fill="#FFFFFF">
+      <!-- Back Chat Bubble with question mark -->
+      <path d="M 12,2 C 5,2 0,7 0,14 C 0,18 2,21 5,23 L 3,28 L 9,25 C 10,26 11,26 12,26 C 19,26 24,21 24,14 C 24,7 19,2 12,2 Z" fill="#FBBF24"/>
+      <text x="12" y="18" fill="#1E293B" font-size="13" font-weight="900" text-anchor="middle">?</text>
+
+      <!-- Front Blue Speech Bubble -->
+      <path d="M 38,16 C 30,16 24,21 24,28 C 24,31 25,34 28,36 L 26,42 L 33,39 C 35,40 36,40 38,40 C 46,40 52,35 52,28 C 52,21 46,16 38,16 Z" fill="#FFFFFF"/>
+      <circle cx="32" cy="28" r="2" fill="#2563EB"/>
+      <circle cx="38" cy="28" r="2" fill="#2563EB"/>
+      <circle cx="44" cy="28" r="2" fill="#2563EB"/>
+    </g>
+
+    <!-- Badge Label -->
+    <text x="0" y="98" fill="#FFFFFF" font-size="26" font-weight="900" text-anchor="middle">सहायता</text>
+  </g>
+
+  <!-- Badge 2: समर्थन (Top Right of group) -->
+  <g transform="translate(830, 435)" filter="url(#badgeShadow)">
+    <circle cx="0" cy="0" r="68" fill="#FFFFFF" stroke="#E11D48" stroke-width="3"/>
+    <circle cx="0" cy="0" r="62" fill="url(#badgeCoral)"/>
+
+    <!-- Heart inside Gear held by Helping Hand Icon -->
+    <g transform="translate(-32, -32) scale(1.1)" fill="#FFFFFF">
+      <!-- Cogwheel / Gear -->
+      <g fill="#FFFFFF" opacity="0.95">
+        <circle cx="30" cy="20" r="14" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+        <rect x="27" y="3" width="6" height="5" rx="1"/>
+        <rect x="27" y="32" width="6" height="5" rx="1"/>
+        <rect x="13" y="17" width="5" height="6" rx="1"/>
+        <rect x="42" y="17" width="5" height="6" rx="1"/>
+        <rect x="18" y="8" width="5" height="5" rx="1" transform="rotate(45 20.5 10.5)"/>
+        <rect x="36" y="26" width="5" height="5" rx="1" transform="rotate(45 38.5 28.5)"/>
+        <rect x="18" y="26" width="5" height="5" rx="1" transform="rotate(-45 20.5 28.5)"/>
+        <rect x="36" y="8" width="5" height="5" rx="1" transform="rotate(-45 38.5 10.5)"/>
+      </g>
+      <!-- Red Heart in center of gear -->
+      <path d="M 30,16 C 29,14 27,13 25,14 C 23,15 22,17 23,19 C 24,22 30,26 30,26 C 30,26 36,22 37,19 C 38,17 37,15 35,14 C 33,13 31,14 30,16 Z" fill="#E11D48"/>
+
+      <!-- Supporting Hand below -->
+      <path d="M 12,38 C 18,36 28,34 32,38 L 48,34 C 49,34 50,35 49,36 L 40,44 L 28,45 C 22,45 16,42 12,38 Z" fill="#FFFFFF"/>
+      <path d="M 6,36 L 14,35 C 15,35 16,36 15,38 L 12,46 L 4,43 Z" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Badge Label -->
+    <text x="0" y="98" fill="#FFFFFF" font-size="26" font-weight="900" text-anchor="middle">समर्थन</text>
+  </g>
+
+  <!-- Badge 3: Legal Aid / कानूनी सहायता (Bottom Left of group) -->
+  <g transform="translate(645, 650)" filter="url(#badgeShadow)">
+    <circle cx="0" cy="0" r="68" fill="#FFFFFF" stroke="#0D9488" stroke-width="3"/>
+    <circle cx="0" cy="0" r="62" fill="url(#badgeTeal)"/>
+
+    <!-- Gavel and Scales of Justice Icon -->
+    <g transform="translate(-32, -34) scale(1.15)">
+      <!-- Gavel Mallet (diagonal) -->
+      <g transform="translate(18, 12) rotate(45)">
+        <rect x="-6" y="-12" width="12" height="24" rx="3" fill="#FFFFFF"/>
+        <rect x="-2" y="8" width="4" height="28" rx="2" fill="#E2E8F0"/>
+        <!-- Brass Band -->
+        <rect x="-6" y="-3" width="12" height="6" fill="#F59E0B"/>
+      </g>
+      <!-- Scales of Justice -->
+      <g transform="translate(34, 18)" stroke="#FFFFFF" stroke-width="2" fill="none">
+        <line x1="0" y1="0" x2="0" y2="28"/> <!-- Pole -->
+        <line x1="-18" y1="6" x2="18" y2="6"/> <!-- Crossbar -->
+        <line x1="-18" y1="6" x2="-24" y2="16"/>
+        <line x1="-18" y1="6" x2="-12" y2="16"/>
+        <path d="M -26,16 Q -18,22 -10,16 Z" fill="#FFFFFF"/>
+        <line x1="18" y1="6" x2="12" y2="16"/>
+        <line x1="18" y1="6" x2="24" y2="16"/>
+        <path d="M 10,16 Q 18,22 26,16 Z" fill="#FFFFFF"/>
+        <line x1="-8" y1="28" x2="8" y2="28" stroke-width="3"/> <!-- Base -->
+      </g>
+    </g>
+
+    <!-- Badge Label -->
+    <text x="0" y="90" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">Legal Aid</text>
+    <text x="0" y="112" fill="#FFFFFF" font-size="20" font-weight="900" text-anchor="middle">कानूनी सहायता</text>
+  </g>
+
+  <!-- Badge 4: Press ID / प्रेस पहचान पत्र (Bottom Right of group) -->
+  <g transform="translate(830, 650)" filter="url(#badgeShadow)">
+    <circle cx="0" cy="0" r="68" fill="#FFFFFF" stroke="#0284C7" stroke-width="3"/>
+    <circle cx="0" cy="0" r="62" fill="url(#badgeGold)"/>
+
+    <!-- ID Card with Lanyard Clip Icon -->
+    <g transform="translate(-32, -32) scale(1.1)">
+      <!-- Lanyard Clip at top -->
+      <rect x="25" y="4" width="14" height="6" rx="2" fill="#FFFFFF"/>
+      <path d="M 29,4 L 29,0 L 35,0 L 35,4" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+
+      <!-- Identity Card Badge Frame -->
+      <rect x="6" y="10" width="52" height="38" rx="5" fill="#FFFFFF"/>
+      <!-- Photo box on card -->
+      <rect x="10" y="15" width="16" height="20" rx="3" fill="#0284C7"/>
+      <!-- User silhouette in photo -->
+      <circle cx="18" cy="22" r="4" fill="#FFFFFF"/>
+      <path d="M 13,33 C 13,28 23,28 23,33 Z" fill="#FFFFFF"/>
+
+      <!-- Text lines on ID card -->
+      <rect x="30" y="16" width="22" height="3" rx="1.5" fill="#0284C7"/>
+      <rect x="30" y="22" width="18" height="2.5" rx="1" fill="#64748B"/>
+      <rect x="30" y="27" width="20" height="2.5" rx="1" fill="#64748B"/>
+      <rect x="30" y="32" width="12" height="2.5" rx="1" fill="#0D9488"/>
+
+      <!-- Red bottom stripe on ID card (Press strip) -->
+      <rect x="6" y="43" width="52" height="5" rx="1" fill="#E30620"/>
+    </g>
+
+    <!-- Badge Label -->
+    <text x="0" y="90" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">Press ID</text>
+    <text x="0" y="112" fill="#FFFFFF" font-size="20" font-weight="900" text-anchor="middle">प्रेस पहचान पत्र</text>
+  </g>
+</svg>

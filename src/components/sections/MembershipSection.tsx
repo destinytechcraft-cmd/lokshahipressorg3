@@ -122,15 +122,14 @@ export function MembershipSection({ onJoinClick }: { onJoinClick?: () => void })
             <span>{lang === 'mr' ? '📄 सभासद नोंदणी अर्ज पहा / डाउनलोड करा (PDF)' : '📄 View / Download Form (PDF)'}</span>
           </a>
 
-          <WFButton
-            variant="navy"
-            href={GOOGLE_FORM_LINKS.joinMembership}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScZurlqeCu98YVLlnhRah-brI0uhCsKhm1Wka1ypic-LNLlFw/viewform?usp=header"
             target="_blank"
-            onClick={onJoinClick}
-            className="w-full sm:w-auto px-6 sm:px-8 py-3.5 text-xs sm:text-sm font-black tracking-wide uppercase shadow-md bg-[#172A4A] hover:bg-[#0f1c32] text-white text-center rounded-xl"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 text-xs sm:text-sm font-black tracking-wide uppercase shadow-md bg-[#172A4A] hover:bg-[#0f1c32] text-white text-center rounded-xl transition-all cursor-pointer border border-[#172A4A]"
           >
-            {lang === 'mr' ? 'ऑनलाइन नोंदणी फॉर्म ↗' : 'ONLINE MEMBERSHIP FORM ↗'}
-          </WFButton>
+            <span>{lang === 'mr' ? 'ऑनलाइन नोंदणी फॉर्म ↗' : 'ONLINE MEMBERSHIP FORM ↗'}</span>
+          </a>
         </div>
       </div>
     </SectionShell>

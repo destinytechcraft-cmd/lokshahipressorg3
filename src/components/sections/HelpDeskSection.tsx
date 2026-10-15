@@ -9,6 +9,17 @@ export function HelpDeskSection() {
   return (
     <SectionShell id="helpdesk" title={t('sec_helpdesk')}>
       <div className="space-y-6 text-left">
+        {/* Official Journalist Helpdesk Graphic Banner */}
+        <div className="overflow-hidden rounded-2xl border-2 border-[#172A4A]/15 bg-white shadow-md">
+          <img
+            src="/helpdesk-banner.svg"
+            alt={lang === 'mr' ? 'पत्रकार हेल्पडेस्क - लोकशाही पत्रकार महासंघ भारत' : 'Journalist Helpdesk - Lokshahi Patrakar Mahasangh Bharat'}
+            className="w-full h-auto object-cover max-h-[460px] sm:max-h-[520px]"
+            loading="eager"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+
         {/* Banner from PDF Page 14 */}
         <div className="rounded-2xl border-2 border-[#172A4A]/20 bg-white p-6 sm:p-8 shadow-xs">
           <h3 className="text-xl sm:text-2xl font-black text-[#172A4A] tracking-tight mb-2">

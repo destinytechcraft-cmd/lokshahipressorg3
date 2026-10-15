@@ -15,9 +15,6 @@ import {
   Flame,
   Globe,
   Radio,
-  Link as LinkIcon,
-  Copy,
-  Check,
   Bell,
 } from 'lucide-react';
 
@@ -29,16 +26,7 @@ export function MediaSection() {
   const { t, lang } = useLanguage();
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'all' | 'facebook' | 'reels' | 'youtube' | 'statements'>('all');
-  const [copiedLink, setCopiedLink] = useState<string | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  const handleCopyLink = (url: string, id: string) => {
-    if (typeof navigator !== 'undefined' && navigator.clipboard) {
-      navigator.clipboard.writeText(url);
-      setCopiedLink(id);
-      setTimeout(() => setCopiedLink(null), 2000);
-    }
-  };
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -625,63 +613,13 @@ export function MediaSection() {
                           </span>
                         </div>
 
-                        {/* Official Facebook Embed Box */}
-                        <div className="my-4 rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-                          <div className="flex items-center gap-2 mb-2">
-                            <FacebookIcon size={20} />
-                            <span className="text-xs font-black text-[#172A4A]">
-                              {lang === 'mr' ? post.titleMr : post.titleEn}
-                            </span>
-                          </div>
-                          <p className="text-xs text-neutral-600 leading-relaxed font-medium">
-                            {lang === 'mr' ? post.descMr : post.descEn}
-                          </p>
-
-                          <div className="mt-3 flex items-center justify-between rounded-lg bg-white p-2.5 border border-neutral-200/80">
-                            <div className="text-left">
-                              <span className="block text-xs font-black text-[#172A4A]">25,000+</span>
-                              <span className="text-[10px] text-neutral-500 font-semibold">
-                                {lang === 'mr' ? 'फॉलोअर्स व सदस्य' : 'Followers & Members'}
-                              </span>
-                            </div>
-                            <a
-                              href={post.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="rounded-lg bg-[#1877F2] px-3 py-1.5 text-xs font-black text-white hover:bg-[#166fe5] transition-colors"
-                            >
-                              + Follow
-                            </a>
-                          </div>
-                        </div>
-
-                        {/* Embedded Source Link Pill */}
-                        <div className="mb-3 flex items-center justify-between text-[10px] font-semibold text-neutral-500 bg-neutral-50 rounded-lg px-2.5 py-1.5 border border-neutral-200/70">
-                          <div className="flex items-center gap-1.5 truncate">
-                            <LinkIcon className="h-3 w-3 text-[#1877F2] shrink-0" />
-                            <span className="truncate text-neutral-700 font-mono font-medium">{post.embedSource}</span>
-                          </div>
-                          <button
-                            type="button"
-                            onClick={() => handleCopyLink(post.url, post.id)}
-                            className="flex items-center gap-1 text-[10px] font-bold text-[#172A4A] hover:text-[#E30620] transition-colors cursor-pointer shrink-0 ml-2"
-                          >
-                            {copiedLink === post.id ? (
-                              <>
-                                <Check className="h-3 w-3 text-emerald-600" />
-                                <span className="text-emerald-600 font-bold">Copied</span>
-                              </>
-                            ) : (
-                              <>
-                                <Copy className="h-3 w-3" />
-                                <span>Copy Link</span>
-                              </>
-                            )}
-                          </button>
-                        </div>
-
                         {/* Interactive Facebook Preview Banner */}
-                        <div className="relative rounded-xl overflow-hidden border border-neutral-200 aspect-[16/10] bg-neutral-900 group">
+                        <a
+                          href={post.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-3 relative block rounded-xl overflow-hidden border border-neutral-200 aspect-[16/10] bg-neutral-900 group cursor-pointer"
+                        >
                           <img
                             src="/leadership-banner.jpg"
                             alt="Facebook Banner"
@@ -695,7 +633,7 @@ export function MediaSection() {
                               {lang === 'mr' ? 'सत्यासाठी लढणार, अन्यायाला भिडणार!' : 'Fight for Truth, Stand Against Injustice!'}
                             </p>
                           </div>
-                        </div>
+                        </a>
                       </div>
 
                       {/* Direct Facebook Action */}
@@ -747,49 +685,12 @@ export function MediaSection() {
                           </span>
                         </div>
 
-                        {/* Title / Description */}
-                        <p className="mt-3 text-xs text-neutral-800 leading-relaxed font-semibold">
-                          {lang === 'mr' ? post.contentMr : post.contentEn}
-                        </p>
-
-                        {/* Embedded Source Link Pill with 1-Click Copy */}
-                        <div className="mt-2.5 mb-2 flex items-center justify-between text-[10px] font-semibold text-neutral-500 bg-blue-50/70 rounded-lg px-2.5 py-1.5 border border-[#1877F2]/20">
-                          <div className="flex items-center gap-1.5 truncate">
-                            <LinkIcon className="h-3 w-3 text-[#1877F2] shrink-0" />
-                            <a
-                              href={post.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="truncate text-[#1877F2] font-mono font-bold hover:underline"
-                            >
-                              {post.embedSource || post.url}
-                            </a>
-                          </div>
-                          <button
-                            type="button"
-                            onClick={() => handleCopyLink(post.url, post.id)}
-                            className="flex items-center gap-1 text-[10px] font-bold text-[#172A4A] hover:text-[#E30620] transition-colors cursor-pointer shrink-0 ml-2"
-                          >
-                            {copiedLink === post.id ? (
-                              <>
-                                <Check className="h-3 w-3 text-emerald-600" />
-                                <span className="text-emerald-600 font-bold">Copied</span>
-                              </>
-                            ) : (
-                              <>
-                                <Copy className="h-3 w-3" />
-                                <span>Copy Link</span>
-                              </>
-                            )}
-                          </button>
-                        </div>
-
-                        {/* Video / Reel Preview Banner */}
+                        {/* Video / Reel Preview Banner (Thumbnail Image) */}
                         <a
                           href={post.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="relative mt-2 block rounded-xl overflow-hidden border border-neutral-200 aspect-[16/10] bg-neutral-950 group cursor-pointer"
+                          className="relative mt-3 block rounded-xl overflow-hidden border border-neutral-200 aspect-[16/10] bg-neutral-950 group cursor-pointer"
                         >
                           <img
                             src={post.image || '/leadership-banner.jpg'}
@@ -911,35 +812,8 @@ export function MediaSection() {
                           {lang === 'mr' ? post.contentMr : post.contentEn}
                         </p>
 
-                        {/* Embedded Source Link Pill with Copy Button */}
-                        <div className="mt-2.5 mb-2 flex items-center justify-between text-[10px] font-semibold text-neutral-500 bg-neutral-50 rounded-lg px-2.5 py-1.5 border border-neutral-200/70">
-                          <div className="flex items-center gap-1.5 truncate">
-                            <YouTubeIcon size={12} className="shrink-0 text-[#FF0000]" />
-                            <span className="truncate text-neutral-700 font-mono font-medium">
-                              youtube.com/@lokshahipatrakarmahasanghindia
-                            </span>
-                          </div>
-                          <button
-                            type="button"
-                            onClick={() => handleCopyLink(post.url, post.id)}
-                            className="flex items-center gap-1 text-[10px] font-bold text-[#172A4A] hover:text-[#FF0000] transition-colors cursor-pointer shrink-0 ml-2"
-                          >
-                            {copiedLink === post.id ? (
-                              <>
-                                <Check className="h-3 w-3 text-emerald-600" />
-                                <span className="text-emerald-600 font-bold">Copied</span>
-                              </>
-                            ) : (
-                              <>
-                                <Copy className="h-3 w-3" />
-                                <span>Copy Link</span>
-                              </>
-                            )}
-                          </button>
-                        </div>
-
                         {/* Embedded YouTube Channel Player Screen (Optimized for channel with no videos uploaded yet) */}
-                        <div className="relative mt-2 rounded-xl overflow-hidden border border-neutral-800 bg-[#0F0F0F] aspect-[16/10] text-white flex flex-col justify-between p-3.5 shadow-inner group">
+                        <div className="relative mt-3 rounded-xl overflow-hidden border border-neutral-800 bg-[#0F0F0F] aspect-[16/10] text-white flex flex-col justify-between p-3.5 shadow-inner group">
                           {/* Dark Radial Ambience */}
                           <div className="absolute inset-0 bg-gradient-to-br from-[#1c1c1c] via-[#0f0f0f] to-[#050505] pointer-events-none" />
                           <div className="absolute -right-6 -top-6 w-28 h-28 rounded-full bg-[#FF0000]/15 blur-2xl pointer-events-none" />
@@ -1075,31 +949,6 @@ export function MediaSection() {
                           {lang === 'mr' ? post.contentMr : post.contentEn}
                         </p>
 
-                        {/* Embedded Source Link Pill */}
-                        <div className="mt-2.5 mb-1 flex items-center justify-between text-[10px] font-semibold text-neutral-500 bg-neutral-50 rounded-lg px-2.5 py-1.5 border border-neutral-200/70">
-                          <div className="flex items-center gap-1.5 truncate">
-                            <LinkIcon className="h-3 w-3 text-[#25D366] shrink-0" />
-                            <span className="truncate text-neutral-700 font-mono font-medium">{post.embedSource}</span>
-                          </div>
-                          <button
-                            type="button"
-                            onClick={() => handleCopyLink(post.url, post.id)}
-                            className="flex items-center gap-1 text-[10px] font-bold text-[#172A4A] hover:text-[#E30620] transition-colors cursor-pointer shrink-0 ml-2"
-                          >
-                            {copiedLink === post.id ? (
-                              <>
-                                <Check className="h-3 w-3 text-emerald-600" />
-                                <span className="text-emerald-600 font-bold">Copied</span>
-                              </>
-                            ) : (
-                              <>
-                                <Copy className="h-3 w-3" />
-                                <span>Copy Link</span>
-                              </>
-                            )}
-                          </button>
-                        </div>
-
                         {/* Attached Media Photo */}
                         {post.image && (
                           <div className="relative mt-2 rounded-xl overflow-hidden border border-neutral-200 aspect-[4/3] bg-neutral-100">
@@ -1159,39 +1008,9 @@ export function MediaSection() {
                         </span>
                       </div>
 
-                      {/* Post Caption */}
-                      <p className="mt-3 text-xs text-neutral-800 leading-relaxed font-semibold">
-                        {lang === 'mr' ? post.contentMr : post.contentEn}
-                      </p>
-
-                      {/* Embedded Source Link Pill */}
-                      <div className="mt-2.5 mb-1 flex items-center justify-between text-[10px] font-semibold text-neutral-500 bg-neutral-50 rounded-lg px-2.5 py-1.5 border border-neutral-200/70">
-                        <div className="flex items-center gap-1.5 truncate">
-                          <LinkIcon className="h-3 w-3 text-[#1877F2] shrink-0" />
-                          <span className="truncate text-neutral-700 font-mono font-medium">{post.embedSource}</span>
-                        </div>
-                        <button
-                          type="button"
-                          onClick={() => handleCopyLink(post.url, post.id)}
-                          className="flex items-center gap-1 text-[10px] font-bold text-[#172A4A] hover:text-[#E30620] transition-colors cursor-pointer shrink-0 ml-2"
-                        >
-                          {copiedLink === post.id ? (
-                            <>
-                              <Check className="h-3 w-3 text-emerald-600" />
-                              <span className="text-emerald-600 font-bold">Copied</span>
-                            </>
-                          ) : (
-                            <>
-                              <Copy className="h-3 w-3" />
-                              <span>Copy Link</span>
-                            </>
-                          )}
-                        </button>
-                      </div>
-
-                      {/* Attached Media Photo */}
+                      {/* Attached Media Photo (Thumbnail Image) */}
                       {post.image && (
-                        <div className="relative mt-2 rounded-xl overflow-hidden border border-neutral-200 aspect-[4/3] bg-neutral-100">
+                        <div className="relative mt-3 rounded-xl overflow-hidden border border-neutral-200 aspect-[4/3] bg-neutral-100">
                           <img
                             src={post.image}
                             alt={post.imageAlt || 'Post Media'}
