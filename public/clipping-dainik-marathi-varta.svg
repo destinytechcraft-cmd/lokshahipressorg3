@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="100%" height="100%" style="background:#ffffff; font-family:'Mukta', 'Noto Sans Devanagari', Arial, sans-serif;">
+  <defs>
+    <style>
+      .mast-box { fill: #e53935; rx: 35px; }
+      .masthead-txt { font-size: 68px; font-weight: 900; fill: #ffffff; letter-spacing: 2px; }
+      .banner-box { fill: #880e4f; }
+      .banner-txt { font-size: 32px; font-weight: 900; fill: #ffffff; letter-spacing: 1px; }
+      .headline-main { font-size: 36px; font-weight: 900; fill: #000000; line-height: 1.25; }
+      .body-news { font-size: 13.5px; font-weight: 600; fill: #222222; line-height: 1.45; text-align: justify; }
+      .byline { font-size: 15px; font-weight: 800; fill: #000; }
+    </style>
+  </defs>
+
+  <!-- Newsprint paper -->
+  <rect width="900" height="620" fill="#faf9f6"/>
+  <rect x="15" y="15" width="870" height="590" fill="#ffffff" stroke="#dcd6c8" stroke-width="2"/>
+
+  <!-- Masthead Badge -->
+  <g transform="translate(180, 28)">
+    <rect x="0" y="0" width="540" height="100" class="mast-box"/>
+    <text x="270" y="72" class="masthead-txt" text-anchor="middle">दैनिक मराठी वार्ता</text>
+  </g>
+
+  <!-- Dark Red/Maroon Bar -->
+  <g transform="translate(15, 142)">
+    <rect x="0" y="0" width="870" height="48" class="banner-box"/>
+    <text x="435" y="34" class="banner-txt" text-anchor="middle">लोकशाही पत्रकार संघाचा पत्रकार प्रशिक्षण मेळावा संपन्न</text>
+  </g>
+
+  <!-- Big Bold Headline -->
+  <g transform="translate(30, 202)">
+    <text x="420" y="40" class="headline-main" text-anchor="middle">
+      पत्रकारांना योग्य न्याय मिळावा यासाठी
+    </text>
+    <text x="420" y="84" class="headline-main" text-anchor="middle">
+      पत्रकारांची वज्रमुठ बांधणार : - किशोर पवार
+    </text>
+    <line x1="20" y1="102" x2="820" y2="102" stroke="#222" stroke-width="1.5"/>
+  </g>
+
+  <!-- News Content Section -->
+  <g transform="translate(30, 320)">
+    <!-- Left Column (Byline & intro) -->
+    <text x="15" y="18" class="byline" text-anchor="middle">नळदुर्ग</text>
+    <text x="15" y="36" class="byline" text-anchor="middle">दादासाहेब बनसोडे</text>
+    <line x1="5" y1="46" x2="115" y2="46" stroke="#888" stroke-width="1"/>
+
+    <text x="0" y="66" class="body-news">
+      <tspan x="0" dy="0">युवा पत्रकारांचे नेतृत्व,</tspan>
+      <tspan x="0" dy="18">करिअर आणि करिअरची संधी</tspan>
+      <tspan x="0" dy="18">नव्या पिढीचे भूमिका या विषयाला</tspan>
+      <tspan x="0" dy="18">अनुसरून पत्रकार कौशल्य</tspan>
+      <tspan x="0" dy="18">विकास डिजिटल माध्यमांचा प्रभावी</tspan>
+      <tspan x="0" dy="18">वापर आणि मजबूत नेटवर्किंग या</tspan>
+      <tspan x="0" dy="18">विषयांवर सखोल मार्गदर्शन करताना</tspan>
+      <tspan x="0" dy="18">मा.श्री.किशोर दादा पवार यांनी</tspan>
+      <tspan x="0" dy="18">पत्रकारांची वज्रमुठ बांधण्याचा</tspan>
+      <tspan x="0" dy="18">निश्चय व्यक्त केला.</tspan>
+    </text>
+
+    <!-- Center Photo Frame -->
+    <g transform="translate(160, 0)">
+      <rect x="-4" y="-4" width="288" height="208" fill="#fff" stroke="#172A4A" stroke-width="2"/>
+      <image href="/hero-photo-2.jpg" x="0" y="0" width="280" height="200" preserveAspectRatio="xMidYMid slice"/>
+      <rect x="0" y="165" width="280" height="35" fill="rgba(0,0,0,0.7)"/>
+      <text x="140" y="188" fill="#fff" font-size="11.5px" font-weight="700" text-anchor="middle">पत्रकार प्रशिक्षण मेळाव्यात सत्कार व सन्मान</text>
+    </g>
+
+    <!-- Right Side Multi-column Text -->
+    <g transform="translate(460, 0)">
+      <text x="0" y="18" class="body-news">
+        <tspan x="0" dy="0">न्याय हक्कासाठी वज्रमुठ बांधण्यासाठी आम्ही सक्षम</tspan>
+        <tspan x="0" dy="18">आहोत, शिवाय लोकशाही पत्रकार संघटनेची उद्दिष्टे स्पष्ट</tspan>
+        <tspan x="0" dy="18">करताना किशोर पवार म्हणाले की, "पत्रकारांचे हक्क आणि</tspan>
+        <tspan x="0" dy="18">जबाबदाऱ्या यावर प्रकाश टाकत संघटनात्मक बांधणी</tspan>
+        <tspan x="0" dy="18">आणि बळकटीचे महत्त्व विषद करण्यात आले."</tspan>
+        <tspan x="0" dy="24">मेळाव्यास प्रमुख उपस्थिती :</tspan>
+        <tspan x="0" dy="18">• प्रतापराव साळुंके (विधि सल्लागार व मार्गदर्शक)</tspan>
+        <tspan x="0" dy="18">• डॉ. संतोषकुमार जयस्वाल (सेवानिवृत्त न्यायाधीश)</tspan>
+        <tspan x="0" dy="18">• पंचशीला कांबळे (अध्यक्षा, मराठवाडा महिला)</tspan>
+        <tspan x="0" dy="18">• बालाजी सूर्यवंशी, रेणुका जयस्वाल, प्रतीक जयस्वाल</tspan>
+        <tspan x="0" dy="18">• राहुलजी थोरात, निखिल घोडके, कविता घोडके</tspan>
+        <tspan x="0" dy="24">राज्यभरातील शेकडो पत्रकारांनी मोठ्या संख्येने उपस्थिती</tspan>
+        <tspan x="0" dy="18">लावून मेळावा यशस्वी केला.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

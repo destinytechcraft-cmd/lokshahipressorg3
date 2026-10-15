@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 1100" width="100%" height="100%" style="background:#ffffff; font-family:'Mukta', 'Noto Sans Devanagari', Arial, sans-serif;">
+  <defs>
+    <style>
+      .masthead-red { font-size: 58px; font-weight: 900; fill: #d32f2f; letter-spacing: 1px; }
+      .meta-top { font-size: 13.5px; font-weight: 700; fill: #333; }
+      .main-h1 { font-size: 44px; font-weight: 900; fill: #000; line-height: 1.2; }
+      .main-h2 { font-size: 26px; font-weight: 900; fill: #000; line-height: 1.3; }
+      .byline-bar { font-size: 17px; font-weight: 900; fill: #000; }
+      .news-col { font-size: 13.5px; font-weight: 600; fill: #222; line-height: 1.45; text-align: justify; }
+    </style>
+  </defs>
+
+  <!-- Newsprint paper -->
+  <rect width="850" height="1100" fill="#fdfcf8"/>
+  <rect x="25" y="25" width="800" height="1050" fill="#ffffff" stroke="#e0ded6" stroke-width="2"/>
+
+  <!-- Top Reg Info -->
+  <g transform="translate(45, 52)">
+    <text x="0" y="0" class="meta-top">Email Id - Vishwavinayaknews@gmail.com</text>
+    <text x="760" y="0" class="meta-top" text-anchor="end">Title Code : MAHMAR/2022/51942</text>
+    <line x1="0" y1="12" x2="760" y2="12" stroke="#111" stroke-width="1.5"/>
+  </g>
+
+  <!-- Masthead -->
+  <g transform="translate(45, 88)">
+    <text x="0" y="35" font-size="20px" font-weight="800" fill="#111">साप्ताहिक</text>
+    <text x="380" y="35" font-size="16px" font-weight="800" fill="#172A4A" text-anchor="middle">ग्रामीण जनतेचा बुलंद आवाज</text>
+    
+    <text x="380" y="95" class="masthead-red" text-anchor="middle">विश्वविनायक न्यूज रिपोर्टर</text>
+    
+    <line x1="0" y1="112" x2="760" y2="112" stroke="#111" stroke-width="2.5"/>
+    <text x="0" y="132" class="meta-top">संपादिका : प्रियांका विकास गायकवाड</text>
+    <text x="760" y="132" class="meta-top" text-anchor="end">EDITOR :- PRIYANKA VIKAS GAIKWAD</text>
+    <line x1="0" y1="142" x2="760" y2="142" stroke="#111" stroke-width="1.5"/>
+    
+    <text x="0" y="162" class="meta-top">| वर्ष - ४ थे | अंक- २० वा |</text>
+    <text x="380" y="162" class="meta-top" text-anchor="middle">| मराठी- साप्ताहिक - धाराशिव | विश्वविनायक न्यूज रिपोर्टर</text>
+    <text x="760" y="162" class="meta-top" text-anchor="end">| पाने - ४ किंमत : २ रू. |</text>
+    <line x1="0" y1="172" x2="760" y2="172" stroke="#d32f2f" stroke-width="3"/>
+  </g>
+
+  <!-- Big Red & Black Headline -->
+  <g transform="translate(45, 290)">
+    <text x="380" y="38" class="main-h1" text-anchor="middle">
+      पत्रकार एकजुटीचा <tspan fill="#d32f2f">महासंगम;</tspan>
+    </text>
+    <text x="380" y="80" class="main-h2" text-anchor="middle">
+      लोकशाही पत्रकार संघाचा राज्यस्तरीय सहविचार मेळावा व पत्रकार
+    </text>
+    <text x="380" y="115" class="main-h2" text-anchor="middle">
+      प्रशिक्षण शिबिर मुंबईत संपन्न !
+    </text>
+    <line x1="20" y1="130" x2="740" y2="130" stroke="#111" stroke-width="2"/>
+  </g>
+
+  <!-- Byline Left Column -->
+  <g transform="translate(45, 455)">
+    <text x="0" y="18" class="byline-bar">उमरगा प्रतिनिधी /</text>
+    <text x="0" y="42" class="byline-bar">विकास गायकवाड</text>
+    <line x1="0" y1="52" x2="160" y2="52" stroke="#888" stroke-width="1.5"/>
+
+    <text x="0" y="74" class="news-col">
+      <tspan x="0" dy="0" font-weight="800">बदलापूर :</tspan> राहुल थोरात लोकशाही
+      <tspan x="0" dy="19">पत्रकार संघ आयोजित राज्यस्तरीय</tspan>
+      <tspan x="0" dy="19">सहविचार बैठक व पत्रकार प्रशिक्षण</tspan>
+      <tspan x="0" dy="19">मेळावा काल बदलापूर, मुंबई येथे अत्यंत</tspan>
+      <tspan x="0" dy="19">उत्साहपूर्ण आणि प्रेरणादायी वातावरणात</tspan>
+      <tspan x="0" dy="19">मोठ्या दिमाखात पार पडला. या</tspan>
+      <tspan x="0" dy="19">कार्यक्रमाला बदलापूर शहराच्या</tspan>
+      <tspan x="0" dy="19">लोकनियुक्त नगराध्यक्षा रुचिताताई</tspan>
+      <tspan x="0" dy="19">घोरपडे, मुंबई हायकोर्टाचे निवृत्त</tspan>
+      <tspan x="0" dy="19">न्यायाधीश, कायदेतज्ज्ञ संतोषकुमार</tspan>
+      <tspan x="0" dy="19">जयस्वालजी, बदलापूर पोलीस स्टेशनचे</tspan>
+      <tspan x="0" dy="19">वरिष्ठ पोलीस निरीक्षक नितीनजी पाटील,</tspan>
+      <tspan x="0" dy="19">लोकशाही पत्रकार संघाचे राष्ट्रीय अध्यक्ष</tspan>
+      <tspan x="0" dy="19">भागवतराव वैद्य, राष्ट्रीय उपाध्यक्ष</tspan>
+      <tspan x="0" dy="19">संदिपजी जाधव, प्रदेशाध्यक्ष प्रतापराव</tspan>
+      <tspan x="0" dy="19">साळुंखे, युवा अध्यक्ष किशोरजी पवार</tspan>
+      <tspan x="0" dy="19">यांची प्रमुख उपस्थिती होती.</tspan>
+    </text>
+  </g>
+
+  <!-- Center Press Photo -->
+  <g transform="translate(245, 455)">
+    <rect x="-4" y="-4" width="348" height="228" fill="#fff" stroke="#172A4A" stroke-width="2"/>
+    <image href="/hero-photo-3.jpg" x="0" y="0" width="340" height="220" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="0" y="185" width="340" height="35" fill="rgba(0,0,0,0.7)"/>
+    <text x="170" y="208" fill="#fff" font-size="12px" font-weight="700" text-anchor="middle">मुंबई राज्यस्तरीय सहविचार मेळाव्यात उपस्थित मान्यवर</text>
+
+    <!-- Lower Text below Photo -->
+    <text x="0" y="250" class="news-col">
+      <tspan x="0" dy="0">स्पष्ट करताना पत्रकारांना संघटित होण्याचे आवाहन केले. तर</tspan>
+      <tspan x="0" dy="19">या मेळाव्यात राष्ट्रीय उपाध्यक्ष संदीप जाधव यांनी दिलेले</tspan>
+      <tspan x="0" dy="19">सखोल आणि प्रभावी मार्गदर्शन या कार्यक्रमाचा मुख्य</tspan>
+      <tspan x="0" dy="19">आकर्षणबिंदू ठरला. आजच्या डिजिटल युगातील पत्रकारितेचे</tspan>
+      <tspan x="0" dy="19">बदलते स्वरूप, माध्यमांची जबाबदारी आणि पत्रकारांनी</tspan>
+      <tspan x="0" dy="19">स्वीकारायची व्यावसायिक शिस्त यावर त्यांनी मार्गदर्शन केले.</tspan>
+      <tspan x="0" dy="24">"सत्य, निष्पक्षता आणि जबाबदारी हीच पत्रकाराची खरी</tspan>
+      <tspan x="0" dy="19">ओळख असली पाहिजे," असे त्यांनी ठामपणे नमूद केले.</tspan>
+    </text>
+  </g>
+
+  <!-- Right Column Text -->
+  <g transform="translate(615, 455)">
+    <text x="0" y="18" class="news-col">
+      <tspan x="0" dy="0">आणि कोकण विभागातील अनेक पदाधिकारी</tspan>
+      <tspan x="0" dy="19">मोठ्या संख्येने उपस्थित होते. विशेषतः</tspan>
+      <tspan x="0" dy="19">मराठवाडा महिला अध्यक्ष पंचशीला कांबळे</tspan>
+      <tspan x="0" dy="19">मॅडम, मराठवाडा अध्यक्ष बालाजी सूर्यवंशी,</tspan>
+      <tspan x="0" dy="19">विदर्भ महिला अध्यक्ष रेणुका जयस्वाल मॅडम</tspan>
+      <tspan x="0" dy="19">तसेच मराठवाडा युवा अध्यक्ष प्रतीक</tspan>
+      <tspan x="0" dy="19">जयस्वाल यांची उपस्थिती उल्लेखनीय होती.</tspan>
+      <tspan x="0" dy="28">तसेच विविध जिल्ह्यांतील पदाधिकाऱ्यांनीही</tspan>
+      <tspan x="0" dy="19">कार्यक्रमात सहभाग घेतला, ज्यामध्ये</tspan>
+      <tspan x="0" dy="19">धाराशिव युवा जिल्हाध्यक्ष राहुलजी थोरात,</tspan>
+      <tspan x="0" dy="19">लातूर महिला जिल्हाध्यक्ष राहू पाटील,</tspan>
+      <tspan x="0" dy="19">धाराशिव महिला उपाध्यक्ष कविता घोडके,</tspan>
+      <tspan x="0" dy="19">पुणे जिल्हा उपाध्यक्ष नकुल सोनवणे, पुणे युवा</tspan>
+      <tspan x="0" dy="19">उपाध्यक्ष निखिल घोडके, उमरगा युवा महिला</tspan>
+      <tspan x="0" dy="19">अध्यक्ष रेणुका कटके यांचा समावेश होता.</tspan>
+      <tspan x="0" dy="28">लोकशाही पत्रकार संघ येत्या काळात</tspan>
+      <tspan x="0" dy="19">पत्रकारांच्या हक्कांसाठी, त्यांच्या</tspan>
+      <tspan x="0" dy="19">सक्षमीकरणासाठी आणि समाजहितासाठी अधिक</tspan>
+      <tspan x="0" dy="19">जोमाने कार्य करणार असल्याचा निर्धार यावेळी</tspan>
+      <tspan x="0" dy="19">व्यक्त करण्यात आला.</tspan>
+    </text>
+  </g>
+</svg>

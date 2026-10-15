@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 1100" width="100%" height="100%" style="background:#ffffff; font-family:'Mukta', 'Noto Sans Devanagari', Arial, sans-serif;">
+  <defs>
+    <style>
+      .masthead { font-size: 64px; font-weight: 900; fill: #d32f2f; letter-spacing: 1px; }
+      .tagline { font-size: 16px; font-weight: 800; fill: #111; }
+      .meta { font-size: 14px; font-weight: 700; fill: #222; }
+      .headline { font-size: 32px; font-weight: 900; fill: #000; line-height: 1.25; }
+      .body-txt { font-size: 13.5px; font-weight: 600; fill: #222; line-height: 1.45; text-align: justify; }
+      .subhead { font-size: 15px; font-weight: 800; fill: #000; }
+    </style>
+  </defs>
+
+  <!-- Paper background -->
+  <rect width="850" height="1100" fill="#faf8f5"/>
+  <rect x="25" y="25" width="800" height="1050" fill="#ffffff" stroke="#e0dcd3" stroke-width="2"/>
+
+  <!-- Top Header / Masthead -->
+  <g transform="translate(45, 55)">
+    <text x="210" y="25" class="meta" text-anchor="end">दैनिक</text>
+    <text x="210" y="85" class="masthead">आम संघर्ष टाईम्स्</text>
+    <text x="760" y="25" class="tagline" text-anchor="end">निःपक्ष निर्भिड आम जनतेचा आवाज!!</text>
+    
+    <line x1="0" y1="100" x2="760" y2="100" stroke="#111" stroke-width="3"/>
+    <line x1="0" y1="104" x2="760" y2="104" stroke="#111" stroke-width="1"/>
+    
+    <text x="380" y="122" class="meta" text-anchor="middle">संपादक : श्री.श्रीनिवास शाहूराज साळुंके | धाराशिव, सोलापूर, पुणे, पालघर, लातूर जाणारे दैनिक</text>
+    
+    <line x1="0" y1="132" x2="760" y2="132" stroke="#111" stroke-width="2"/>
+  </g>
+
+  <!-- Main Big Headline -->
+  <g transform="translate(45, 220)">
+    <text x="380" y="30" class="headline" text-anchor="middle">युवा प्रदेश अध्यक्ष मा.श्री.किशोर दादा पवार यांच्या मार्गदर्शनाखाली पत्रकार</text>
+    <text x="380" y="75" class="headline" text-anchor="middle">मार्गदर्शन व नवीन पदाधिकारी नियुक्तीपत्र तथा आयडी वितरण कार्यक्रम संपन्न</text>
+    <line x1="10" y1="95" x2="750" y2="95" stroke="#d32f2f" stroke-width="3"/>
+  </g>
+
+  <!-- Photo in Center with border -->
+  <g transform="translate(245, 335)">
+    <rect x="-5" y="-5" width="370" height="240" fill="#fff" stroke="#172A4A" stroke-width="2"/>
+    <image href="/hero-photo-1.jpg" x="0" y="0" width="360" height="230" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="0" y="195" width="360" height="35" fill="rgba(0,0,0,0.7)"/>
+    <text x="180" y="218" fill="#fff" font-size="12px" font-weight="700" text-anchor="middle">लोकशाही पत्रकार संघ महाराष्ट्र राज्य - नियुक्तीपत्र व आयडी वाटप सोहळा</text>
+  </g>
+
+  <!-- Left Column Text -->
+  <g transform="translate(45, 335)">
+    <rect x="0" y="0" width="185" height="420" fill="transparent"/>
+    <text x="0" y="18" class="subhead" fill="#d32f2f">धाराशिव/प्रतिनिधी :</text>
+    <text x="0" y="38" class="body-txt">
+      <tspan x="0" dy="0">धाराशिव जिल्ह्यातील उमरगा</tspan>
+      <tspan x="0" dy="19">येथील शासकीय विश्रामगृहात</tspan>
+      <tspan x="0" dy="19">लोकशाही पत्रकार संघ महाराष्ट्र</tspan>
+      <tspan x="0" dy="19">राज्याचे युवा प्रदेश अध्यक्ष मा.श्री.</tspan>
+      <tspan x="0" dy="19">किशोर दादा पवार यांच्या</tspan>
+      <tspan x="0" dy="19">मार्गदर्शनाखाली पत्रकार मार्गदर्शन</tspan>
+      <tspan x="0" dy="19">तसेच आयडी वितरण कार्यक्रम</tspan>
+      <tspan x="0" dy="19">उत्साहात पार पडला.</tspan>
+      <tspan x="0" dy="28">कार्यक्रमाची सुरुवात मान्यवरांच्या</tspan>
+      <tspan x="0" dy="19">हस्ते दीपप्रज्वलन करून</tspan>
+      <tspan x="0" dy="19">करण्यात आली. यावेळी उपस्थितांना</tspan>
+      <tspan x="0" dy="19">मार्गदर्शन करताना मा.श्री.किशोर</tspan>
+      <tspan x="0" dy="19">दादा पवार यांनी पत्रकारितेतील</tspan>
+      <tspan x="0" dy="19">जबाबदाऱ्या, नैतिक मूल्ये आणि</tspan>
+      <tspan x="0" dy="19">बदलत्या काळात डिजिटल माध्यमांची</tspan>
+      <tspan x="0" dy="19">भूमिका यावर सखोल मार्गदर्शन</tspan>
+      <tspan x="0" dy="19">केले. ते म्हणाले, "पत्रकार हा</tspan>
+      <tspan x="0" dy="19">समाजाचा आरसा असून सत्य</tspan>
+      <tspan x="0" dy="19">आणि निष्पक्ष बातमी देणे हीच खरी</tspan>
+      <tspan x="0" dy="19">पत्रकाराची ओळख आहे."</tspan>
+    </text>
+  </g>
+
+  <!-- Center Lower Column Text -->
+  <g transform="translate(245, 595)">
+    <text x="0" y="18" class="body-txt">
+      <tspan x="0" dy="0">यावेळी पत्रकारांनी आपले प्रश्न मांडले, तसेच सध्याच्या</tspan>
+      <tspan x="0" dy="19">पत्रकारितेतील अडचणी, दबाव आणि आव्हाने यावर चर्चा</tspan>
+      <tspan x="0" dy="19">करण्यात आली. संघटनेच्या माध्यमातून पत्रकारांच्या हक्कांसाठी</tspan>
+      <tspan x="0" dy="19">ठामपणे उभे राहण्याचा निर्धार व्यक्त करण्यात आला.</tspan>
+      <tspan x="0" dy="28">कार्यक्रमात नव्याने सदस्यत्व घेतलेल्या पत्रकारांना अधिकृत</tspan>
+      <tspan x="0" dy="19">ओळखपत्र (आयडी कार्ड) वाटप करण्यात आले. यामुळे</tspan>
+      <tspan x="0" dy="19">पत्रकारांना ओळख आणि काम करताना अधिक सहकार्य</tspan>
+      <tspan x="0" dy="19">मिळणार असल्याचे मत व्यक्त करण्यात आले.</tspan>
+    </text>
+  </g>
+
+  <!-- Right Column Text (Office Bearers list) -->
+  <g transform="translate(625, 335)">
+    <text x="0" y="16" class="subhead">उपस्थित पदाधिकारी व मान्यवर :</text>
+    <text x="0" y="36" class="body-txt">
+      <tspan x="0" dy="0">या कार्यक्रमाला प्रमुख उपस्थित राहणारे</tspan>
+      <tspan x="0" dy="18">लोकशाही पत्रकार संघाचे मराठवाडा</tspan>
+      <tspan x="0" dy="18">महिला अध्यक्ष श्रीमती पंचशीला कांबळे</tspan>
+      <tspan x="0" dy="18">मॅडम व मराठवाडा अध्यक्ष श्री बालाजी</tspan>
+      <tspan x="0" dy="18">सूर्यवंशी सर उपस्थित होते.</tspan>
+      <tspan x="0" dy="24" font-weight="800">खालील पदाधिकाऱ्यांची नियुक्ती :</tspan>
+      <tspan x="0" dy="20">१) धाराशिव जिल्हा अध्यक्ष: श्री शैलैश सिद्राम हत्ते</tspan>
+      <tspan x="0" dy="18">२) धाराशिव युवा जिल्हा अध्यक्ष: श्री राहुल थोरात</tspan>
+      <tspan x="0" dy="18">३) लातूर महिला जिल्हा अध्यक्ष: श्रीमती पाटील</tspan>
+      <tspan x="0" dy="18">४) धाराशिव महिला अध्यक्ष: श्रीमती वडणे</tspan>
+      <tspan x="0" dy="18">५) महिला उपाध्यक्ष: श्रीमती कविता घोडके</tspan>
+      <tspan x="0" dy="18">६) लोहारा तालुका अध्यक्ष: श्री ज्ञानेश्वर कांबळे</tspan>
+      <tspan x="0" dy="18">७) उमरगा तालुका अध्यक्ष: श्री ओंकार कोंडे</tspan>
+      <tspan x="0" dy="18">८) युवा उपाध्यक्ष: श्री निखिल घोडके</tspan>
+      <tspan x="0" dy="26">सर्वांचे मनःपूर्वक अभिनंदन व पुढील</tspan>
+      <tspan x="0" dy="18">कार्यासाठी हार्दिक शुभेच्छा!</tspan>
+    </text>
+  </g>
+
+  <!-- Page Footer -->
+  <g transform="translate(45, 990)">
+    <line x1="0" y1="0" x2="760" y2="0" stroke="#111" stroke-width="2"/>
+    <text x="380" y="24" font-size="16px" font-weight="700" fill="#333" text-anchor="middle">April 3, 2026</text>
+    <text x="380" y="48" font-size="15px" font-weight="700" fill="#555" text-anchor="middle">Page no:4 | aamsangrashtimes.com</text>
+  </g>
+</svg>
