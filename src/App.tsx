@@ -202,8 +202,8 @@ export default function App() {
             <HomeSocialPreview onSeeMore={() => navigate('/social-work')} />
             <HomeRoadmapPreview onSeeMore={() => navigate('/roadmap')} />
             <HomeMembershipPreview onSeeMore={() => navigate('/membership')} />
-            <HomeFacebookSection onSeeMore={() => navigate('/media')} />
             <OrgNetworkSection />
+            <HomeFacebookSection onSeeMore={() => navigate('/media')} />
             <MediaCoverage />
           </>
         );
