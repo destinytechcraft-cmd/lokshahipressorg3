@@ -29,6 +29,7 @@ import { HomeRightsPreview } from './components/sections/HomeRightsPreview';
 import { HomeSocialPreview } from './components/sections/HomeSocialPreview';
 import { HomeRoadmapPreview } from './components/sections/HomeRoadmapPreview';
 import { HomeMembershipPreview } from './components/sections/HomeMembershipPreview';
+import { HomeFacebookSection } from './components/sections/HomeFacebookSection';
 import { GallerySection } from './components/sections/GallerySection';
 import { JoinMembershipModal, QuickIssueModal } from './components/modals/InteractiveModals';
 import { FloatingWhatsApp } from './components/common/FloatingWhatsApp';
@@ -201,6 +202,7 @@ export default function App() {
             <HomeSocialPreview onSeeMore={() => navigate('/social-work')} />
             <HomeRoadmapPreview onSeeMore={() => navigate('/roadmap')} />
             <HomeMembershipPreview onSeeMore={() => navigate('/membership')} />
+            <HomeFacebookSection onSeeMore={() => navigate('/media')} />
             <OrgNetworkSection />
             <MediaCoverage />
           </>

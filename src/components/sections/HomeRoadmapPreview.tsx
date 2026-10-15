@@ -9,15 +9,15 @@ export function HomeRoadmapPreview({ onSeeMore }: HomeRoadmapPreviewProps) {
   const { lang } = useLanguage();
 
   return (
-    <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 text-left">
+    <section className="mx-auto w-full max-w-6xl px-4 py-2.5 sm:py-3 text-left">
       <div className="rounded-2xl border-2 border-blue-500/70 bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/20 p-6 sm:p-7 shadow-xs transition-all hover:border-[#172A4A]/50">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-5 sm:gap-6">
           <div className="space-y-2 max-w-4xl">
-            <h3 className="text-base sm:text-lg md:text-xl font-black text-[#172A4A] tracking-tight">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-black text-[#172A4A] tracking-tight mb-2">
               {lang === 'mr' ? 'भविष्यातील रोडमॅप व धोरणात्मक वाटचाल' : 'Future Roadmap & Strategic Vision'}
             </h3>
             <div className="rounded-xl border border-[#172A4A]/10 bg-white/90 p-3.5 sm:p-4 space-y-1">
-              <h4 className="text-sm sm:text-base font-black text-[#172A4A] tracking-tight">
+              <h4 className="text-base sm:text-lg font-black text-[#172A4A] tracking-tight">
                 {lang === 'mr' ? 'भारतभर सक्षम पत्रकार संघटन उभारणी' : 'Building a Strong Journalist Network Across India'}
               </h4>
               <p className="text-sm sm:text-base md:text-[17px] text-[#172A4A]/90 leading-relaxed font-medium">
