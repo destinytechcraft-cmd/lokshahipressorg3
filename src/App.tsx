@@ -24,6 +24,11 @@ import { LeadershipSection } from './components/sections/LeadershipSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { OrgNetworkSection } from './components/sections/OrgNetworkSection';
 import { HomeOrgPreview } from './components/sections/HomeOrgPreview';
+import { HomeLeadershipPreview } from './components/sections/HomeLeadershipPreview';
+import { HomeRightsPreview } from './components/sections/HomeRightsPreview';
+import { HomeSocialPreview } from './components/sections/HomeSocialPreview';
+import { HomeRoadmapPreview } from './components/sections/HomeRoadmapPreview';
+import { HomeMembershipPreview } from './components/sections/HomeMembershipPreview';
 import { GallerySection } from './components/sections/GallerySection';
 import { JoinMembershipModal, QuickIssueModal } from './components/modals/InteractiveModals';
 import { FloatingWhatsApp } from './components/common/FloatingWhatsApp';
@@ -189,8 +194,13 @@ export default function App() {
               onVoiceClick={() => navigate('/help-desk')}
               onKnowMoreClick={() => navigate('/about')}
             />
-            {/* Added only on homepage before भारतभर संघटनात्मक जाळे */}
+            {/* Homepage feature preview sections with See More navigation */}
             <HomeOrgPreview onSeeMore={() => navigate('/organisation')} />
+            <HomeLeadershipPreview onSeeMore={() => navigate('/leadership')} />
+            <HomeRightsPreview onSeeMore={() => navigate('/rights')} />
+            <HomeSocialPreview onSeeMore={() => navigate('/social-work')} />
+            <HomeRoadmapPreview onSeeMore={() => navigate('/roadmap')} />
+            <HomeMembershipPreview onSeeMore={() => navigate('/membership')} />
             <OrgNetworkSection />
             <MediaCoverage />
           </>

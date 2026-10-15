@@ -120,51 +120,51 @@ export function Footer({ onNavigate }: { onNavigate?: (path: string) => void }) 
             <div className="text-xs font-black uppercase tracking-widest text-[#E30620]">
               {lang === 'mr' ? 'सोशल मीडिया' : 'Social Media'}
             </div>
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
               <a
                 href="https://www.facebook.com/share/1Ekodo5ECG/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Facebook"
-                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 hover:bg-[#1877F2] transition-all cursor-pointer"
+                className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-white/10 hover:bg-[#1877F2] hover:scale-105 transition-all cursor-pointer shadow-xs"
               >
-                <FacebookIcon size={16} />
+                <FacebookIcon size={22} />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Instagram"
-                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 hover:bg-[#E1306C] transition-all cursor-pointer"
+                className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-white/10 hover:bg-[#E1306C] hover:scale-105 transition-all cursor-pointer shadow-xs"
               >
-                <InstagramIcon size={16} />
+                <InstagramIcon size={22} />
               </a>
               <a
                 href="https://youtube.com/@lokshahipatrakarmahasanghindia?si=Bf0f_OWURoC1FCox"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="YouTube"
-                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 hover:bg-[#FF0000] transition-all cursor-pointer"
+                className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-white/10 hover:bg-[#FF0000] hover:scale-105 transition-all cursor-pointer shadow-xs"
               >
-                <YouTubeIcon size={16} />
+                <YouTubeIcon size={22} />
               </a>
               <a
                 href="https://x.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="X"
-                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 hover:bg-black transition-all cursor-pointer"
+                className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-white/10 hover:bg-black hover:scale-105 transition-all cursor-pointer shadow-xs"
               >
-                <XIcon size={16} />
+                <XIcon size={22} />
               </a>
               <a
                 href="https://wa.me/918788734440"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="WhatsApp"
-                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 hover:bg-[#25D366] transition-all cursor-pointer"
+                className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-white/10 hover:bg-[#25D366] hover:scale-105 transition-all cursor-pointer shadow-xs"
               >
-                <WhatsAppIcon size={16} />
+                <WhatsAppIcon size={22} />
               </a>
             </div>
           </div>
