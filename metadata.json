@@ -1,6 +1,6 @@
 {
   "name": "Lokshahi Patrakar Mahasangh Bharat",
-  "description": "End-to-end wireframe for Lokshahi Patrakar Mahasangh Bharat website (Marathi / English).",
+  "description": "Official national platform of Lokshahi Patrakar Mahasangh Bharat (Marathi / English) — Committed to journalist rights, security, social welfare and public justice.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
