@@ -4,13 +4,11 @@ import { SectionShell } from '../ui/WireframePrimitives';
 import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const eventPhotos = [
-  { image: '/event-1.jpg', alt: 'राज्य कार्यकारिणी निवड व नियुक्तीपत्र वाटप सोहळा' },
+  { image: '/deep.png', alt: 'लोकशाही पत्रकार महासंघ विशेष सोहळा व कार्यक्रम' },
   { image: '/event-2.jpg', alt: 'छत्रपती शिवाजी महाराज स्मारक अभिवादन व पूजन' },
-  { image: '/event-3.jpg', alt: 'पत्रकार प्रशिक्षण कार्यशाळा व सन्मान सोहळा' },
-  { image: '/event-4.jpg', alt: 'महाराष्ट्र राज्य कार्यकारिणी बैठक व सत्कार सोहळा' },
-  { image: '/event-5.jpg', alt: 'दैनिक लोकनेता २रा वर्धापन दिन व विशेषांक प्रकाशन सोहळा' },
-  { image: '/event-6.jpg', alt: 'राज्य कार्यकारिणी पदाधिकारी नियुक्तीपत्र वाटप' },
+  { image: '/con.png', alt: 'महासंघ महत्त्वपूर्ण बैठक व संवाद' },
   { image: '/event-7.jpg', alt: 'पत्रकार महासंघ संवाद व बैठक' },
+  { image: '/event-3.jpg', alt: 'पत्रकार प्रशिक्षण कार्यशाळा व सन्मान सोहळा' },
   { image: '/event-8.jpg', alt: 'राज्य कार्यकारिणी निवड कार्यक्रम व सन्मान' },
   { image: '/event-9.jpg', alt: 'आरोग्य तपासणी शिबीर व सामाजिक उपक्रम' },
   { image: '/event-10.jpg', alt: 'लोकशाही पत्रकार संघ बैठक व सन्मान सोहळा' },
@@ -45,27 +43,37 @@ export function EventsSection() {
   return (
     <SectionShell id="events">
       <div className="space-y-6">
-        {/* Clean Responsive Photos Grid without descriptions or blue taglines */}
+        {/* Uniform Consistent Grid - Identical Card Sizes for All Photos */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {eventPhotos.map((item, idx) => (
             <button
               key={idx}
               type="button"
               onClick={() => setActiveIdx(idx)}
-              className="group relative overflow-hidden rounded-2xl border-2 border-[#172A4A]/15 bg-white shadow-sm hover:border-[#E30620] hover:shadow-lg transition-all duration-300 cursor-pointer text-left block w-full focus:outline-none focus:ring-2 focus:ring-[#E30620]"
+              className="group relative overflow-hidden rounded-2xl bg-neutral-950 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer text-left block w-full focus:outline-none focus:ring-2 focus:ring-[#E30620]"
               title={lang === 'mr' ? 'पूर्ण फोटो पाहण्यासाठी क्लिक करा' : 'Click to view full image'}
             >
-              <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-100 relative">
+              {/* Fixed Uniform Container Height & Width */}
+              <div className="aspect-[4/3] w-full overflow-hidden relative flex items-center justify-center bg-neutral-950">
+                {/* Matching ambient blurred backdrop */}
+                <img
+                  src={item.image}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 h-full w-full object-cover blur-xl opacity-40 scale-125 pointer-events-none select-none"
+                />
+
+                {/* Main uncropped image fitted consistently inside container */}
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  className="relative z-10 max-h-full max-w-full w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-[1.03] select-none p-1.5"
                   loading="lazy"
                 />
 
                 {/* Hover overlay with zoom icon */}
-                <div className="absolute inset-0 bg-black/35 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="flex items-center gap-1.5 rounded-full bg-white/95 px-3.5 py-1.5 text-xs font-black text-[#172A4A] shadow-lg">
+                <div className="absolute inset-0 z-20 bg-black/35 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span className="flex items-center gap-1.5 rounded-full bg-white/95 px-4 py-2 text-xs font-black text-[#172A4A] shadow-lg">
                     <ZoomIn className="h-4 w-4 text-[#E30620]" />
                     <span>{lang === 'mr' ? 'मोठा फोटो पहा' : 'View Full Image'}</span>
                   </span>
@@ -128,8 +136,10 @@ export function EventsSection() {
             </div>
 
             {/* Counter */}
-            <div className="mt-2 text-center text-xs font-semibold text-white/80 bg-black/60 px-3 py-1 rounded-full border border-white/10">
-              {activeIdx + 1} / {eventPhotos.length}
+            <div className="mt-3 text-center">
+              <span className="text-xs font-semibold text-white/80 bg-black/60 px-4 py-1.5 rounded-full border border-white/15">
+                {activeIdx + 1} / {eventPhotos.length}
+              </span>
             </div>
           </div>
         </div>

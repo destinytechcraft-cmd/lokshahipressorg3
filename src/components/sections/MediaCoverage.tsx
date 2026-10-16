@@ -8,6 +8,9 @@ export function MediaCoverage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const clippingImages = [
+    '/2222.jpeg',
+    '/3333.jpeg',
+    '/1111.jpeg',
     'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/0.2-hVgu4X76jUFd201E7zBdPqVsJ25wXk.jpeg',
     'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/0.1-2K7d7ZZsvVEpxt8dR31lwwWb0V0Eug.jpeg',
     'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/0.3-Jogr8dMKM2wfZXApSKjtt2Ipa9uoaN.jpeg',

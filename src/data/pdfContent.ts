@@ -99,7 +99,7 @@ export const leadershipMembers: LeadershipMember[] = [
     roleEn: "National President",
     nameMr: "श्री. संदिप जाधव",
     nameEn: "Shri Sandip Jadhav",
-    image: "/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B8%E0%A4%82%E0%A4%A6%E0%A4%BF%E0%A4%AA%20%E0%A4%9C%E0%A4%BE%E0%A4%A7%E0%A4%B5.PNG",
+    image: "/rot.png",
     stateMr: "महाराष्ट्र / भारत",
     stateEn: "Maharashtra / India",
     subtitleMr: "पत्रकार | प्रभावी वक्ते | निवडणूक रणनीतिकार | राजकीय विश्लेषक | संस्थापक Hashtag Media Network",

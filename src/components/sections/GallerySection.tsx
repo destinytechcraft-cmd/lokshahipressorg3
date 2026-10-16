@@ -4,16 +4,15 @@ import { SectionShell } from '../ui/WireframePrimitives';
 import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryPhotos = [
-  { image: '/gallery-1.jpg', alt: 'मान्यवर भेट व संवाद' },
   { image: '/gallery-2.jpg', alt: 'पदाधिकारी बैठक व मार्गदर्शन' },
+  { image: '/gallery-1.jpg', alt: 'मान्यवर भेट व संवाद' },
+  { image: '/eknath.jpeg', alt: 'मा. मुख्यमंत्री एकनाथ शिंदे सत्कार व सन्मान सोहळा' },
+  { image: '/0000.jpeg', alt: 'महासंघ राष्ट्रीय व राज्यस्तरीय कार्यक्रम' },
   { image: '/gallery-3.jpg', alt: 'छत्रपती शिवाजी महाराज भव्य शिवमूर्ती पूजन व सन्मान सोहळा' },
   { image: '/gallery-4.jpg', alt: 'राज्य कार्यकारिणी निवड कार्यक्रम व नियुक्तीपत्र प्रदान' },
   { image: '/gallery-5.jpg', alt: 'महासंघ पदाधिकारी व कार्यकर्त्यांचा स्नेहमेळावा' },
   { image: '/gallery-6.jpg', alt: 'अधिकृत शिष्टमंडळ भेट व ऐतिहासिक स्मारक पाहणी' },
   { image: '/gallery-8.jpg', alt: 'राज्य कार्यकारिणी निवड व प्रमाणपत्र वाटप सोहळा' },
-  { image: '/gallery-9.jpg', alt: 'सांस्कृतिक व संघटनात्मक स्नेहसंमेलन' },
-  { image: '/gallery-10.jpg', alt: 'वृद्धाश्रम भेट व ज्येष्ठ नागरिकांशी आत्मीय संवाद' },
-  { image: '/gallery-11.jpg', alt: 'मा. मुख्यमंत्री एकनाथ शिंदे सत्कार व सन्मान सोहळा' },
   { image: '/gallery-12.jpg', alt: 'संघटनात्मक चर्चा व पदाधिकाऱ्यांची अनौपचारिक बैठक' },
   { image: '/gallery-13.jpg', alt: 'लोकशाही पत्रकार महासंघ शिष्टमंडळ व सदस्य बैठक' },
   { image: '/gallery-14.jpg', alt: 'पत्रकार प्रशिक्षण मेळावा व संबोधन' },
@@ -52,26 +51,36 @@ export function GallerySection() {
   return (
     <SectionShell id="gallery">
       <div className="space-y-6">
-        {/* Responsive Gallery Grid */}
+        {/* Uniform Consistent Grid - Identical Card Sizes for All Photos */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {galleryPhotos.map((item, idx) => (
             <button
               key={idx}
               type="button"
               onClick={() => setActiveIdx(idx)}
-              className="group relative overflow-hidden rounded-2xl border-2 border-[#172A4A]/20 bg-white shadow-sm hover:border-[#E30620] hover:shadow-xl transition-all duration-300 cursor-pointer text-left block w-full focus:outline-none focus:ring-2 focus:ring-[#E30620]"
+              className="group relative overflow-hidden rounded-2xl bg-neutral-950 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer text-left block w-full focus:outline-none focus:ring-2 focus:ring-[#E30620]"
               title={lang === 'mr' ? 'पूर्ण फोटो पाहण्यासाठी क्लिक करा' : 'Click to view full image'}
             >
-              <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-100 relative">
+              {/* Fixed Uniform Container Height & Width */}
+              <div className="aspect-[4/3] w-full overflow-hidden relative flex items-center justify-center bg-neutral-950">
+                {/* Matching ambient blurred backdrop */}
+                <img
+                  src={item.image}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 h-full w-full object-cover blur-xl opacity-40 scale-125 pointer-events-none select-none"
+                />
+
+                {/* Main uncropped image fitted consistently inside container */}
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  className="relative z-10 max-h-full max-w-full w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-[1.03] select-none p-1.5"
                   loading="lazy"
                 />
 
-                {/* Subtle hover overlay with zoom icon */}
-                <div className="absolute inset-0 bg-black/35 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                {/* Hover overlay with zoom icon */}
+                <div className="absolute inset-0 z-20 bg-black/35 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <span className="flex items-center gap-1.5 rounded-full bg-white/95 px-4 py-2 text-xs font-black text-[#172A4A] shadow-lg">
                     <ZoomIn className="h-4 w-4 text-[#E30620]" />
                     <span>{lang === 'mr' ? 'मोठा फोटो पहा' : 'View Full Image'}</span>
@@ -135,8 +144,10 @@ export function GallerySection() {
             </div>
 
             {/* Counter */}
-            <div className="mt-2 text-center text-xs font-semibold text-white/80 bg-black/60 px-3 py-1 rounded-full border border-white/10">
-              {activeIdx + 1} / {galleryPhotos.length}
+            <div className="mt-3 text-center">
+              <span className="text-xs font-semibold text-white/80 bg-black/60 px-4 py-1.5 rounded-full border border-white/15">
+                {activeIdx + 1} / {galleryPhotos.length}
+              </span>
             </div>
           </div>
         </div>
