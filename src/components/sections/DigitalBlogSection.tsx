@@ -120,16 +120,6 @@ export function DigitalBlogSection() {
           {/* TAB 1: Live Interactive Google Site Content (Always 100% visible, no gray box) */}
           {activeTab === 'feed' && (
             <div className="w-full bg-[#FAF8F5]">
-              {/* Site Banner */}
-              <div className="w-full bg-[#172A4A] border-b border-neutral-200 flex items-center justify-center overflow-hidden max-h-72">
-                <img
-                  src="/google-site-banner.jpg"
-                  alt="लोकशाही पत्रकार महासंघ भारत बॅनर"
-                  className="w-full h-auto object-cover max-h-72 block"
-                  loading="lazy"
-                />
-              </div>
-
               {/* Main Content Area */}
               <div className="max-w-4xl mx-auto p-5 sm:p-8 space-y-6">
                 {/* News Article Card */}
