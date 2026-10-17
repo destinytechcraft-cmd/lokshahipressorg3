@@ -56,7 +56,7 @@ export function MediaSection() {
       url: OFFICIAL_FB_URL,
       embedSource: 'facebook.com/share/1Ekodo5ECG',
     },
-    // The 9 specific Facebook Reels & Videos requested by user:
+    // The 9 specific Facebook Reels & Videos with authentic FB thumbnails and content:
     {
       id: 'fb-reel-1',
       platform: 'facebook',
@@ -66,10 +66,10 @@ export function MediaSection() {
       timeMr: 'अधिकृत व्हिडिओ • 🌐 Facebook Video',
       timeEn: 'Official Video • 🌐 Facebook Video',
       contentMr:
-        'पत्रकार हक्क व संरक्षण परिषद — ज्येष्ठ पत्रकारांचे कायदेशीर मार्गदर्शन, पत्रकार सुरक्षा कायदे आणि हक्कांची जनजागृती विशेष भाषण.',
+        'लोकशाहीचा श्वास जिवंत ठेवायचा असेल, तर पत्रकारांनी जाग राहणे गरजेचे 🎤 — पत्रकार प्रशिक्षण कार्यशाळा व मार्गदर्शन #JournalismTraining #PressFreedom #लोकशाहीपत्रकारसंघ',
       contentEn:
-        'Journalist Rights & Security Convention — Keynote address, journalist safety legislation, and press rights legal guidance.',
-      image: '/event-2.jpg',
+        'To keep democracy alive, journalists must stay vigilant 🎤 — Journalism training workshop and keynote address.',
+      image: '/fb/fb-reel-1.jpg',
       badge: 'FB VIDEO',
       likes: '3.4K',
       comments: '420',
@@ -86,10 +86,10 @@ export function MediaSection() {
       timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
       timeEn: 'Official Reel • 🎬 Facebook Reel',
       contentMr:
-        'लोकशाही पत्रकार महासंघ — पत्रकार संरक्षण कायद्याची प्रभावी अंमलबजावणी व राज्यव्यापी जनजागृती मोहीम.',
+        'विचारातून क्रांती जन्माला येते ✊🎙️ — युवा नेतृत्व व प्रेरणादायी संवाद #MotivationSpeech #LeadershipTalk #TeamLokshahi #SandeepJadhav',
       contentEn:
-        'Lokshahi Patrakar Mahasangh — Statewide advocacy campaign for strict enforcement of the Journalist Protection Act.',
-      image: '/event-4.jpg',
+        'Revolution is born from ideas ✊🎙️ — Youth leadership and inspirational reel by Shri Sandeep Jadhav.',
+      image: '/fb/fb-reel-2.jpg',
       badge: 'FB REEL',
       likes: '4.8K',
       comments: '610',
@@ -106,10 +106,10 @@ export function MediaSection() {
       timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
       timeEn: 'Official Reel • 🎬 Facebook Reel',
       contentMr:
-        'सत्यासाठी लढणार, अन्यायाला भिडणार! पत्रकार एकता जिंदाबाद — लोकशाही पत्रकार महासंघ महाअधिवेशन झलक.',
+        'मराठवाडा कृषी संजीवनी महोत्सवाच्या नियोजनाबाबत परभणी शहराचे महापौर सय्यद इकबालजी यांच्याशी सविस्तर व सकारात्मक चर्चा संपन्न. #MarathwadaSanjeevaniMahotsav #Parbhani #Agriculture',
       contentEn:
-        'Fight for Truth, Stand Against Injustice! Press Unity Anthem & Highlights from the Federation Convention.',
-      image: '/event-6.jpg',
+        'Constructive discussion held with Parbhani Mayor Syed Iqbal regarding planning of the Marathwada Krishi Sanjeevani Mahotsav.',
+      image: '/fb/fb-reel-3.jpg',
       badge: 'FB REEL',
       likes: '5.2K',
       comments: '730',
@@ -126,10 +126,10 @@ export function MediaSection() {
       timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
       timeEn: 'Official Reel • 🎬 Facebook Reel',
       contentMr:
-        'ग्रामीण व तालुका पातळीवरील पत्रकारांच्या समस्यांवर विधानभवन व शासन दरबारी सादर केलेले महत्त्वपूर्ण निवेदन.',
+        'तलवारीची धार संपते, पण विचारांची क्रांती कधीच संपत नाही हेच शिवतत्त्व 🚩 शिवराय शक्तीदाता ❤️🙌⛳️ #शिवजयंती #ShivJayanti #ShivajiMaharaj',
       contentEn:
-        'Crucial official memorandum presented to the State Government addressing grievances of rural and taluka press correspondents.',
-      image: '/event-7.jpg',
+        'The sharpness of a sword ends, but the revolution of ideals never dies 🚩 Chhatrapati Shivaji Maharaj Jayanti tribute.',
+      image: '/fb/fb-reel-4.jpg',
       badge: 'FB REEL',
       likes: '2.9K',
       comments: '345',
@@ -146,10 +146,10 @@ export function MediaSection() {
       timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
       timeEn: 'Official Reel • 🎬 Facebook Reel',
       contentMr:
-        'डिजिटल मीडिया, यूट्यूब न्यूज व सोशल मीडिया पत्रकारांचे कायदेशीर हक्क आणि सुरक्षा कवच यावर विशेष विश्लेषण.',
+        'लोकशाही पत्रकार संघाची मराठवाडा आढावा बैठक उत्साहात संपन्न 🎙️ पत्रकारांच्या समस्या, संघ विस्तार व कल्याणकारी उपक्रमांवर सखोल मार्गदर्शन. #lokshahi #marathwada #teamlokshahi',
       contentEn:
-        'Special legal analysis on press accreditation and rights safeguards for digital news creators and YouTube reporters.',
-      image: '/event-9.jpg',
+        'Marathwada Regional Review Meeting of Lokshahi Patrakar Sangh successfully conducted — strategic roadmap for journalist welfare.',
+      image: '/fb/fb-reel-5.jpg',
       badge: 'FB REEL',
       likes: '3.8K',
       comments: '490',
@@ -166,10 +166,10 @@ export function MediaSection() {
       timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
       timeEn: 'Official Reel • 🎬 Facebook Reel',
       contentMr:
-        'पत्रकारांसाठी मोफत आरोग्य विमा व वैद्यकीय सहाय्य योजना — संघटनेच्या पुढाकाराने आरोग्य शिबिराचे थेट अपडेट.',
+        'गर्जा जयजयकार… क्रांतीचा ✊🔥 एखाद्याला मदत करणं चांगलं, पण त्याला स्वतःच्या हक्कासाठी उभं करणं हीच खरी परिवर्तनाची सुरुवात! #Motivation #SocialChange #SandeepJadhav',
       contentEn:
-        'Free Health Insurance & Medical Support Scheme — Live footage from the federation’s journalist welfare medical camp.',
-      image: '/event-10.jpg',
+        'Empowering people to stand up for their rights is the true beginning of real transformation ✊🔥 #Motivation #SocialChange',
+      image: '/fb/fb-reel-6.jpg',
       badge: 'FB REEL',
       likes: '4.1K',
       comments: '530',
@@ -186,10 +186,10 @@ export function MediaSection() {
       timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
       timeEn: 'Official Reel • 🎬 Facebook Reel',
       contentMr:
-        'लोकशाहीचा चौथा स्तंभ अधिक सक्षम करण्यासाठी आयोजित भव्य पत्रकार संमेलन — पत्रकारांच्या बुलंद आवाजाची साक्ष.',
+        'जे सर्व सुंदर, सर्वथा आजन्म तयाचा ध्यास दे ❤️🍀✨ #TeamLokshahi 🎙️ #motivational #sandeepjadhav #trendingreel',
       contentEn:
-        'Statewide Grand Journalists Convention to strengthen democratic press values — A resolute stand for media freedom.',
-      image: '/event-11.jpg',
+        'Dedicated to truth, beauty, and public good — Team Lokshahi inspirational reel by Sandeep Jadhav.',
+      image: '/fb/fb-reel-7.jpg',
       badge: 'FB REEL',
       likes: '6.4K',
       comments: '880',
@@ -206,10 +206,10 @@ export function MediaSection() {
       timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
       timeEn: 'Official Reel • 🎬 Facebook Reel',
       contentMr:
-        'जिल्हास्तरीय कार्यकारणी आढावा व नवनियुक्त पदाधिकाऱ्यांचा सत्कार सोहळा — संघटनेच्या कार्यविस्ताराची नवी दिशा.',
+        'मैं उस मिट्टी का वृक्ष नहीं, जिसे नदियों ने सींचा है; मैं उस मिट्टी का वृक्ष हूँ, जिसने बंजर जमीन पर रहकर मृत्यु से जीवन सीचा है। 🌱🔥 #Motivation #SandeepJadhav #LokshahiPatrakar',
       contentEn:
-        'District Executive Committee Review and felicitation ceremony for newly inducted district office bearers.',
-      image: '/gallery-3.jpg',
+        'Resilience and dedication: Rising through adversity to serve society and press freedom 🌱🔥 #Motivation #LokshahiPatrakar',
+      image: '/fb/fb-reel-8.jpg',
       badge: 'FB REEL',
       likes: '3.1K',
       comments: '395',
@@ -226,16 +226,16 @@ export function MediaSection() {
       timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
       timeEn: 'Official Reel • 🎬 Facebook Reel',
       contentMr:
-        'पत्रकार संरक्षण कायदा: कर्तव्य बजावताना पत्रकारांनी समजून घ्यावेत हे महत्त्वाचे कायदे व अधिकार!',
+        'लोकशाही पत्रकार महासंघ भारत — राष्ट्रीय व राज्यस्तरीय उपक्रम, पत्रकार हक्क व सुरक्षा जनजागृती संवाद 🎙️ #LokshahiPatrakar #PressFreedom',
       contentEn:
-        'Journalist Safety Act: Crucial legal rights and immediate helpline procedures every reporter on the field must know!',
-      image: '/gallery-4.jpg',
+        'Lokshahi Patrakar Mahasangh Bharat — Nationwide awareness campaign for journalist rights and legal protection 🎙️',
+      image: '/fb/fb-reel-9.jpg',
       badge: 'FB REEL',
       likes: '7.2K',
       comments: '950',
       shares: '510',
-      url: 'https://www.facebook.com/share/r/14rcoPLCgY6/?mibextid=wwXIfr',
-      embedSource: 'facebook.com/share/r/14rcoPLCgY6',
+      url: 'https://www.facebook.com/share/r/12DY9c2a1eE/?mibextid=wwXIfr',
+      embedSource: 'facebook.com/share/r/12DY9c2a1eE',
     },
     // Main official feed posts:
     {
@@ -695,9 +695,9 @@ export function MediaSection() {
                           <img
                             src={post.image || '/leadership-banner.jpg'}
                             alt={post.contentMr || 'Facebook Reel'}
-                            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 opacity-85"
+                            className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/20 group-hover:via-black/10 transition-colors" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/15 group-hover:via-transparent transition-colors" />
 
                           {/* Center Big Play Button with Pulse */}
                           <div className="absolute inset-0 flex items-center justify-center">
