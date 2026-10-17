@@ -35,10 +35,8 @@ export function Logo({
   }
 
   const isEnglish = variant !== 'marathi' && lang === 'en';
-  const primarySrc = isEnglish ? '/logo-official-en.svg' : '/logo-official-mr.svg';
-  const fallbackSrc = isEnglish
-    ? 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/svg%20artboard%20copy-ehciRDupxecaWve0aPWnNuQdU7GEvb.svg'
-    : 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/svg%20artboard-eWBKKf7NmMizh6trK5quOrzLpBPGhS.svg';
+  const primarySrc = '/LPMB_ANTON.png';
+  const fallbackSrc = '/logo-official.png';
 
   const logoAlt =
     alt ||
