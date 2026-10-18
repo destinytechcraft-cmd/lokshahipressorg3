@@ -12,9 +12,9 @@ export function HelpDeskSection() {
         {/* Official Journalist Helpdesk Graphic Banner */}
         <div className="overflow-hidden rounded-2xl border-2 border-[#172A4A]/15 bg-white shadow-md">
           <img
-            src="/modern-page-redesign.png"
+            src="/pub.jpg"
             alt={lang === 'mr' ? 'पत्रकार हेल्पडेस्क - लोकशाही पत्रकार महासंघ भारत' : 'Journalist Helpdesk - Lokshahi Patrakar Mahasangh Bharat'}
-            className="w-full h-auto object-contain"
+            className="w-full h-auto object-contain block"
             loading="eager"
             referrerPolicy="no-referrer"
           />
