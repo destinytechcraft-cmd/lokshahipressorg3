@@ -46,6 +46,14 @@ export const dict: Record<DictKey, { mr: string; en: string }> = {
     mr: 'मीडिया',
     en: 'Media',
   },
+  nav_media_live: {
+    mr: 'लाईव्ह न्यूज अपडेट',
+    en: 'Live News Update',
+  },
+  nav_media_social: {
+    mr: 'सोशल मीडिया',
+    en: 'Social Media',
+  },
   nav_events: {
     mr: 'कार्यक्रम',
     en: 'Events',

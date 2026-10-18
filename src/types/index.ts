@@ -22,6 +22,8 @@ export type DictKey =
   | 'nav_committees'
   | 'nav_social'
   | 'nav_media'
+  | 'nav_media_live'
+  | 'nav_media_social'
   | 'nav_events'
   | 'nav_roadmap'
   | 'nav_membership'

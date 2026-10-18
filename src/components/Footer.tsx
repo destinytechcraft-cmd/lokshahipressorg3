@@ -131,10 +131,10 @@ export function Footer({ onNavigate }: { onNavigate?: (path: string) => void }) 
                 <FacebookIcon size={22} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/lokshahipressorg?utm_source=ig_web_button_share_sheet&srtk=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Instagram"
+                title="Instagram (@lokshahipressorg)"
                 className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-white/10 hover:bg-[#E1306C] hover:scale-105 transition-all cursor-pointer shadow-xs"
               >
                 <InstagramIcon size={22} />

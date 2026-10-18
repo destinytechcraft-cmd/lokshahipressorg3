@@ -39,6 +39,16 @@ export function RoleSection() {
   return (
     <SectionShell id="role" title={t('sec_role')}>
       <div className="space-y-6 text-left">
+        {/* Official Role Banner Image */}
+        <div className="overflow-hidden rounded-2xl border-2 border-[#172A4A]/15 bg-white shadow-sm">
+          <img
+            src="/ab.jpg"
+            alt={lang === 'mr' ? 'आमची भूमिका - लोकशाही पत्रकार महासंघ भारत' : 'Our Role - Lokshahi Patrakar Mahasangh Bharat'}
+            className="w-full h-auto max-h-[520px] object-cover object-center block"
+            loading="lazy"
+          />
+        </div>
+
         {/* Role Headline & Intro */}
         <div className="rounded-xl border-2 border-neutral-300 bg-neutral-50 p-6">
           <h3 className="text-xl sm:text-2xl font-black text-neutral-900">

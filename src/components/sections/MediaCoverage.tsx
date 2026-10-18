@@ -39,6 +39,16 @@ export function MediaCoverage() {
     'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-10%20at%2011.37.00%20PM-QyHJJmAXhPabZNmeSPIQot5Q1CrD3G.jpeg',
     'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-10%20at%2011.37.00%20PMlast1-uYU819B1AbpjmbUzfSqcN22ELWdO5P.jpeg',
     'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-10%20at%2011.37.18%20PM-rSkJAVVVKJoEAkWQOKnngXtvUBE2ZD.jpeg',
+    '/news/news-coverage-1.jpeg',
+    '/news/news-coverage-2.jpeg',
+    '/news/news-coverage-3.jpeg',
+    '/news/news-coverage-4.jpeg',
+    '/news/news-coverage-5.jpeg',
+    '/news/news-coverage-6.jpeg',
+    '/news/news-coverage-7.jpeg',
+    '/news/news-coverage-8.jpeg',
+    '/news/news-coverage-9.jpeg',
+    '/news/news-coverage-10.jpeg',
   ];
 
   // Duplicate the gallery for seamless infinite looping autoscroll.

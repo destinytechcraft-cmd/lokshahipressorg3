@@ -19,13 +19,18 @@ import {
 } from 'lucide-react';
 
 const OFFICIAL_FB_URL = 'https://www.facebook.com/share/1Ekodo5ECG/?mibextid=wwXIfr';
+const OFFICIAL_INSTA_URL = 'https://www.instagram.com/lokshahipressorg?utm_source=ig_web_button_share_sheet&srtk=ZDNlZDc0MzIxNw==';
 const OFFICIAL_WA_URL = 'https://wa.me/918788734440';
 const OFFICIAL_YT_URL = 'https://youtube.com/@lokshahipatrakarmahasanghindia?si=Bf0f_OWURoC1FCox';
 
-export function MediaSection() {
+export interface MediaSectionProps {
+  initialTab?: 'all' | 'facebook' | 'reels' | 'youtube' | 'statements';
+}
+
+export function MediaSection({ initialTab = 'all' }: MediaSectionProps = {}) {
   const { t, lang } = useLanguage();
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'all' | 'facebook' | 'reels' | 'youtube' | 'statements'>('all');
+  const [activeTab, setActiveTab] = useState<'all' | 'facebook' | 'reels' | 'youtube' | 'statements'>(initialTab);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
@@ -237,6 +242,66 @@ export function MediaSection() {
       url: 'https://www.facebook.com/share/r/12DY9c2a1eE/?mibextid=wwXIfr',
       embedSource: 'facebook.com/share/r/12DY9c2a1eE',
     },
+    {
+      id: 'fb-reel-10',
+      platform: 'facebook',
+      type: 'facebook-reel',
+      author: 'Lokshahi Patrakar Mahasangh Bharat',
+      authorMr: 'लोकशाही पत्रकार महासंघ भारत',
+      timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
+      timeEn: 'Official Reel • 🎬 Facebook Reel',
+      contentMr:
+        'लोकशाही पत्रकार महासंघाचा नवा संकल्प — पत्रकार एकता, संरक्षण आणि जनहितासाठी अविरत लढा! ✊🎙️ #TeamLokshahi #PressFreedom #OfficialReel',
+      contentEn:
+        'Lokshahi Patrakar Mahasangh: Unwavering commitment to media unity, press defense, and public integrity. ✊🎙️ #PressFreedom',
+      image: '/fb/fb-reel-10.jpg',
+      badge: 'FB REEL',
+      likes: '6.4K',
+      comments: '810',
+      shares: '430',
+      url: 'https://www.facebook.com/share/r/1HQRLuEqrW/?mibextid=wwXIfr',
+      embedSource: 'facebook.com/share/r/1HQRLuEqrW',
+    },
+    {
+      id: 'fb-reel-11',
+      platform: 'facebook',
+      type: 'facebook-reel',
+      author: 'Lokshahi Patrakar Mahasangh Bharat',
+      authorMr: 'लोकशाही पत्रकार महासंघ भारत',
+      timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
+      timeEn: 'Official Reel • 🎬 Facebook Reel',
+      contentMr:
+        'पत्रकारांच्या हक्कांसाठी संघटित संघर्ष आणि लोकशाही मूल्यांचे जतन — महासंघाची महत्त्वपूर्ण राज्यस्तरीय भूमिका! 📢 #LokshahiNews #JournalistSecurity',
+      contentEn:
+        'Collective advocacy for journalist safety and constitutional media freedoms across the state. 📢 #JournalistSecurity',
+      image: '/fb/fb-reel-11.jpg',
+      badge: 'FB REEL',
+      likes: '5.9K',
+      comments: '740',
+      shares: '390',
+      url: 'https://www.facebook.com/share/r/1QfLYib2gM/?mibextid=wwXIfr',
+      embedSource: 'facebook.com/share/r/1QfLYib2gM',
+    },
+    {
+      id: 'fb-reel-12',
+      platform: 'facebook',
+      type: 'facebook-reel',
+      author: 'Lokshahi Patrakar Mahasangh Bharat',
+      authorMr: 'लोकशाही पत्रकार महासंघ भारत',
+      timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
+      timeEn: 'Official Reel • 🎬 Facebook Reel',
+      contentMr:
+        'सत्य, निर्भीडता आणि पारदर्शकता हीच आमची ताकद! महासंघाचा अधिकृत व्हिडिओ संदेश 🎥✨ #LokshahiPatrakarMahasangh #TruthInJournalism',
+      contentEn:
+        'Truth, courage, and constitutional transparency — Official video message by the press federation. 🎥✨',
+      image: '/fb/fb-reel-12.jpg',
+      badge: 'FB REEL',
+      likes: '6.8K',
+      comments: '880',
+      shares: '470',
+      url: 'https://www.facebook.com/share/r/1Co5CQnQfw/?mibextid=wwXIfr',
+      embedSource: 'facebook.com/share/r/1Co5CQnQfw',
+    },
     // Main official feed posts:
     {
       id: 'fb-post-1',
@@ -440,16 +505,26 @@ export function MediaSection() {
               </p>
             </div>
 
-            <div className="flex items-center gap-2 self-start md:self-auto shrink-0">
+            <div className="flex flex-wrap items-center gap-2 self-start md:self-auto shrink-0">
               <a
                 href={OFFICIAL_FB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-[#1877F2] px-4 py-2.5 text-xs font-black text-white shadow-xs hover:bg-[#166fe5] transition-all"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#1877F2] px-3.5 py-2.5 text-xs font-black text-white shadow-xs hover:bg-[#166fe5] transition-all"
               >
                 <FacebookIcon size={16} />
-                <span>{lang === 'mr' ? 'अधिकृत फेसबुक पेज' : 'Visit Official Facebook'}</span>
-                <ExternalLink className="h-3.5 w-3.5" />
+                <span>{lang === 'mr' ? 'फेसबुक' : 'Facebook'}</span>
+                <ExternalLink className="h-3 w-3" />
+              </a>
+              <a
+                href={OFFICIAL_INSTA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] px-3.5 py-2.5 text-xs font-black text-white shadow-xs hover:opacity-90 transition-all"
+              >
+                <InstagramIcon size={16} />
+                <span>{lang === 'mr' ? 'इन्स्टाग्राम (@lokshahipressorg)' : 'Instagram'}</span>
+                <ExternalLink className="h-3 w-3" />
               </a>
             </div>
           </div>
@@ -478,7 +553,7 @@ export function MediaSection() {
                 }`}
               >
                 <FacebookIcon size={14} />
-                <span>{lang === 'mr' ? 'फेसबुक रील्स व व्हिडिओ (९)' : 'FB Reels & Videos (9)'}</span>
+                <span>{lang === 'mr' ? 'फेसबुक रील्स व व्हिडिओ (१२)' : 'FB Reels & Videos (12)'}</span>
               </button>
               <button
                 type="button"

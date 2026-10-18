@@ -93,8 +93,8 @@ export function OrganisationSection() {
         <div className="rounded-xl border-2 border-neutral-300 bg-neutral-50 p-6">
           <h3 className="text-base sm:text-lg font-bold text-neutral-900 mb-2">
             {lang === 'mr'
-              ? 'संघटनेची रचना व अधिकार स्तर'
-              : 'Organisational Structure & Hierarchy'}
+              ? 'संघटनेची रचना'
+              : 'Organisational Structure'}
           </h3>
           <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
             {lang === 'mr'

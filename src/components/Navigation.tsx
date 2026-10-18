@@ -3,9 +3,15 @@ import { useLanguage } from '../context/LanguageContext';
 import { cn } from './ui/WireframePrimitives';
 import type { DictKey, Language } from '../types';
 
+export interface NavSubItemDef {
+  key: DictKey;
+  href: string;
+}
+
 export interface NavItemDef {
   key: DictKey;
   href: string;
+  children?: NavSubItemDef[];
 }
 
 export const navItems: NavItemDef[] = [
@@ -15,7 +21,14 @@ export const navItems: NavItemDef[] = [
   { key: 'nav_leadership', href: '/leadership' },
   { key: 'nav_rights', href: '/rights' },
   { key: 'nav_social', href: '/social-work' },
-  { key: 'nav_media', href: '/media' },
+  {
+    key: 'nav_media',
+    href: '/media',
+    children: [
+      { key: 'nav_media_live', href: '/media/live-news' },
+      { key: 'nav_media_social', href: '/media/social-media' },
+    ],
+  },
   { key: 'nav_events', href: '/events' },
   { key: 'nav_roadmap', href: '/roadmap' },
   { key: 'nav_membership', href: '/membership' },
@@ -114,10 +127,12 @@ export function Header({
 }) {
   const { lang, t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const handleNavClick = (href: string) => {
     onNavigate(href);
     setMobileMenuOpen(false);
+    setOpenDropdown(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -183,6 +198,90 @@ export function Header({
       <nav className="hidden border-t border-[#172A4A]/10 bg-[#F7F3EC]/70 md:block">
         <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-x-1.5 md:gap-x-2 gap-y-1.5 px-4 py-2 md:py-2.5">
           {navItems.map((item) => {
+            if (item.children && item.children.length > 0) {
+              const isChildActive = item.children.some((sub) => currentPath === sub.href);
+              const isSelfActive = currentPath === item.href;
+              const isActive = isSelfActive || isChildActive;
+
+              return (
+                <div
+                  key={item.href}
+                  className="relative"
+                  onMouseEnter={() => setOpenDropdown(item.key)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (openDropdown === item.key) {
+                        setOpenDropdown(null);
+                      } else {
+                        setOpenDropdown(item.key);
+                      }
+                    }}
+                    aria-expanded={openDropdown === item.key}
+                    aria-haspopup="true"
+                    className={cn(
+                      'rounded-lg px-2.5 sm:px-3 md:px-3.5 py-1 md:py-1.5 text-xs md:text-[13px] lg:text-sm font-bold transition-all cursor-pointer select-none inline-flex items-center gap-1.5',
+                      isActive
+                        ? 'bg-[#172A4A] text-white shadow-2xs'
+                        : 'text-[#172A4A]/80 hover:bg-[#172A4A]/10 hover:text-[#E30620]'
+                    )}
+                  >
+                    <span>{t(item.key)}</span>
+                    <svg
+                      className={cn(
+                        'h-3 w-3 sm:h-3.5 sm:w-3.5 transition-transform duration-200 shrink-0 opacity-75',
+                        openDropdown === item.key && 'rotate-180 opacity-100'
+                      )}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </button>
+
+                  {/* Dropdown Menu */}
+                  {openDropdown === item.key && (
+                    <div className="absolute left-0 top-full pt-1.5 z-50 w-52 animate-in fade-in zoom-in-95 duration-100">
+                      <div className="overflow-hidden rounded-xl border-2 border-[#172A4A]/20 bg-white py-1.5 shadow-xl ring-1 ring-black/5">
+                        {item.children.map((sub) => {
+                          const isSubActive = currentPath === sub.href;
+                          return (
+                            <button
+                              key={sub.href}
+                              type="button"
+                              onClick={() => {
+                                handleNavClick(sub.href);
+                                setOpenDropdown(null);
+                              }}
+                              className={cn(
+                                'flex items-center gap-2.5 w-full px-3.5 py-2 text-left text-xs sm:text-sm font-bold transition-all cursor-pointer',
+                                isSubActive
+                                  ? 'bg-[#172A4A] text-white'
+                                  : 'text-[#172A4A] hover:bg-[#F7F3EC] hover:text-[#E30620]'
+                              )}
+                            >
+                              {sub.key === 'nav_media_live' ? (
+                                <span className="flex h-2 w-2 rounded-full bg-red-600 animate-pulse shrink-0" />
+                              ) : (
+                                <span className="flex h-2 w-2 rounded-full bg-blue-600 shrink-0" />
+                              )}
+                              <span>{t(sub.key)}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
             const isActive = currentPath === item.href;
             return (
               <button
@@ -209,6 +308,63 @@ export function Header({
         <nav id="mobile-nav" className="border-t border-[#172A4A]/15 md:hidden bg-white shadow-xl animate-in slide-in-from-top-2 duration-150 max-h-[calc(100vh-80px)] overflow-y-auto">
           <ul className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-4 py-3">
             {navItems.map((item) => {
+              if (item.children && item.children.length > 0) {
+                const isChildActive = item.children.some((sub) => currentPath === sub.href);
+                const isSelfActive = currentPath === item.href;
+                const isActive = isSelfActive || isChildActive;
+
+                return (
+                  <li key={item.href} className="space-y-1">
+                    <div
+                      className={cn(
+                        'flex items-center justify-between w-full rounded-lg px-3.5 py-2.5 text-sm font-bold transition-colors',
+                        isActive
+                          ? 'bg-[#172A4A] text-white'
+                          : 'text-[#172A4A] hover:bg-[#F7F3EC]'
+                      )}
+                    >
+                      <button
+                        type="button"
+                        onClick={() => handleNavClick(item.href)}
+                        className="text-left flex-1"
+                      >
+                        {t(item.key)}
+                      </button>
+                      <span className="text-xs font-normal opacity-75">
+                        ▼
+                      </span>
+                    </div>
+
+                    {/* Sub items */}
+                    <div className="pl-3 space-y-1">
+                      {item.children.map((sub) => {
+                        const isSubActive = currentPath === sub.href;
+                        return (
+                          <button
+                            key={sub.href}
+                            type="button"
+                            onClick={() => handleNavClick(sub.href)}
+                            className={cn(
+                              'flex items-center gap-2.5 w-full text-left rounded-lg px-3 py-2 text-xs sm:text-sm font-bold transition-colors cursor-pointer',
+                              isSubActive
+                                ? 'bg-[#E30620] text-white font-black'
+                                : 'text-[#172A4A]/85 hover:bg-[#F7F3EC] hover:text-[#E30620] bg-neutral-50'
+                            )}
+                          >
+                            {sub.key === 'nav_media_live' ? (
+                              <span className="flex h-2 w-2 rounded-full bg-red-600 animate-pulse shrink-0" />
+                            ) : (
+                              <span className="flex h-2 w-2 rounded-full bg-blue-600 shrink-0" />
+                            )}
+                            <span>{t(sub.key)}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </li>
+                );
+              }
+
               const isActive = currentPath === item.href;
               return (
                 <li key={item.href}>

@@ -70,6 +70,8 @@ export default function App() {
   else if (currentPath === '/rights') nameKey = 'nav_rights';
   else if (currentPath === '/social-work') nameKey = 'nav_social';
   else if (currentPath === '/media') nameKey = 'nav_media';
+  else if (currentPath === '/media/live-news') nameKey = 'nav_media_live';
+  else if (currentPath === '/media/social-media') nameKey = 'nav_media_social';
   else if (currentPath === '/events') nameKey = 'nav_events';
   else if (currentPath === '/roadmap') nameKey = 'nav_roadmap';
   else if (currentPath === '/membership') nameKey = 'nav_membership';
@@ -121,6 +123,23 @@ export default function App() {
           <>
             <PageHero titleKey="nav_social" onNavigate={navigate} />
             <SocialSection />
+          </>
+        );
+
+      case '/media/live-news':
+        return (
+          <>
+            <PageHero titleKey="nav_media_live" onNavigate={navigate} />
+            <MediaCoverage />
+            <DigitalBlogSection />
+          </>
+        );
+
+      case '/media/social-media':
+        return (
+          <>
+            <PageHero titleKey="nav_media_social" onNavigate={navigate} />
+            <MediaSection />
           </>
         );
 

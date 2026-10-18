@@ -9,6 +9,8 @@ export function ContactSection() {
 
   const officialPhone = '+91 878 873 4440';
   const officialPhoneRaw = '+918788734440';
+  const statePhone = '+91 83080 89258';
+  const statePhoneRaw = '+918308089258';
   const officialEmail = 'help@lokshahipressorg.com';
   const officialWebsite = 'lokshahipressorg.com';
   const officialWhatsApp = 'https://wa.me/918788734440';
@@ -93,6 +95,17 @@ export function ContactSection() {
                 </div>
                 <span className="rounded-full bg-[#172A4A]/10 px-3 py-1 text-[11px] font-black text-[#172A4A] uppercase tracking-wider">
                   {lang === 'mr' ? 'राष्ट्रीय' : 'National'}
+                </span>
+              </div>
+
+              {/* Registration Number Badge */}
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-neutral-50 border border-neutral-200">
+                <ShieldCheck className="h-4 w-4 text-[#287A18] shrink-0" />
+                <span className="text-xs font-black text-neutral-800">
+                  {lang === 'mr' ? 'नोंदणी क्रमांक :' : 'Regd. No. :'}
+                </span>
+                <span className="font-mono text-xs font-bold text-[#E30620] bg-white px-2 py-0.5 rounded border border-neutral-300">
+                  169/2026/RGD
                 </span>
               </div>
 
@@ -182,17 +195,6 @@ export function ContactSection() {
                 </span>
               </div>
 
-              {/* Registration Number Badge */}
-              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-neutral-50 border border-neutral-200">
-                <ShieldCheck className="h-4 w-4 text-[#287A18] shrink-0" />
-                <span className="text-xs font-black text-neutral-800">
-                  {lang === 'mr' ? 'नोंदणी क्रमांक :' : 'Regd. No. :'}
-                </span>
-                <span className="font-mono text-xs font-bold text-[#E30620] bg-white px-2 py-0.5 rounded border border-neutral-300">
-                  169/2026/RGD
-                </span>
-              </div>
-
               {/* Details */}
               <div className="space-y-4 text-xs sm:text-sm text-[#172A4A]">
                 {/* Address */}
@@ -215,10 +217,10 @@ export function ContactSection() {
                     {lang === 'mr' ? 'मोबाईल क्रमांक :' : 'Mobile Number :'}
                   </span>
                   <a
-                    href={`tel:${officialPhoneRaw}`}
+                    href={`tel:${statePhoneRaw}`}
                     className="font-black text-[#172A4A] text-base hover:text-[#E30620] transition-colors inline-block"
                   >
-                    {officialPhone}
+                    {statePhone}
                   </a>
                 </div>
 

@@ -35,7 +35,7 @@ export function HomeOrgPreview({ onSeeMore }: HomeOrgPreviewProps) {
 
             {/* Main Headline */}
             <h3 className="text-xl sm:text-2xl font-black text-[#172A4A] tracking-tight group-hover:text-[#1877F2] transition-colors">
-              {lang === 'mr' ? 'संघटनेची रचना व अधिकार स्तर' : 'Organisational Structure & Hierarchy'}
+              {lang === 'mr' ? 'संघटनेची रचना' : 'Organisational Structure'}
             </h3>
 
             {/* Description */}
