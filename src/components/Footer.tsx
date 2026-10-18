@@ -149,10 +149,10 @@ export function Footer({ onNavigate }: { onNavigate?: (path: string) => void }) 
                 <YouTubeIcon size={22} />
               </a>
               <a
-                href="https://x.com"
+                href="https://x.com/lokshahipress?s=11"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="X"
+                title="X (@lokshahipress)"
                 className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-white/10 hover:bg-black hover:scale-105 transition-all cursor-pointer shadow-xs"
               >
                 <XIcon size={22} />

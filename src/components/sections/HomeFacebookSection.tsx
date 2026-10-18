@@ -238,9 +238,9 @@ export function HomeFacebookSection({ onSeeMore }: HomeFacebookSectionProps) {
       timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
       timeEn: 'Official Reel • 🎬 Facebook Reel',
       contentMr:
-        'लोकशाही पत्रकार महासंघाचा नवा संकल्प — पत्रकार एकता, संरक्षण आणि जनहितासाठी अविरत लढा! ✊🎙️ #TeamLokshahi #PressFreedom #OfficialReel',
+        'मराठवाडा दौऱ्यादरम्यान उमरगा येथे आपुलकीची भेट❤️... आमचे बंधू किशोर दादा पवार व मित्र बालाजीजी सूर्यवंशी यांच्या उमरगा अर्बन बँक, उमरगा शाखेला सदिच्छा भेट दिली. - पत्रकार संदिप जाधव✍️ #marathwada #meet #friends #trendingreels',
       contentEn:
-        'Lokshahi Patrakar Mahasangh: Unwavering commitment to media unity, press defense, and public integrity. ✊🎙️ #PressFreedom',
+        'Heartfelt visit to Umarga Urban Bank branch during Marathwada tour with Kishor Dada Pawar and Balaji Suryavanshi. - Sandeep Jadhav',
       image: '/fb/fb-reel-10.jpg',
       badge: 'FB REEL',
       likes: '6.4K',
@@ -258,9 +258,9 @@ export function HomeFacebookSection({ onSeeMore }: HomeFacebookSectionProps) {
       timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
       timeEn: 'Official Reel • 🎬 Facebook Reel',
       contentMr:
-        'पत्रकारांच्या हक्कांसाठी संघटित संघर्ष आणि लोकशाही मूल्यांचे जतन — महासंघाची महत्त्वपूर्ण राज्यस्तरीय भूमिका! 📢 #LokshahiNews #JournalistSecurity',
+        '#लोकशाहीर❤️ वंचितांच्या वेदनांना शब्द देणारे, संघर्ष, समता, श्रम आणि सामाजिक न्यायाचा बुलंद आवाज, जनतेचे लोकशाहीर साहित्यरत्न अण्णाभाऊ साठे यांना जयंतीनिमित्त विनम्र अभिवादन! 💐 #annabhausathe #jayanti #trendingreels',
       contentEn:
-        'Collective advocacy for journalist safety and constitutional media freedoms across the state. 📢 #JournalistSecurity',
+        'Tribute to Lokshahir Annabhau Sathe on his birth anniversary — fearless voice of social justice, equality, and dignity. 💐 #annabhausathe',
       image: '/fb/fb-reel-11.jpg',
       badge: 'FB REEL',
       likes: '5.9K',
@@ -278,9 +278,9 @@ export function HomeFacebookSection({ onSeeMore }: HomeFacebookSectionProps) {
       timeMr: 'अधिकृत रील • 🎬 Facebook Reel',
       timeEn: 'Official Reel • 🎬 Facebook Reel',
       contentMr:
-        'सत्य, निर्भीडता आणि पारदर्शकता हीच आमची ताकद! महासंघाचा अधिकृत व्हिडिओ संदेश 🎥✨ #LokshahiPatrakarMahasangh #TruthInJournalism',
+        'स्वतःवर विश्वास ठेवा… बाकी सगळं आपोआप घडतं❤️...... #selfconfidence #motivational #inspiration #viralreels #trendingvideos | Sandeep Jadhav',
       contentEn:
-        'Truth, courage, and constitutional transparency — Official video message by the press federation. 🎥✨',
+        'Believe in yourself... everything else falls into place naturally. ❤️ #selfconfidence #motivational #viralreels | Sandeep Jadhav',
       image: '/fb/fb-reel-12.jpg',
       badge: 'FB REEL',
       likes: '6.8K',

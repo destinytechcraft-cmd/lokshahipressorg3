@@ -79,7 +79,7 @@ export function SocialLinksBar({ size = 22, className = '' }: { size?: number; c
     { name: 'Facebook', icon: FacebookIcon, href: 'https://www.facebook.com/share/1Ekodo5ECG/?mibextid=wwXIfr', bg: 'hover:border-[#1877F2]' },
     { name: 'Instagram', icon: InstagramIcon, href: 'https://www.instagram.com/lokshahipressorg?utm_source=ig_web_button_share_sheet&srtk=ZDNlZDc0MzIxNw==', bg: 'hover:border-[#E1306C]' },
     { name: 'YouTube', icon: YouTubeIcon, href: 'https://youtube.com/@lokshahipatrakarmahasanghindia?si=Bf0f_OWURoC1FCox', bg: 'hover:border-[#FF0000]' },
-    { name: 'X', icon: XIcon, href: 'https://x.com', bg: 'hover:border-black' },
+    { name: 'X', icon: XIcon, href: 'https://x.com/lokshahipress?s=11', bg: 'hover:border-black' },
     { name: 'WhatsApp', icon: WhatsAppIcon, href: 'https://wa.me/918788734440', bg: 'hover:border-[#25D366]' },
   ];
 

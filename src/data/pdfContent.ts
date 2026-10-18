@@ -423,8 +423,8 @@ export const leadershipMembers: LeadershipMember[] = [
   },
   {
     id: "anil-patil",
-    roleMr: "प्रदेश कार्याध्यक्ष",
-    roleEn: "State Working President",
+    roleMr: "प्रदेश उपाध्यक्ष",
+    roleEn: "State Vice President",
     nameMr: "अनिल पाटील",
     nameEn: "Anil Patil",
     image: "/%E0%A4%A1%E0%A5%89.%20%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%B2%20%E0%A4%A6%E0%A4%BF%E0%A4%B2%E0%A5%80%E0%A4%AA%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.jpeg",
