@@ -182,7 +182,7 @@ export default function App() {
           <>
             <PageHero titleKey="nav_helpdesk" onNavigate={navigate} />
             <HelpDeskSection />
-            <GrievanceSection onSubmitIssueClick={() => setIssueModalOpen(true)} />
+            <GrievanceSection />
           </>
         );
 
