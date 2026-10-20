@@ -17,14 +17,14 @@ export interface BackgroundSlide {
   durationMs: number;
 }
 
-// 6 Background Slides for the event photos with custom timings (1st slide: 8s, rest: 4s)
+// 6 Background Slides for the event photos with 4 seconds per image
 const backgroundSlides: BackgroundSlide[] = [
   {
     id: 1,
     imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ZyFveTX0izQX1vVdtTV2j9Hr1LSkf3.png',
     titleMr: 'लोकशाही पत्रकार महासंघ बैठक व पत्रकार प्रशिक्षण मेळावा',
     titleEn: 'Press Federation Meeting and Journalist Training Seminar',
-    durationMs: 8000,
+    durationMs: 4000,
   },
   {
     id: 2,
