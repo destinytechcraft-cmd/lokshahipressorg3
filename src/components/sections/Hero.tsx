@@ -56,7 +56,7 @@ const backgroundSlides: BackgroundSlide[] = [
   },
   {
     id: 6,
-    imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-deIesYcbJyAzcCmzvJem8F9RxpPs0E.png',
+    imageSrc: '/assets/aistudio/image-deIesYcbJyAzcCmzvJem8F9RxpPs0E_3cabcc8a.png',
     titleMr: 'प्रशासकीय अधिकाऱ्यांची सदिच्छा भेट',
     titleEn: 'Courtesy Meeting with Administrative Officials',
     durationMs: 4000,
