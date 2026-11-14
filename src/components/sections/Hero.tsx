@@ -49,7 +49,7 @@ const backgroundSlides: BackgroundSlide[] = [
   },
   {
     id: 5,
-    imageSrc: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-92H0pAshBqurUFJIkPT3pUk4oUMhKe.png',
+    imageSrc: '/assets/aistudio/new_image_52e59f67.png',
     titleMr: 'दैनिक लोकनेता वर्धापन दिन सोहळा',
     titleEn: 'Dainik Lokneta Anniversary Celebration',
     durationMs: 4000,
